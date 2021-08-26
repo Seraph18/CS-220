@@ -1,0 +1,2093 @@
+Script started on 2021-08-26 10:36:14-04:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="94" LINES="49"]
+jgordo39@remote01:~/temp/lab0$ mkfir[K[K[Kdir -p ~/projects
+jgordo39@remote01:~/temp/lab0$ cs[K[Kls
+lab0.LOG
+jgordo39@remote01:~/temp/lab0$ cd ~/projects
+jgordo39@remote01:~/projects$ git clone ssh://user@remote.cs.binghamton.edu/~umrigar/git-repos/cs220.git
+fatal: destination path 'cs220' already exists and is not an empty directory.
+jgordo39@remote01:~/projects$ 
+jgordo39@remote01:~/projects$ ls
+cs220
+jgordo39@remote01:~/projects$ ls
+cs220
+jgordo39@remote01:~/projects$ cs220
+bash: cs220: command not found
+jgordo39@remote01:~/projects$ cd ~
+jgordo39@remote01:~$ ln -s projects/cs220
+jgordo39@remote01:~$ cd ~/cs220
+jgordo39@remote01:~/cs220$ ls
+announce.html  assets  docs	  hw	      index.umt  misc	   README.md  umt.make
+announce.umt   bin     exercises  index.html  labs	 projects  slides
+jgordo39@remote01:~/cs220$ git pull
+[33mhint: Pulling without specifying how to reconcile divergent branches is[m
+[33mhint: discouraged. You can squelch this message by running one of the following[m
+[33mhint: commands sometime before your next pull:[m
+[33mhint: [m
+[33mhint:   git config pull.rebase false  # merge (the default strategy)[m
+[33mhint:   git config pull.rebase true   # rebase[m
+[33mhint:   git config pull.ff only       # fast-forward only[m
+[33mhint: [m
+[33mhint: You can replace "git config" with "git config --global" to set a default[m
+[33mhint: preference for all repositories. You can also pass --rebase, --no-rebase,[m
+[33mhint: or --ff-only on the command line to override the configured default per[m
+[33mhint: invocation.[m
+Already up to date.
+jgordo39@remote01:~/cs220$ git lo [Kg -5
+[?1h=[33mcommit 0305b86713046c529f54718435c6af9c8c6cd675[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Wed Aug 25 22:07:50 2021 -0400[m
+[m
+    lab0 tweaks[m
+[m
+[33mcommit 9a6567527398cc3238ab38629a58873a55e7f3e7[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Wed Aug 25 16:19:48 2021 -0400[m
+[m
+    fix problems seen in class[m
+[m
+[33mcommit 34009f8097c9b3d4a61ec3376464a298c8db62a6[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Wed Aug 25 12:56:10 2021 -0400[m
+[m
+    grade assignment[m
+[m
+[33mcommit f471d336c1f9a89740b916f65e950fb51e8ce34e[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Wed Aug 25 02:44:39 2021 -0400[m
+[m
+    added more stuff[m
+[m
+[33mcommit 09716377740775b1c716fdd58955c1c86675fbbf[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Wed Aug 25 01:23:36 2021 -0400[m
+[m
+    tweaks[m
+[K[?1l>jgordo39@remote01:~/cs220$ git log -3 labs/lab0.umt
+fatal: ambiguous argument 'labs/lab0.umt': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+jgordo39@remote01:~/cs220$ git fig[K[K[K[K diff -r xxxxx labs/lab0.umt
+fatal: ambiguous argument 'xxxxx': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+jgordo39@remote01:~/cs220$ git diff -r xxxxx labs/lab0.umt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P labs/lab0.umt[6Plog -3[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+fatal: ambiguous argument 'labs/lab0.umt': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+jgordo39@remote01:~/cs220$ git log -3 labs/lab0.umt~labs/lab0.umt/labs/lab0.umt
+fatal: ambiguous argument '/home/jgordo39/labs/lab0.umt': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+jgordo39@remote01:~/cs220$ git log -3 ~/labs/lab0.umt[C[C[C[C[C[C[1Plab0.umt[1Plab0.umt[1Plab0.umt[1Plab0.umt[1Pab0.umt[1Plab0.umt[1Plab0.umt
+fatal: ambiguous argument 'lab0.umt': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+jgordo39@remote01:~/cs220$ git log -3 lab0.umt[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+announce.html  assets  docs	  hw	      index.umt  misc	   README.md  umt.make
+announce.umt   bin     exercises  index.html  labs	 projects  slides
+jgordo39@remote01:~/cs220$ lsgit log -3 lab0.umt[Clab0.umtalab0.umtblab0.umtslab0.umt/lab0.umt
+fatal: ambiguous argument 'labs/lab0.umt': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+jgordo39@remote01:~/cs220$ cd labs
+jgordo39@remote01:~/cs220/labs$ ls
+index.html  index.umt  lab0  working
+jgordo39@remote01:~/cs220/labs$ lscd labsgit log -3 labs/lab0.umtls[K[K[Kgit log -3 lab0.umt~/labs/lab0.umt[K[K[K[K
+fatal: ambiguous argument '/home/jgordo39/labs/lab0': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+jgordo39@remote01:~/cs220/labs$ git log -3 ~/labs/lab0[1Plabs/lab0[1Plabs/lab0[1Plabs/lab0 labs/lab0
+fatal: ambiguous argument 'labs/lab0': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+jgordo39@remote01:~/cs220/labs$ git log -3 labs/lab0[1P/lab0[C[1Plab0[1Plab0[1Plab0[1Pab0
+[?1h=[33mcommit 0305b86713046c529f54718435c6af9c8c6cd675[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Wed Aug 25 22:07:50 2021 -0400[m
+[m
+    lab0 tweaks[m
+[m
+[33mcommit 09716377740775b1c716fdd58955c1c86675fbbf[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Wed Aug 25 01:23:36 2021 -0400[m
+[m
+    tweaks[m
+[m
+[33mcommit f22a4765fcc13cdc57545980747240b4be588418[m[m
+Author: zerksis umrigar <umrigar@binghamton.edu>[m
+Date:   Tue Aug 24 23:13:55 2021 -0400[m
+[m
+    added course material[m
+[K[?1l>jgordo39@remote01:~/cs220/labs$ git fi[K[Kdiff -r f22a47 lab0
+[?1h=[1mdiff --git a/labs/lab0/lab0.html b/labs/lab0/lab0.html[m[m
+[1mindex 8d3fb49..1844666 100644[m[m
+[1m--- a/labs/lab0/lab0.html[m[m
+[1m+++ b/labs/lab0/lab0.html[m[m
+[36m@@ -182,150 +182,114 @@[m [myou share with your TA's.[m[m
+ github repository on <samp data-coord="lab0.umt:290:91">remote.cs.binghamton.edu</samp>.[m[m
+ </p></li></ul><p data-coord="lab0.umt:293:0">The rest of this lab provides step-by-step direc[m tions for setting up a github[m[m
+ account.[m[m
+[31m-</p><section data-coord="lab0.umt:296:0"><h3 data-coord="lab0.umt:296:0">Quick Start</h3><p d[m [31mata-coord="lab0.umt:299:0">If you know what you are doing, this <samp data-coord="lab0.umt:299[m [31m:37">tl;dr</samp> section should largely suffice:[m[m
+[31m-</p><ol data-coord="lab0.umt:301:0"><li data-coord="lab0.umt:301:0"><p data-coord="lab0.umt:3[m [31m01:4">Set up a personal github account and create a <samp data-coord="lab0.umt:301:50">i220a</[m [31msamp> or <samp data-coord="lab0.umt:301:61">i220b</samp>[m[m
+[31m-git repository, depending on the course section you are registered[m[m
+[31m-for.  Choose the github options to generate a <samp data-coord="lab0.umt:301:190">.gitignore<[m [31m/samp> for the C[m[m
+[31m-programming language and initialize your repository with a <samp data-coord="lab0.umt:301:276[m [31m">README</samp>.[m[m
+[31m-</p></li><li data-coord="lab0.umt:306:0"><p data-coord="lab0.umt:306:4">Set up TAs to have ac[m [31mcess to your repository:[m[m
+[31m-</p><ul data-coord="lab0.umt:308:0"><li data-coord="lab0.umt:308:0"><p data-coord="lab0.umt:3[m [31m08:8">All students give access to Jerome for grading projects.[m[m
+[31m-Github ID: <samp data-coord="lab0.umt:308:84">dherath</samp> [m[m
+[31m-</p></li><li data-coord="lab0.umt:311:0"><p data-coord="lab0.umt:311:8"><strong data-coord="l[m [31mab0.umt:311:8">Lab Section A51 Thu 10:05 - 11:30 and A52 11:40 - 1:05p</strong>: Zhen;[m[m
+[31m-Github ID: <samp data-coord="lab0.umt:311:92">YesZhen</samp>[m[m
+[31m-</p></li><li data-coord="lab0.umt:314:0"><p data-coord="lab0.umt:314:8"><strong data-coord="l[m [31mab0.umt:314:8">Lab Section A52 Thu 11:40 - 1:05p</strong>:[m[m
+[31m-Zhen; Github ID: <samp data-coord="lab0.umt:314:70">YesZhen</samp> [m[m
+[31m-</p></li><li data-coord="lab0.umt:317:0"><p data-coord="lab0.umt:317:8"><strong data-coord="l[m [31mab0.umt:317:8">Lab Section A53 1:15 - 2:40p</strong>:[m[m
+[31m-Jerome; Github ID: <samp data-coord="lab0.umt:317:67">dherath</samp> [m[m
+[31m-</p></li><li data-coord="lab0.umt:320:0"><p data-coord="lab0.umt:320:8"><strong data-coord="l[m [31mab0.umt:320:8">Lab Section B51: Thu 2:50 - 4:15p</strong>:  Jerome;[m[m
+[31m-Github ID: <samp data-coord="lab0.umt:320:73">dherath</samp> <br data-coord="lab0.umt:320:83"[m [31m/>[m[m
+[31m-</p></li><li data-coord="lab0.umt:323:0"><p data-coord="lab0.umt:323:8"><strong data-coord="l[m [31mab0.umt:323:8">Lab Section B52: Thu 4:25 - 5:50p</strong>: Barak; Github[m[m
+[31m-ID: <samp data-coord="lab0.umt:323:71">barakharari</samp> <br data-coord="lab0.umt:323:85"/>[m[m
+[31m-</p></li><li data-coord="lab0.umt:326:0"><p data-coord="lab0.umt:326:8"><strong data-coord="l[m [31mab0.umt:326:8">Lab Section B53: Thu 6:00-7:25p</strong>: Barak; Github[m[m
+[31m-ID: <samp data-coord="lab0.umt:326:69">barakharari</samp> <br data-coord="lab0.umt:326:83"/>[m[m
+[31m-</p></li></ul><p data-coord="lab0.umt:330:4">As there are many similar names and some people [m [31mmay have multiple[m[m
+[31m-accounts, <strong data-coord="lab0.umt:330:84">make 100% sure that you have the correct githu[m [31mb[m[m
+:[K[K[31m-    accounts</strong> (the above <em data-coord="lab0.umt:330:158">ID</em>'s must match).[m[m
+:[K[K[?1l>
+[1]+  Stopped                 git diff -r f22a47 lab0
+jgordo39@remote01:~/cs220/labs$ cd
+jgordo39@remote01:~$ ls
+cs120a0  Desktop    Downloads  Music	 projects  temp       Videos
+cs220	 Documents  Maildir    Pictures  Public    Templates
+jgordo39@remote01:~$ x[Kcd cs3[K220
+jgordo39@remote01:~/cs220$ ls
+announce.html  assets  docs	  hw	      index.umt  misc	   README.md  umt.make
+announce.umt   bin     exercises  index.html  labs	 projects  slides
+jgordo39@remote01:~/cs220$ f[Kdir
+announce.html  assets  docs	  hw	      index.umt  misc	   README.md  umt.make
+announce.umt   bin     exercises  index.html  labs	 projects  slides
+jgordo39@remote01:~/cs220$ ls[K[Kcd
+jgordo39@remote01:~$ dir
+cs120a0  Desktop    Downloads  Music	 projects  temp       Videos
+cs220	 Documents  Maildir    Pictures  Public    Templates
+jgordo39@remote01:~$ ~/.profile
+bash: /home/jgordo39/.profile: No such file or directory
+jgordo39@remote01:~$ ~/.profiledir[K[1Pcddir[1Pcd[K[Kdir[1Plscd cs220ls[Kdir[Kdir[1Plscd cs220ls[Kcdgit diff -r f22a47 lab0[8Plog -3[C[C[C[C[C[8@diff -r f22a47[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd[Klscd cs220ls[Kdir[Kdir~/.profile[K~/.profilec~/.profiled~/.profile ~/.profile
+bash: cd: /home/jgordo39/.profile: No such file or directory
+jgordo39@remote01:~$ ls
+cs120a0  Desktop    Downloads  Music	 projects  temp       Videos
+cs220	 Documents  Maildir    Pictures  Public    Templates
+jgordo39@remote01:~$ cd cs120a0
+jgordo39@remote01:~/cs120a0$ ls
+arg	array	  floats     hello     lab1  lab6  mult.c    personal  switch.c~  total.c~
+arg.c	array.c   floats.c   hello.c   lab2  lab9  mult.c~   switch    total	  total.txt
+arg.c~	array.c~  floats.c~  hello.c~  lab4  mult  mult.txt  switch.c  total.c
+jgordo39@remote01:~/cs120a0$ cd
+jgordo39@remote01:~$ ls
+cs120a0  Desktop    Downloads  Music	 projects  temp       Videos
+cs220	 Documents  Maildir    Pictures  Public    Templates
+jgordo39@remote01:~$ lscdlscd cs120a0ls[Kcd ~/.profile[K[K[K[K[K[K[Kjgordo2[K39
+bash: cd: /home/jgordo39/.jgordo39: No such file or directory
+jgordo39@remote01:~$ opej[Kn
+bash: open: command not found
+jgordo39@remote01:~$ start
+bash: start: command not found
+jgordo39@remote01:~$ start[1Popencd ~/.jgordo39ls[Kcdlscd cs120a0ls[Kcd ~/.profile[1P ~/.profile[1P ~/.profilee ~/.profilem ~/.profilea ~/.profilec ~/.profiles ~/.profile
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[49d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[48d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[49;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[49;54H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[49;59H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[49;58H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[49;60H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[49;57H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[49;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[49;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[49;77H[?25ldone[H
+[?12l[?25h[?12;25h[49;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[49;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[49;75H[?25ldone[H
+[?12l[?25h[?12;25h[49;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[49;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[49;61H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[49d[?25l..[K[H[7mFile Edit Options Buffers Tools Help                                                          [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------[39;49m
+[A
+Loading /usr/share/emacs/site-lisp/elpa/haskell-mode-16.1/haskell-mode-autoloads.el (source).\
+[A[2d[?12l[?25h[?12;25h[49;3H[?25ldone[H
+[?12l[?25h[?12;25h[49d[K[48;10H[?25letc/emacs/site-start.d/50haskell-mode.el (source)...done[K[H
+[?12l[?25h[?12;25h[48;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[48;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[48;75H[?25ldone[H
+[?12l[?25h[?12;25h[48;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[48;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[48;64H[?25ldone[H
+[?12l[?25h[?12;25h[48;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[48;54H[?25ldone[H
+[?12l[?25h[?12;25h[48;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[48;65H[?25ldone[H
+[?12l[?25h[?12;25h[48;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[48;54H[?25ldone[H
+[?12l[?25h[?12;25h[48;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[48;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[?2004h[?1004h[49d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                         [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) ------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[?25l(New file)[K[H
+[?12l[?25h[?12;25h[49d[?25lSetting up indent for shell type sh[H
+[?12l[?25h[?12;25h[49d[?25lIndentation variables are now local.[H
+[?12l[?25h[?12;25h[49;13H[?25lsetup for shell type sh[K[H
+[?12l[?25h[?12;25h[49d[?25lIndentation setup for shell type sh[K[H[7mFile Edit Options Buffers Tools Sh-Script Help                                                [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m.profile    [0m[39;49m[30m[48;5;250m   All L1     (Shell-script[sh]) ------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[K[2d[?25lx[48;6H[30m[48;5;250m**[39;49m[2;2H[?12l[?25h[?12;25h[48;34H[?25l[30m[48;5;250m2[39;49m[H
+
+[?12l[?25h[?12;25h[48;34H[?25l[30m[48;5;250m1[39;49m[2;2H[?12l[?25h[?12;25h[K[49d[?25lBeginning of buffer[H
+[?12l[?25h[?12;25h[49d[K[2d[49d[?25lC-x[H
+[?12l[?25h[?12;25h[49;4H[?25l-[H
+[?12l[?25h[?12;25h[49;4H[?25l C-x[H
+[?12l[?25h[?12;25h[49d[?25lNo mark set in this buffer[H
+[?12l[?25h[?12;25h[49d[K[?1004l[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m
+[2]+  Stopped                 emacs ~/.profile
+jgordo39@remote01:~$ end 
+bash: end: command not found
+jgordo39@remote01:~$ stop
+bash: stop: command not found
+jgordo39@remote01:~$ fn
+bash: fn: command not found
+jgordo39@remote01:~$ fg
+emacs ~/.profile
+[?1049h[22;0;0t[?12;25h[?1h=[?1004h[?2004h[49;1H[K[H[?25l[7mFile Edit Options Buffers Tools Sh-Script Help                                                [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:**--F1  [39;49m[1m[30m[48;5;250m.profile    [0m[39;49m[30m[48;5;250m   All L1     (Shell-script[sh]) ------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[?25lC[?12l[?25h[?12;25h[49;1H[?25lC-c[2;2H[?12l[?25h[?12;25h[49;4H[?25l-[2;2H[?12l[?25h[?12;25h[49;4H[?25l z[2;2H[?12l[?25h[?12;25h[49;7H[?25lis undefined[2;2H[?12l[?25h[?12;25h[49;1H[K[2;2H[?25lC[?12l[?25h[?12;25h[?25lz[?12l[?25h[?12;25h[48;34H[?25l[30m[48;5;250m2[39;49m[H
+
+[?12l[?25h[?12;25h[49d[?25lC-c[H
+
+[?12l[?25h[?12;25h[49;4H[?25l-[H
+
+[?12l[?25h[?12;25h[49;4H[?25l C-z[H
+
+[?12l[?25h[?12;25h[49d[?25lC-c C-z[K[H[7mFile Edit Options Buffers Tools Complete In/Out Signals Help                                  [0m[39;49m[27m
+[A
+CCz[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[38;5;236m[47m-UUU:**--F1  [39;49m[1m[38;5;236m[47m.profile    [0m[39;49m[38;5;236m[47m   All L2     (Shell-script[sh]) ------------------------------------[39;49m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*shell*     [0m[39;49m[30m[48;5;250m   All L1     (Shell:run) -------------------------------------------[39;49m
+[A[26d[?12l[?25h[?12;25h[?25l[38;5;20mjgordo39@remote01:~$ [39;49m[48;6H[30m[48;5;250m**[39;49m[26;22H[?12l[?25h[?12;25h[49;1H[K[48;34H[?25l[30m[48;5;250m2[39;49m[27;1H[?12l[?25h[?12;25h[?25l[38;5;20mjgordo39@remote01:~$ [39;49m[?12l[?25h[?12;25h[49;1H[?25lNo previous history command[27;22H[?12l[?25h[?12;25h[49;1H[K[27;22H	[?25lC-c C-z[?12l[?25h[?12;25h[49;1H[K[?1004l[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m
+[2]+  Stopped                 emacs ~/.profile
+jgordo39@remote01:~$ free
+              total        used        free      shared  buff/cache   available
+Mem:       32891752      541484    29783996       79088     2566272    31809184
+Swap:       4008180           0     4008180
+jgordo39@remote01:~$ cs ~[K[K[K[Kls
+cs120a0  Desktop    Downloads  Music	 projects  temp       Videos
+cs220	 Documents  Maildir    Pictures  Public    Templates
+jgordo39@remote01:~$ cdlsfree[2Pgnstopend macs ~/.profilestart[K[1Popencd ~/.jgordo39ls[Kcdlscd cs120a0ls[Kcd ~/.profile[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+cs120a0  Desktop    Downloads  Music	 projects  temp       Videos
+cs220	 Documents  Maildir    Pictures  Public    Templates
+jgordo39@remote01:~$ cd projecta[Kw[Ks[K[K[K[K[K[K[Kublic
+bash: cd: public: No such file or directory
+jgordo39@remote01:~$ cd public[1PublicPublic
+jgordo39@remote01:~/Public$ ls
+jgordo39@remote01:~/Public$ cd
+jgordo39@remote01:~$ cdlscd Public[K[K[K[K[K[KMa[K[K[K temp
+jgordo39@remote01:~/temp$ ls
+lab0
+jgordo39@remote01:~/temp$ ls[K[Kcd lab0
+jgordo39@remote01:~/temp/lab0$ ls
+lab0.LOG
+jgordo39@remote01:~/temp/lab0$ vim[K[K[Kemacs ~/.profile
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[49d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[48d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[49;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[49;54H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[49;59H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[49;58H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[49;60H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[49;57H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[49;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[49;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[49;77H[?25ldone[H
+[?12l[?25h[?12;25h[49;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[49;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[49;75H[?25ldone[H
+[?12l[?25h[?12;25h[49;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[49;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[49;61H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[49d[?25l..[K[H[7mFile Edit Options Buffers Tools Help                                                          [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------[39;49m
+[A
+Loading /usr/share/emacs/site-lisp/elpa/haskell-mode-16.1/haskell-mode-autoloads.el (source).\
+[A[2d[?12l[?25h[?12;25h[49;3H[?25ldone[H
+[?12l[?25h[?12;25h[49d[K[48;10H[?25letc/emacs/site-start.d/50haskell-mode.el (source)...done[K[H
+[?12l[?25h[?12;25h[48;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[48;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[48;75H[?25ldone[H
+[?12l[?25h[?12;25h[48;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[48;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[48;64H[?25ldone[H
+[?12l[?25h[?12;25h[48;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[48;54H[?25ldone[H
+[?12l[?25h[?12;25h[48;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[48;65H[?25ldone[H
+[?12l[?25h[?12;25h[48;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[48;54H[?25ldone[H
+[?12l[?25h[?12;25h[48;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[48;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[?2004h[?1004h[49d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                         [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) ------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[?25l(New file)[K[H
+[?12l[?25h[?12;25h[49d[?25lSetting up indent for shell type sh[H
+[?12l[?25h[?12;25h[49d[?25lIndentation variables are now local.[H
+[?12l[?25h[?12;25h[49;13H[?25lsetup for shell type sh[K[H
+[?12l[?25h[?12;25h[49d[?25lIndentation setup for shell type sh[K[H[7mFile Edit Options Buffers Tools Sh-Script Help                                                [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m.profile    [0m[39;49m[30m[48;5;250m   All L1     (Shell-script[sh]) ------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[K[2d[49d[?25l[38;5;20mRun script: [39;49m/home/jgordo39/.profile[1;33H[7mMinibuf Help  [0m[39;49m[27m[49;36H[?12l[?25h[?12;25h[K[2d[49d[K[H[?25l[7mFile Edit Options Buffers Tools Sh-Script Help                                                [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m.profile    [0m[39;49m[30m[48;5;250m   All L1     [Compiling] (Shell-script[sh]) ------------------------[39;49m
+[A
+-*- mode: compilation; default-directory: "~/" -*-[K
+Comint started at Thu Aug 26 10:56:24[K
+[K
+/home/jgordo39/.profile[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[38;5;236m[47m-UUU:----F1  [39;49m[1m[38;5;236m[47m*interpretation*[0m[39;49m[38;5;236m[47m   All L1     [Compiling] (Comint[39;49m[1m[38;5;208m[47m:exit[0m[39;49m[38;5;236m[47m [[39;49m[1m[91m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;208m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;28m[47m0[0m[39;49m[38;5;236m[47m] Shell-Compile) ---[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[?25lComint exited abnormally with code 127[H
+[?12l[?25h[?12;25h[25;40H[?25l[30m[48;5;250m(Shell-script[sh]) ------------[39;49m
+
+
+
+
+[38;5;21m/bin/bash[39;49m: /home/jgordo39/.profile: No such file or directory
+
+Comint exited abnormally with code 127 at Thu Aug 26 10:56:24[48;6H[38;5;236m[47m**--F1  [39;49m[1m[38;5;236m[47m*interpretation*[0m[39;49m[38;5;236m[47m   All L1     (Comint[39;49m[1m[91m[47m:exit [127][0m[39;49m[38;5;236m[47m [[39;49m[1m[91m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;208m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;28m[47m0[0m[39;49m[38;5;236m[47m] Shell-Compile) ------[39;49m[H
+[?12l[?25h[?12;25h[49d[?25l...ome1/jgordo39/.profile locked by jgordo39@remo... (pid 1486831): (s, q, p, ?)?[H
+[?12l[?25h[?12;25h[49;84H[?25lPlease type q, s, or p; or ? for help[K[H
+[?12l[?25h[?12;25h[49d[?25l...ome1/jgordo39/.profile locked by jgordo39@remo... (pid 1486831): (s, q, p, ?)?[H
+[?12l[?25h[?12;25h[49d[?25lPlease type q, s, or p; or ? for help[K[H
+[?12l[?25h[?12;25h[49d[?25l...ome1/jgordo39/.profile locked by jgordo39@remo... (pid 1486831): (s, q, p, ?)?[H
+[?12l[?25h[?12;25h[49;84H[?25lPlease type q, s, or p; or ? for help[K[H
+[?12l[?25h[?12;25h[49d[?25l...ome1/jgordo39/.profile locked by jgordo39@remo... (pid 1486831): (s, q, p, ?)?[H
+[?12l[?25h[?12;25h[49d[?25lPlease type q, s, or p; or ? for help[K[H
+[?12l[?25h[?12;25h[49d[?25l...ome1/jgordo39/.profile locked by jgordo39@remo... (pid 1486831): (s, q, p, ?)?[H
+[?12l[?25h[?12;25h[49d[?25lPlease type q, s, or p; or ? for help[K[H
+[?12l[?25h[?12;25h[49d[?25l...ome1/jgordo39/.profile locked by jgordo39@remo... (pid 1486831): (s, q, p, ?)?[H
+[?12l[?25h[?12;25h[49d[?25lPlease type q, s, or p; or ? for help[K[H
+[?12l[?25h[?12;25h[49d[?25l...ome1/jgordo39/.profile locked by jgordo39@remo... (pid 1486831): (s, q, p, ?)?[H
+[?12l[?25h[?12;25h[49d[?25lPlease type q, s, or p; or ? for help[K[H
+[?12l[?25h[?12;25h[49d[?25l...ome1/jgordo39/.profile locked by jgordo39@remo... (pid 1486831): (s, q, p, ?)?[H
+[?12l[?25h[?12;25h[49d[?25lPlease type q, s, or p; or ? for help[K[H
+[?12l[?25h[?12;25h[49d[?25l...ome1/jgordo39/.profile locked by jgordo39@remo... (pid 1486831): (s, q, p, ?)?[H
+[?12l[?25h[?12;25h[49;84H[K[25;6H[?25l[30m[48;5;250m**--F1  [39;49m[1m[30m[48;5;250m.profile    [0m[39;49m[30m[48;5;250m   All L2[39;49m[H
+
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m	[?12l[?25h[?12;25h[?25lSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) C-x[C[?12l[?25h[?12;25h[?25lType C-h for help.[K[H
+
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m	[?12l[?25h[?12;25h[?25lSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) C-c[C[?12l[?25h[?12;25h[?25lType C-h for help.[K[H
+
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m	[?12l[?25h[?12;25h[?25lSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) C-x[C[?12l[?25h[?12;25h[?25lType C-h for help.[K[H
+
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m	[?12l[?25h[?12;25h[?25lSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) C-x[C[?12l[?25h[?12;25h[?25lType C-h for help.[K[H
+
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m	[?12l[?25h[?12;25h[?25lSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) C-h[C[?12l[?25h[?12;25h[?25lType "q" in help window to restore its previous buffer.[K[H
+
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m	[?12l[?25h[?12;25h[26;1H[?25lType SPC or ‘y’ to save the current buffer;[K
+DEL or ‘n’ to skip the current buffer;
+RET or ‘q’ to skip the current and all remaining buffers;
+C-g to quit (cancel the whole command);
+! to save all remaining buffers;[K
+C-r to view this buffer;
+[C-f to view this buffer and quit;[K
+d to view changes in this buffer;
+or . (period) to save the current buffer and exit.[48;6H[38;5;236m[47m%%--F1  [39;49m[1m[38;5;236m[47m*Help*      [0m[39;49m[38;5;236m[47m   All L1     (Help) ---------------------------------------[39;49m[49;73H[?12l[?25h[?12;25h[?25lSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) C-z[C[?12l[?25h[?12;25h[?25lType C-h for help.[K[H
+
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m	[?12l[?25h[?12;25h[?25lSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) C-z[C[?12l[?25h[?12;25h[?25lType C-h for help.[K[H
+
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m	[?12l[?25h[?12;25h[?25lSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) C-z[C[?12l[?25h[?12;25h[?25lType C-h for help.[K[H
+
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m	[?12l[?25h[?12;25h[?25lSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) C-z[C[?12l[?25h[?12;25h[?25lType C-h for help.[K[H
+
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m	[?12l[?25h[?12;25h[?25lSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) C-z[C[?12l[?25h[?12;25h[?25lType C-h for help.[K[H
+
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m	[?12l[?25h[?12;25h[?25lSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) n[C[?12l[?25h[?12;25h[K[3d[49d[?25l[38;5;20mModified buffers exist; exit anyway? (yes or no) [39;49m[1;33H[7mMinibuf Help  [0m[39;49m[27m[26;1H-*- mode: compilation; default-directory: "~/" -*-
+Comint started at Thu Aug 26 10:56:24[K
+[K
+/home/jgordo39/.profile[K
+[38;5;21m/bin/bash[39;49m: /home/jgordo39/.profile: No such file or directory
+[K
+[Comint exited abnormally with code 127 at Thu Aug 26 10:56:24
+[K
+[K[48;6H[38;5;236m[47m**--F1  [39;49m[1m[38;5;236m[47m*interpretation*[0m[39;49m[38;5;236m[47m   All L1     (Comint[39;49m[1m[91m[47m:exit [127][0m[39;49m[38;5;236m[47m [[39;49m[1m[91m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;208m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;28m[47m0[0m[39;49m[38;5;236m[47m] Shell-Compile) [39;49m[49;50H[?12l[?25h[?12;25h[?25lPlease answer yes or no.[K[H
+
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mModified buffers exist; exit anyway? (yes or no) [39;49m[?12l[?25h[?12;25h[K[1;33H[?25l[7mSh-Script Help[0m[39;49m[27m
+
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mRun script: [39;49m/home/jgordo39/.profile[1;33H[7mMinibuf Help  [0m[39;49m[27m[49;36H[?12l[?25h[?12;25h[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[?25l[38;5;20m [Text is read-only][39;49m[49;13H[?12l[?25h[?12;25h[?25l[38;5;20mSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m	[?12l[?25h[?12;25h[1;33H[?25l[7mSh-Script Help[0m[39;49m[27m[49;73H[?12l[?25h[?12;25h[?25lSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) n[C[?12l[?25h[?12;25h[K[3d[25;40H[?25l[30m[48;5;250m[Compiling] (Shell-script[sh]) [39;49m[27;34H7:25
+
+[K
+[K
+
+[K[48;6H[38;5;236m[47m----F1  [39;49m[1m[38;5;236m[47m*interpretation*[0m[39;49m[38;5;236m[47m   All L1     [Compiling] (Comint[39;49m[1m[38;5;208m[47m:run[0m[39;49m[38;5;236m[47m [[39;49m[1m[91m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;208m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;28m[47m0[0m[39;49m[38;5;236m[47m] Shell-Compile) [39;49m[H
+
+[?12l[?25h[?12;25h[49d[?25lComint finished[H
+
+[?12l[?25h[?12;25h[25;40H[?25l[30m[48;5;250m(Shell-script[sh]) ------------[39;49m[31;1HComint finished at Thu Aug 26 10:57:25[48;6H[38;5;236m[47m**--F1  [39;49m[1m[38;5;236m[47m*interpretation*[0m[39;49m[38;5;236m[47m   All L1     (Comint[39;49m[1m[38;5;28m[47m:exit [0][0m[39;49m[38;5;236m[47m [[39;49m[1m[91m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;208m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;28m[47m0[0m[39;49m[38;5;236m[47m] Shell-Compile) -------[39;49m[H
+
+[?12l[?25h[?12;25h[49d[K[25;34H[?25l[30m[48;5;250m3[39;49m[4;1H[?12l[?25h[?12;25h[?25ld[?12l[?25h[?12;25h[25;34H[?25l[30m[48;5;250m2[39;49m[H
+
+[?12l[?25h[?12;25h[25;34H[?25l[30m[48;5;250m1[39;49m[H
+[?12l[?25h[?12;25h[49d[?25lBeginning of buffer[H
+[?12l[?25h[?12;25h[49d[K[?1004l[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m
+[3]+  Stopped                 emacs ~/.profile
+jgordo39@remote01:~/temp/lab0$ free
+              total        used        free      shared  buff/cache   available
+Mem:       32891752      562212    29762332       79088     2567208    31788456
+Swap:       4008180           0     4008180
+jgordo39@remote01:~/temp/lab0$ s
+bash: s: command not found
+jgordo39@remote01:~/temp/lab0$ ls
+lab0.LOG
+jgordo39@remote01:~/temp/lab0$ cd
+jgordo39@remote01:~$ ls
+cs120a0  Desktop    Downloads  Music	 projects  temp       Videos
+cs220	 Documents  Maildir    Pictures  Public    Templates
+jgordo39@remote01:~$ cd s[Kcs220
+jgordo39@remote01:~/cs220$ ls
+announce.html  assets  docs	  hw	      index.umt  misc	   README.md  umt.make
+announce.umt   bin     exercises  index.html  labs	 projects  slides
+jgordo39@remote01:~/cs220$ ~/.profliw[Ke
+bash: /home/jgordo39/.proflie: No such file or directory
+jgordo39@remote01:~/cs220$ ~/.proflie[1Pie[Cle
+bash: /home/jgordo39/.profile: No such file or directory
+jgordo39@remote01:~/cs220$ ~/.profile.
+bash: /home/jgordo39/.profile.: No such file or directory
+jgordo39@remote01:~/cs220$ cd
+jgordo39@remote01:~$ emacs -[K~/.profile
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[49d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[48d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[49;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[49;54H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[49;59H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[49;58H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[49;60H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[49;57H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[49;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[49;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[49;77H[?25ldone[H
+[?12l[?25h[?12;25h[49;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[49;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[49;75H[?25ldone[H
+[?12l[?25h[?12;25h[49;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[49;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[49;61H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[49d[?25l..[K[H[7mFile Edit Options Buffers Tools Help                                                          [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------[39;49m
+[A
+Loading /usr/share/emacs/site-lisp/elpa/haskell-mode-16.1/haskell-mode-autoloads.el (source).\
+[A[2d[?12l[?25h[?12;25h[49;3H[?25ldone[H
+[?12l[?25h[?12;25h[49d[K[48;10H[?25letc/emacs/site-start.d/50haskell-mode.el (source)...done[K[H
+[?12l[?25h[?12;25h[48;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[48;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[48;75H[?25ldone[H
+[?12l[?25h[?12;25h[48;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[48;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[48;64H[?25ldone[H
+[?12l[?25h[?12;25h[48;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[48;54H[?25ldone[H
+[?12l[?25h[?12;25h[48;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[48;65H[?25ldone[H
+[?12l[?25h[?12;25h[48;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[48;54H[?25ldone[H
+[?12l[?25h[?12;25h[48;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[48;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[?2004h[?1004h[49d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                         [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) ------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[?25l(New file)[K[H
+[?12l[?25h[?12;25h[49d[?25lSetting up indent for shell type sh[H
+[?12l[?25h[?12;25h[49d[?25lIndentation variables are now local.[H
+[?12l[?25h[?12;25h[49;13H[?25lsetup for shell type sh[K[H
+[?12l[?25h[?12;25h[49d[?25lIndentation setup for shell type sh[K[H[7mFile Edit Options Buffers Tools Sh-Script Help                                                [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m.profile    [0m[39;49m[30m[48;5;250m   All L1     (Shell-script[sh]) ------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[K[2d[49d[?25lMark set[H
+[?12l[?25h[?12;25h[49d[?25l...ome1/jgordo39/.profile locked by jgordo39@remo... (pid 1488154): (s, q, p, ?)?[H
+[?12l[?25h[?12;25h[49;84H[?25lPlease type q, s, or p; or ? for help[K[H
+[?12l[?25h[?12;25h[49d[?25l...ome1/jgordo39/.profile locked by jgordo39@remo... (pid 1488154): (s, q, p, ?)?[H
+[?12l[?25h[?12;25h[49;84H[?25lPlease type q, s, or p; or ? for help[K[H
+[?12l[?25h[?12;25h[49d[?25l...ome1/jgordo39/.profile locked by jgordo39@remo... (pid 1488154): (s, q, p, ?)?[H
+[?12l[?25h[?12;25h[49d[?25lPlease type q, s, or p; or ? for help[K[H
+[?12l[?25h[?12;25h[49d[?25l...ome1/jgordo39/.profile locked by jgordo39@remo... (pid 1488154): (s, q, p, ?)?[H
+[?12l[?25h[?12;25h[49;84H[K[H
+	[?25l. ~umrigar/cs220/bin/student.profile[48;6H[30m[48;5;250m**--F1  [39;49m[1m[30m[48;5;250m.profile    [0m[39;49m[30m[48;5;250m   All L2[39;49m[H
+
+[?12l[?25h[?12;25h[48;34H[?25l[30m[48;5;250m1[39;49m[H
+[?12l[?25h[?12;25h	[C[C[C[?25l[1P[?12l[?25h[?12;25h[?25l[1P[?12l[?25h[?12;25h[1P[1P[1P[1P[1P[1P[1P[1P[?25l[1@.[?12l[?25h[?12;25h[48;34H[?25l[30m[48;5;250m2[39;49m[H
+
+[?12l[?25h[?12;25h[48;34H[?25l[30m[48;5;250m1[39;49m[2;2H[?12l[?25h[?12;25h[?25l[1@ [?12l[?25h[?12;25h[C[C[C[C		[C[C[C[C[C[C		[C[C[C[C[C[C		[C[C[C[C[C[C		[C[C[C[?25l e[?12l[?25h[?12;25h[?25le[K[?12l[?25h[?12;25h[C[C[49;1H[?25l[38;5;20mRun script: [39;49m/home/jgordo39/.profile[1;33H[7mMinibuf Help  [0m[39;49m[27m[49;36H[?12l[?25h[?12;25h[C[?25l[C-c C-s is undefined][49;36H[?12l[?25h[?12;25h[?25l[38;5;20mSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m	[?12l[?25h[?12;25h[?25l[38;5;20mSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m[K[H[7mFile Edit Options Buffers Tools Sh-Script Help                                                [0m[39;49m[27m
+[A
+. ~umrigar/cs220/bin/student.profile[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:**--F1  [39;49m[1m[30m[48;5;250m.profile    [0m[39;49m[30m[48;5;250m   All L1     (Shell-script[sh]) ------------------------------------[39;49m
+[A[49;73H[?12l[?25h[?12;25h[?25lSave file /home/jgordo39/.profile? (y, n, !, ., q, C-r, C-f, d or C-h) y[C[?12l[?25h[?12;25h[49;4H[?25ling file /home/jgordo39/.profile...[K[2;38H[?12l[?25h[?12;25h[49;1H[?25lWrote /home/jgordo39/.profile[K[2;38H[?12l[?25h[?12;25h[49;1H[K[2;38H[25;1H[?25l[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m.profile    [0m[39;49m[30m[48;5;250m   All L1     [Compiling] (Shell-script[sh]) ------------------------[39;49m
+-*- mode: compilation; default-directory: "~/" -*-
+Comint started at Thu Aug 26 11:01:34
+
+/home/jgordo39/.profile[48;1H[38;5;236m[47m-UUU:----F1  [39;49m[1m[38;5;236m[47m*interpretation*[0m[39;49m[38;5;236m[47m   All L1     [Compiling] (Comint[39;49m[1m[38;5;208m[47m:run[0m[39;49m[38;5;236m[47m [[39;49m[1m[91m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;208m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;28m[47m0[0m[39;49m[38;5;236m[47m] Shell-Compile) ----[39;49m
+[2;38H[?12l[?25h[?12;25h[49;1H[?25lComint exited abnormally with code 126[2;38H[?12l[?25h[?12;25h[25;40H[?25l[30m[48;5;250m(Shell-script[sh]) ------------[39;49m
+
+
+
+
+[38;5;21m/bin/bash[39;49m: /home/jgordo39/.profile: Permission denied
+
+Comint exited abnormally with code 126 at Thu Aug 26 11:01:34[48;6H[38;5;236m[47m**--F1  [39;49m[1m[38;5;236m[47m*interpretation*[0m[39;49m[38;5;236m[47m   All L1     (Comint[39;49m[1m[91m[47m:exit [126][0m[39;49m[38;5;236m[47m [[39;49m[1m[91m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;208m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;28m[47m0[0m[39;49m[38;5;236m[47m] Shell-Compile) -----[39;49m[2;38H[?12l[?25h[?12;25h[49;1H[?25lBeginning of buffer[K[2;38H[?12l[?25h[?12;25h[49;1H[K[2;38H[49;1H[K[?1004l[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m
+[4]+  Stopped                 emacs ~/.profile
+jgordo39@remote01:~$ fg
+emacs ~/.profile
+[?1049h[22;0;0t[?12;25h[?1h=[?1004h[?2004h[49;1H[K[H[?25l[7mFile Edit Options Buffers Tools Sh-Script Help                                                [0m[39;49m[27m
+[A
+. ~umrigar/cs220/bin/student.profile[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m.profile    [0m[39;49m[30m[48;5;250m   All L1     (Shell-script[sh]) ------------------------------------[39;49m
+[A
+-*- mode: compilation; default-directory: "~/" -*-[K
+Comint started at Thu Aug 26 11:01:34[K
+[K
+/home/jgordo39/.profile[K
+[38;5;21m/bin/bash[39;49m: /home/jgordo39/.profile: Permission denied[K
+[K
+Comint exited abnormally with code 126 at Thu Aug 26 11:01:34[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[38;5;236m[47m-UUU:**--F1  [39;49m[1m[38;5;236m[47m*interpretation*[0m[39;49m[38;5;236m[47m   All L1     (Comint[39;49m[1m[91m[47m:exit [126][0m[39;49m[38;5;236m[47m [[39;49m[1m[91m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;208m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;28m[47m0[0m[39;49m[38;5;236m[47m] Shell-Compile) ---------[39;49m
+[A[2;38H[?12l[?25h[?12;25h[49;1H[K[?1004l[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m
+[4]+  Stopped                 emacs ~/.profile
+jgordo39@remote01:~$ fg
+emacs ~/.profile
+[?1049h[22;0;0t[?12;25h[?1h=[?1004h[?2004h[49;1H[K[H[?25l[7mFile Edit Options Buffers Tools Sh-Script Help                                                [0m[39;49m[27m
+[A
+. ~umrigar/cs220/bin/student.profile[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m.profile    [0m[39;49m[30m[48;5;250m   All L1     (Shell-script[sh]) ------------------------------------[39;49m
+[A
+-*- mode: compilation; default-directory: "~/" -*-[K
+Comint started at Thu Aug 26 11:01:34[K
+[K
+/home/jgordo39/.profile[K
+[38;5;21m/bin/bash[39;49m: /home/jgordo39/.profile: Permission denied[K
+[K
+Comint exited abnormally with code 126 at Thu Aug 26 11:01:34[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[38;5;236m[47m-UUU:**--F1  [39;49m[1m[38;5;236m[47m*interpretation*[0m[39;49m[38;5;236m[47m   All L1     (Comint[39;49m[1m[91m[47m:exit [126][0m[39;49m[38;5;236m[47m [[39;49m[1m[91m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;208m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;28m[47m0[0m[39;49m[38;5;236m[47m] Shell-Compile) ---------[39;49m
+[A[2;38H[?12l[?25h[?12;25h[49;1H[?25l[38;5;20mRun script: [39;49m/home/jgordo39/.profile[1;33H[7mMinibuf Help  [0m[39;49m[27m[49;36H[?12l[?25h[?12;25h[C[?25l[C-c C-s is undefined][49;36H[?12l[?25h[?12;25h[K[2;38H[1;33H[?25l[7mSh-Script Help[0m[39;49m[27m[25;40H[30m[48;5;250m[Compiling] (Shell-script[sh]) [39;49m[27;34H2:31
+
+
+[K
+
+[K[48;6H[38;5;236m[47m----F1  [39;49m[1m[38;5;236m[47m*interpretation*[0m[39;49m[38;5;236m[47m   All L1     [Compiling] (Comint[39;49m[1m[38;5;208m[47m:run[0m[39;49m[38;5;236m[47m [[39;49m[1m[91m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;208m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;28m[47m0[0m[39;49m[38;5;236m[47m] Shell-Compile) [39;49m[2;38H[?12l[?25h[?12;25h[30;1H[?25l[38;5;21m/bin/bash[39;49m: /home/jgordo39/.profile: Permission denied[48;6H[38;5;236m[47m**--F1  [39;49m[1m[38;5;236m[47m*interpretation*[0m[39;49m[38;5;236m[47m   All L1     [Compiling] (Comint[39;49m[1m[38;5;208m[47m:exit[0m[39;49m[38;5;236m[47m [[39;49m[1m[91m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;208m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;28m[47m0[0m[39;49m[38;5;236m[47m] Shell-Compile) [39;49m[2;38H[?12l[?25h[?12;25h[49;1H[?25lComint exited abnormally with code 126[2;38H[?12l[?25h[?12;25h[25;40H[?25l[30m[48;5;250m(Shell-script[sh]) ------------[39;49m[32;1HComint exited abnormally with code 126 at Thu Aug 26 11:02:31[48;44H[38;5;236m[47m(Comint[39;49m[1m[91m[47m:exit [126][0m[39;49m[38;5;236m[47m [[39;49m[1m[91m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;208m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;28m[47m0[0m[39;49m[38;5;236m[47m] Shell-Compile) ------[39;49m[2;38H[?12l[?25h[?12;25h[49;1H[K[2;38H[49;1H[?25lC-x[2;38H[?12l[?25h[?12;25h[49;4H[?25l-[2;38H[?12l[?25h[?12;25h[49;4H[?25l C-s[2;38H[?12l[?25h[?12;25h[49;1H[?25l(No changes need to be saved)[2;38H[?12l[?25h[?12;25h[49;1H[K[2;38H[49;1H[K[?1004l[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mjgordo39@remote01:~$ fgemacs ~/.profilecd[Kemacs ~/.profile[K[K[K[K[K[K[Kbashrc
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[49d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[48d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[49;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[49;54H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[49;59H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[49;58H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[49;60H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[49;57H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[49;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[49;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[49;77H[?25ldone[H
+[?12l[?25h[?12;25h[49;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[49;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[49;75H[?25ldone[H
+[?12l[?25h[?12;25h[49;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[49;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[49;61H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[49d[?25l..[K[H[7mFile Edit Options Buffers Tools Help                                                          [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------[39;49m
+[A
+Loading /usr/share/emacs/site-lisp/elpa/haskell-mode-16.1/haskell-mode-autoloads.el (source).\
+[A[2d[?12l[?25h[?12;25h[49;3H[?25ldone[H
+[?12l[?25h[?12;25h[49d[K[48;10H[?25letc/emacs/site-start.d/50haskell-mode.el (source)...done[K[H
+[?12l[?25h[?12;25h[48;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[48;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[48;75H[?25ldone[H
+[?12l[?25h[?12;25h[48;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[48;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[48;64H[?25ldone[H
+[?12l[?25h[?12;25h[48;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[48;54H[?25ldone[H
+[?12l[?25h[?12;25h[48;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[48;65H[?25ldone[H
+[?12l[?25h[?12;25h[48;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[48;54H[?25ldone[H
+[?12l[?25h[?12;25h[48;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[48;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[?2004h[?1004h[49d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                         [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) ------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[?25l(New file)[K[H
+[?12l[?25h[?12;25h[49d[?25lSetting up indent for shell type bash[H
+[?12l[?25h[?12;25h[49d[?25lIndentation variables are now local.[K[H
+[?12l[?25h[?12;25h[49;13H[?25lsetup for shell type bash[H
+[?12l[?25h[?12;25h[49d[?25lIndentation setup for shell type bash[K[H[7mFile Edit Options Buffers Tools Sh-Script Help                                                [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m.bashrc     [0m[39;49m[30m[48;5;250m   All L1     (Shell-script[bash]) ----------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[K[2d[?25ls[48;6H[30m[48;5;250m**[39;49m[2;2H[?12l[?25h[?12;25h[K[49d[?25l[38;5;20mI-search: [39;49m[H
+[?12l[?25h[?12;25h[1;43H[?25l[7mIsearch Help[0m[39;49m[27m[48;59H[30m[48;5;250m Isearch) [39;49m[H
+[?12l[?25h[?12;25h[49d[K[2d[49d[?25lC-c[H
+[?12l[?25h[?12;25h[49;4H[?25l-[H
+[?12l[?25h[?12;25h[49;4H[?25l C-x[H
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mRun script: [39;49m/home/jgordo39/.bashrc[1;33H[7mMinibuf Help          [0m[39;49m[27m[48;59H[30m[48;5;250m) --------[39;49m[49;35H[?12l[?25h[?12;25h[?25l[38;5;20mSave file /home/jgordo39/.bashrc? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m	[?12l[?25h[?12;25h[?25l[38;5;20mSave file /home/jgordo39/.bashrc? (y, n, !, ., q, C-r, C-f, d or C-h) [39;49m[K[H[7mFile Edit Options Buffers Tools Sh-Script Help                                                [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:**--F1  [39;49m[1m[30m[48;5;250m.bashrc     [0m[39;49m[30m[48;5;250m   All L1     (Shell-script[bash]) ----------------------------------[39;49m
+[A[49;72H[?12l[?25h[?12;25h[?25lSave file /home/jgordo39/.bashrc? (y, n, !, ., q, C-r, C-f, d or C-h) y	[?12l[?25h[?12;25h[49;4H[?25ling file /home/jgordo39/.bashrc...[K[H
+[?12l[?25h[?12;25h[49d[?25lWrote /home/jgordo39/.bashrc[K[H
+[?12l[?25h[?12;25h[49d[K[2d[25d[?25l[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m.bashrc     [0m[39;49m[30m[48;5;250m   All L1     [Compiling] (Shell-script[bash]) ----------------------[39;49m
+-*- mode: compilation; default-directory: "~/" -*-
+Comint started at Thu Aug 26 11:03:54
+
+/home/jgordo39/.bashrc[48;1H[38;5;236m[47m-UUU:----F1  [39;49m[1m[38;5;236m[47m*interpretation*[0m[39;49m[38;5;236m[47m   All L1     [Compiling] (Comint[39;49m[1m[38;5;208m[47m:run[0m[39;49m[38;5;236m[47m [[39;49m[1m[91m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;208m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;28m[47m0[0m[39;49m[38;5;236m[47m] Shell-Compile) ----[39;49m
+[2d[?12l[?25h[?12;25h[49d[?25lComint exited abnormally with code 126[H
+[?12l[?25h[?12;25h[25;40H[?25l[30m[48;5;250m(Shell-script[bash]) ------------[39;49m
+
+
+
+
+[38;5;21m/bin/bash[39;49m: /home/jgordo39/.bashrc: Permission denied
+
+Comint exited abnormally with code 126 at Thu Aug 26 11:03:54[48;6H[38;5;236m[47m**--F1  [39;49m[1m[38;5;236m[47m*interpretation*[0m[39;49m[38;5;236m[47m   All L1     (Comint[39;49m[1m[91m[47m:exit [126][0m[39;49m[38;5;236m[47m [[39;49m[1m[91m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;208m[47m0[0m[39;49m[38;5;236m[47m [39;49m[1m[38;5;28m[47m0[0m[39;49m[38;5;236m[47m] Shell-Compile) -----[39;49m[H
+[?12l[?25h[?12;25h[49d[K[25;6H[?25l[30m[48;5;250m**--F1  [39;49m[1m[30m[48;5;250m.bashrc     [0m[39;49m[30m[48;5;250m   All L2[39;49m[H
+
+[?12l[?25h[?12;25h[25;34H[?25l[30m[48;5;250m1[39;49m[H
+[?12l[?25h[?12;25h[?25ly[?12l[?25h[?12;25h[K[49d[?25lMark set[H
+[?12l[?25h[?12;25h[49d[?25lKill ring is empty[H
+[?12l[?25h[?12;25h[49d[?25lMark set[K[H
+[?12l[?25h[?12;25h[49d[?25lKill ring is empty[H
+[?12l[?25h[?12;25h[49d[K[2d[49d[?25l[38;5;20mI-search: [39;49m[H
+[?12l[?25h[?12;25h[1;43H[?25l[7mIsearch Help[0m[39;49m[27m[25;59H[30m[48;5;250m Isearch) [39;49m[H
+[?12l[?25h[?12;25h[49d[K[2d[49d[?25lKill ring is empty[H
+[?12l[?25h[?12;25h[49d[K[2d[49d[?25lKill ring is empty[H
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mI-search: [39;49my[K[C[?12l[?25h[?12;25h[?25l[38;5;20mFailing I-search: [39;49m[48;5;217my[39;49m[H
+[?12l[?25h[?12;25h[49;20H[?25l[48;5;217ma[39;49m[H
+[?12l[?25h[?12;25h[49;21H[?25l[48;5;217ms[39;49m[H
+[?12l[?25h[?12;25h[49;22H[?25l[48;5;217md[39;49m[H
+[?12l[?25h[?12;25h[49;22H[K[H
+[49;21H[K[H
+[49;20H[K[H
+[49d[?25l[38;5;20mI-search: [39;49m[K[H
+[?12l[?25h[?12;25h[49d[?25l[38;5;20mSearch: [39;49m[K[1;33H[7mMinibuf Help          [0m[39;49m[27m[25;59H[30m[48;5;250m) --------[39;49m[49;9H[?12l[?25h[?12;25h[2d[1;33H[?25l[7mSh-Script Isearch Help[0m[39;49m[27m[25;59H[30m[48;5;250m Isearch) [39;49m[H
+[?12l[?25h[?12;25h[49;10H[H
+[49d[K[2d[1;43H[?25l[7mHelp        [0m[39;49m[27m[25;59H[30m[48;5;250m) --------[39;49m[H
+[?12l[?25h[?12;25h[49d[?25lAuto-saving...[H
+[?12l[?25h[?12;25h[49;15H[?25ldone[H
+[?12l[?25h[?12;25h[49d[K[2d[49d[?25lESC[H
+[?12l[?25h[?12;25h[49;4H[?25l-[H
+[?12l[?25h[?12;25h[49;4H[?25l y[H
+[?12l[?25h[?12;25h[49d[?25lPrevious command was not a yank[H
+[?12l[?25h[?12;25h[49d[K[2d[49d[?25lPrevious command was not a yank[H
+[?12l[?25h[?12;25h[49d[K[2d[49d[?25lMark set[H
+[?12l[?25h[?12;25h	[?25l[38;5;60m.[39;49m ~umrigar/cs220/bin/student.rc[25;34H[30m[48;5;250m2[39;49m[H
+
+[?12l[?25h[?12;25h[49d[K[25;34H[?25l[30m[48;5;250m1[39;49m[H
+[?12l[?25h[?12;25h	[1P[1P[1P[1P[1P[1P[1P[1P[49d[?25lBeginning of buffer[H
+[?12l[?25h[?12;25h[49d[K[2;2H[C[C[C[C[C		[C[C[C[C[C[C		[C[C[C[C[C[C		[C[C[C[C[C[C	[25;34H[?25l[30m[48;5;250m2[39;49m[H
+
+[?12l[?25h[?12;25h[25;34H[?25l[30m[48;5;250m3[39;49m[4;1H[?12l[?25h[?12;25h[49d[?25lEnd of buffer[4;1H[?12l[?25h[?12;25h[49d[K[25;34H[?25l[30m[48;5;250m2[39;49m[H
+
+[?12l[?25h[?12;25h[25;34H[?25l[30m[48;5;250m1[39;49m[2;32H[?12l[?25h[?12;25h[K[?25ls[?12l[?25h[?12;25h[K[?25lx[?12l[?25h[?12;25h[K[?25lc[?12l[?25h[?12;25h	[49;1H[?25lC-x[2;33H[?12l[?25h[?12;25h[49;4H[?25l-[2;33H[?12l[?25h[?12;25h[49;4H[?25l C-s[2;33H[?12l[?25h[?12;25h[49;1H[?25lSaving file /home/jgordo39/.bashrc...[2;33H[?12l[?25h[?12;25h[49;1H[?25lWrote /home/jgordo39/.bashrc[K[2;33H[?12l[?25h[?12;25h[25;6H[?25l[30m[48;5;250m--[39;49m[2;33H[?12l[?25h[?12;25h[49;1H[K[2;33H[?25lx[25;6H[30m[48;5;250m**[39;49m[2;34H[?12l[?25h[?12;25h[K	[49;1H[?25lC-x[2;33H[?12l[?25h[?12;25h[49;4H[?25l-[2;33H[?12l[?25h[?12;25h[49;4H[?25l C-s[2;33H[?12l[?25h[?12;25h[49;1H[?25lSaving file /home/jgordo39/.bashrc...[2;33H[?12l[?25h[?12;25h[49;1H[?25lWrote /home/jgordo39/.bashrc[K[2;33H[?12l[?25h[?12;25h[25;6H[?25l[30m[48;5;250m--[39;49m[2;33H[?12l[?25h[?12;25h[49;1H[K[2;33H[49;1H[?25lC-x[2;33H[?12l[?25h[?12;25h[49;4H[?25l-[2;33H[?12l[?25h[?12;25h[49;4H[?25l C-c[2;33H[?12l[?25h[?12;25h[49;1H[K[?1004l[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mjgordo39@remote01:~$ ss[K[Kls
+cs120a0  Desktop    Downloads  Music	 projects  temp       Videos
+cs220	 Documents  Maildir    Pictures  Public    Templates
+jgordo39@remote01:~$ ks[K[Kls -[K~/.ssh/id_rsda[K[Ka
+/home/jgordo39/.ssh/id_rsa
+jgordo39@remote01:~$ ls ~/.ssh/id_rsa[1P ~/.ssh/id_rsa[1P ~/.ssh/id_rsae ~/.ssh/id_rsam ~/.ssh/id_rsaa ~/.ssh/id_rsac ~/.ssh/id_rsas ~/.ssh/id_rsa
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[49d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[48d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[49;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[49;54H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[49;59H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[49;58H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[49;60H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[49;57H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[49;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[49;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[49;77H[?25ldone[H
+[?12l[?25h[?12;25h[49;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[49;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[49;75H[?25ldone[H
+[?12l[?25h[?12;25h[49;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[49;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[49;61H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[49d[?25l..[K[H[7mFile Edit Options Buffers Tools Help                                                          [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------[39;49m
+[A
+Loading /usr/share/emacs/site-lisp/elpa/haskell-mode-16.1/haskell-mode-autoloads.el (source).\
+[A[2d[?12l[?25h[?12;25h[49;3H[?25ldone[H
+[?12l[?25h[?12;25h[49d[K[48;10H[?25letc/emacs/site-start.d/50haskell-mode.el (source)...done[K[H
+[?12l[?25h[?12;25h[48;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[48;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[48;75H[?25ldone[H
+[?12l[?25h[?12;25h[48;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[48;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[48;64H[?25ldone[H
+[?12l[?25h[?12;25h[48;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[48;54H[?25ldone[H
+[?12l[?25h[?12;25h[48;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[48;65H[?25ldone[H
+[?12l[?25h[?12;25h[48;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[48;54H[?25ldone[H
+[?12l[?25h[?12;25h[48;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[48;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[?2004h[?1004h[49d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                         [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) ------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Help                                                          [0m[39;49m[27m
+[A
+-----BEGIN OPENSSH PRIVATE KEY-----[K
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn[K
+NhAAAAAwEAAQAAAYEA0NTlU6Mct+zzNRFHiIbNighJE9CLefdyEmbcR3fsdR6dwAHnht5F[K
+t0ezSC1WjJca26zbE4UTs4coNUhkGIMRfMyhrVHuxv3m4rGbd2t01RnJLnOYvqStHKBeQg[K
+fTqUqqXiqI6B7a2+Kilqx1FCvNJqrjBi0rlpZB0GQpWs4/MZBlIHrREbtWlXHi4DlhBbOC[K
+JHFb5X8mD1fvypOiEd4fdwxSXuUFugjXIiciVGoWQOqbdFNMcDAIPN5px8EKJ1QIbhS/Lz[K
+oHtGjmUdO8E8syskjkE/7fnAHiOMnjg8xubc7lJpzZQufweWbRBSMC+7f4vagRatyp2S32[K
+vehneQ1FtSdW4YhoxN6wUFqufQ3YIOBb3cxLaI4eDGIFq27OM7xe5AN/bFUCoJFM+8Gw/X[K
+EDoKqJqk7gC0+GGHdxMtA08heS7MKu7xF966MfDhSCf0V8vakbgE/H7S72i5jrQzPbWPwQ[K
+9Hgr4WB6N4sljCruvyfMF+8jnYc8UH6+RFRBErBVAAAFiA9tQsoPbULKAAAAB3NzaC1yc2[K
+EAAAGBANDU5VOjHLfs8zURR4iGzYoISRPQi3n3chJm3Ed37HUencAB54beRbdHs0gtVoyX[K
+Gtus2xOFE7OHKDVIZBiDEXzMoa1R7sb95uKxm3drdNUZyS5zmL6krRygXkIH06lKql4qiO[K
+ge2tviopasdRQrzSaq4wYtK5aWQdBkKVrOPzGQZSB60RG7VpVx4uA5YQWzgiRxW+V/Jg9X[K
+78qTohHeH3cMUl7lBboI1yInIlRqFkDqm3RTTHAwCDzeacfBCidUCG4Uvy86B7Ro5lHTvB[K
+PLMrJI5BP+35wB4jjJ44PMbm3O5Sac2ULn8Hlm0QUjAvu3+L2oEWrcqdkt9r3oZ3kNRbUn[K
+VuGIaMTesFBarn0N2CDgW93MS2iOHgxiBatuzjO8XuQDf2xVAqCRTPvBsP1xA6CqiapO4A[K
+tPhhh3cTLQNPIXkuzCru8RfeujHw4Ugn9FfL2pG4BPx+0u9ouY60Mz21j8EPR4K+FgejeL[K
+JYwq7r8nzBfvI52HPFB+vkRUQRKwVQAAAAMBAAEAAAGBAMmxpaBG/NjDeQ57FuzMzb2QTQ[K
+xfMiblj/4n7H72W6GupUuqSzSefxUKoiSG7X2x/5XF+H183U9arcHwngRyqrQva8PbS1RU[K
+K+gtA+uuFFQxqHY93XvbzvrEBOWfa5WpcKysRjhyfI088i22eQm3WFgNWmE/xUaW7w/XfX[K
+2fj7dOL+3T0RNgLbr/GNHZeVSpUHvkJI6eZGMTWpz8Q98f+qHfe7r9Va+dFDN/Oo/vOnkO[K
+XoBWZ5A/Q+WOJvpv/l+HrzGmVfju/oiNlf5YkFzjCSqVohehFZfTOsXdA58DOG0qru9t8s[K
+/DyfJ8mEqbHhsNyAGZywGBcg8AdS1nBeuUv0cSPIbCP7J2SOTpweu/Qwb+ClIho0WkYXMV[K
+2sK4tkvABkAYqIcenFbn3aHJCYwDlI2qHBf2hDjVjpGoB0mh4F/lyIUSPI1KpjdzgWw6m5[K
+q/CLUy30o5dmr/PRjjGOed1iGvHcBN0h77QsnzOvY5uaeqStSUHGdzFzx+W8ll51yTYQAA[K
+AMBUamZuskZYxi6ZcqkjZUF/d824EgZAWis3lb+AgAW/gGgnV2RE5XfHE/4+huNPk39o1u[K
+ITFRhdXwzBk1KLrCJ4yw6Fst+/BbXNM/X6qBDNu3nLEYX0IufOuxERFoiqwsLOHHYq7VRq[K
+WVeO3/29CyQxfFHJslIDIbJBDjDeLS/AOq0rqZzPn2DAaVqzlI4acOHJ4pXy8QSusn0Fj4[K
+F04Kdonksou5ihpTCEZv/dsq4psRlNW9rT/S4pHyLhZe5i9qYAAADBAPEApyaz4m/HEIgJ[K
+Bk6Ek6cbT1w4i8xYUTsu2VLpnHjpuRs8PaR4xBXLo5nWvQOpVjCOMsyZWr683x1xpdUuZQ[K
+5stOEv72QsN7n1mGKxUbcPhnv/Z11DJcsyTgLPy9sS98TbCSSrtMcPDxjxC50w3fSmZ6TF[K
+Q4ta4Zw2Q517Y0dikq33KA5TaQbycpgt1rDXG0pfCtUhgLiZ1CY+c6rbVP9EkWjBu9RjqC[K
+bQ6oespQjewWTzbezYGQiOxIpckH9P7QAAAMEA3dO8iQDfLQ18x2AD5iSvLKNtv69VfGaH[K
+ELRKjtGFNksJ4G4aaKMOc32PnOjE/M0+lFuJVx2Ys7HxpWvqgbA/+7E3CM60/23FX8fFX8[K
+ueRTeshT/6MsajywLXUfWVhWdm3tcFXVCMHZNbBwnJ0OhUCD4XKoV3DRMafy4rY3mbaWnG[K
+6X/DoIhK8U9TKi1aJ/S8EZ01W/vcneN+phRfwzB/hoD2IGlm3NM0UNLM/86dYKQKE6tlRc[K
+ivBYmkbjRehkUJAAAAEWpnb3JkbzM5QHJlbW90ZTA2AQ==[K
+-----END OPENSSH PRIVATE KEY-----[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mid_rsa      [0m[39;49m[30m[48;5;250m   All L1     (Fundamental) -----------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[K[2d[49d[K[?1004l[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mjgordo39@remote01:~$ emacs ~/.ssh/id_rsa.pub
+[?1049h[22;0;0t[?12;25h[?1h=[H[2J[49d[K[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m[?1049h[22;0;0t[?12;25h[?1h=[H[2J[48d[?25l[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[?25lLoading /etc/emacs/site-start.d/00debian.el (source)...done[K[H
+[?12l[?25h[?12;25h[49;33H[?25l50a2ps.el (source)...[K[H
+[?12l[?25h[?12;25h[49;54H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lsymptote.el (source)...[H
+[?12l[?25h[?12;25h[49;59H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lutoconf.el (source)...[K[H
+[?12l[?25h[?12;25h[49;58H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25lcmake-data.el (source)...[K[H
+[?12l[?25h[?12;25h[49;60H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25ldevhelp.el (source)...[K[H
+[?12l[?25h[?12;25h[49;57H[?25ldone[H
+[?12l[?25h[?12;25h[49;36H[?25lictionaries-common.el (source)...[H
+[?12l[?25h[?12;25h[49;9H[?25ldebian-ispell...[K[H
+[?12l[?25h[?12;25h[49;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-default.el (source)...[H
+[?12l[?25h[?12;25h[49;77H[?25ldone[H
+[?12l[?25h[?12;25h[49;9H[?25ldebian-ispell...done[K[H
+[?12l[?25h[?12;25h[49;9H[?25l/var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...[H
+[?12l[?25h[?12;25h[49;75H[?25ldone[H
+[?12l[?25h[?12;25h[49;10H[?25letc/emacs/site-start.d/50dictionaries-common[6P[H
+[?12l[?25h[?12;25h[49;35H[?25lerlang-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[49;61H[?25ldone[H
+[?12l[?25h[?12;25h[49;35H[?25lhaskell-mode.el (source)...[K[H
+[?12l[?25h[?12;25h[49d[?25l..[K[H[7mFile Edit Options Buffers Tools Help                                                          [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[47m-UUU:----F1  [39;49m[1m[30m[47m*scratch*   [0m[39;49m[30m[47m   All L1     (Fundamental) -----------------------------------------[39;49m
+[A
+Loading /usr/share/emacs/site-lisp/elpa/haskell-mode-16.1/haskell-mode-autoloads.el (source).\
+[A[2d[?12l[?25h[?12;25h[49;3H[?25ldone[H
+[?12l[?25h[?12;25h[49d[K[48;10H[?25letc/emacs/site-start.d/50haskell-mode.el (source)...done[K[H
+[?12l[?25h[?12;25h[48;35H[?25llatex-cjk-common.el (source)...[H
+[?12l[?25h[?12;25h[48;10H[?25lusr/share/emacs/site-lisp/latex-cjk-commo[9@n/cjk-enc[H
+[?12l[?25h[?12;25h[48;75H[?25ldone[H
+[?12l[?25h[?12;25h[48;10H[?25letc/emacs/site-start.d/50latex-cjk-common[9P[H
+[?12l[?25h[?12;25h[48;45H[?25lthai.el (source)...[K[H
+[?12l[?25h[?12;25h[48;64H[?25ldone[H
+[?12l[?25h[?12;25h[48;35H[?25lpsvn.el (source)...[K[H
+[?12l[?25h[?12;25h[48;54H[?25ldone[H
+[?12l[?25h[?12;25h[48;36H[?25lython-docutils.el (source)...[H
+[?12l[?25h[?12;25h[48;65H[?25ldone[H
+[?12l[?25h[?12;25h[48;35H[?25ltcsh.el (source)...[K[H
+[?12l[?25h[?12;25h[48;54H[?25ldone[H
+[?12l[?25h[?12;25h[48;36H[?25lexlive-lang-english.el (source)...[H
+[?12l[?25h[?12;25h[48;70H[?25ldone[H
+[?12l[?25h[?12;25h[>0c[?2004h[?1004h[49d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Lisp-Interaction Help                                         [0m[39;49m[27m
+[A
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UUU:----F1  [39;49m[1m[30m[48;5;250m*scratch*   [0m[39;49m[30m[48;5;250m   All L1     (Lisp Interaction ElDoc) ------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[?25lFor information about GNU Emacs and the GNU system, type C-h C-a.[K[H[7mFile Edit Options Buffers Tools Help                                                          [0m[39;49m[27m
+[A
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDQ1OVToxy37PM1EUeIhs2KCEkT0It593ISZtxHd+x1Hp3AAeeG3kW3R\
+[A
+7NILVaMlxrbrNsThROzhyg1SGQYgxF8zKGtUe7G/ebisZt3a3TVGckuc5i+pK0coF5CB9OpSqpeKojoHtrb4qKWrHUUK8\
+[A
+0mquMGLSuWlkHQZClazj8xkGUgetERu1aVceLgOWEFs4IkcVvlfyYPV+/Kk6IR3h93DFJe5QW6CNciJyJUahZA6pt0U0x\
+[A
+wMAg83mnHwQonVAhuFL8vOge0aOZR07wTyzKySOQT/t+cAeI4yeODzG5tzuUmnNlC5/B5ZtEFIwL7t/i9qBFq3KnZLfa9\
+[A
+6Gd5DUW1J1bhiGjE3rBQWq59Ddgg4FvdzEtojh4MYgWrbs4zvF7kA39sVQKgkUz7wbD9cQOgqomqTuALT4YYd3Ey0DTyF\
+[A
+5Lswq7vEX3rox8OFIJ/RXy9qRuAT8ftLvaLmOtDM9tY/BD0eCvhYHo3iyWMKu6/J8wX7yOdhzxQfr5EVEESsFU= jgord\
+[A
+o39@remote06[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mid_rsa.pub  [0m[39;49m[30m[48;5;250m   All L1     (Fundamental) -----------------------------------------[39;49m
+[A[2d[?12l[?25h[?12;25h[49d[K[2d
+
+
+
+
+
+[48;34H[?25l[30m[48;5;250m2[39;49m[9;1H[?12l[?25h[?12;25h[49d[?25lEnd of buffer[9;1H[?12l[?25h[?12;25h[49d[K[9d[H[2J[49d[K[H[?25l[7mFile Edit Options Buffers Tools Help                                                                                                                                                          [0m[39;49m[27m
+[A
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDQ1OVToxy37PM1EUeIhs2KCEkT0It593ISZtxHd+x1Hp3AAeeG3kW3R7NILVaMlxrbrNsThROzhyg1SGQYgxF8zKGtUe7G/ebisZt3a3TVGckuc5i+pK0coF5CB9OpSqpeKojoHtrb4qKWrHUUK80mq\
+[A
+uMGLSuWlkHQZClazj8xkGUgetERu1aVceLgOWEFs4IkcVvlfyYPV+/Kk6IR3h93DFJe5QW6CNciJyJUahZA6pt0U0xwMAg83mnHwQonVAhuFL8vOge0aOZR07wTyzKySOQT/t+cAeI4yeODzG5tzuUmnNlC5/B5ZtEFIwL7t/i9qBFq3KnZLfa96Gd5DU\
+[A
+W1J1bhiGjE3rBQWq59Ddgg4FvdzEtojh4MYgWrbs4zvF7kA39sVQKgkUz7wbD9cQOgqomqTuALT4YYd3Ey0DTyF5Lswq7vEX3rox8OFIJ/RXy9qRuAT8ftLvaLmOtDM9tY/BD0eCvhYHo3iyWMKu6/J8wX7yOdhzxQfr5EVEESsFU= jgordo39@remot\
+[A
+e06[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mid_rsa.pub  [0m[39;49m[30m[48;5;250m   All L2     (Fundamental) -----------------------------------------------------------------------------------------------------------------------------------------[39;49m
+[A[6d[?12l[?25h[?12;25h[H[2J[24d[K[H[?25l[7mFile Edit Options Buffers Tools Help                                            [0m[39;49m[27m
+[A
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDQ1OVToxy37PM1EUeIhs2KCEkT0It593ISZtxHd+x\
+[A
+1Hp3AAeeG3kW3R7NILVaMlxrbrNsThROzhyg1SGQYgxF8zKGtUe7G/ebisZt3a3TVGckuc5i+pK0coF\
+[A
+5CB9OpSqpeKojoHtrb4qKWrHUUK80mquMGLSuWlkHQZClazj8xkGUgetERu1aVceLgOWEFs4IkcVvlf\
+[A
+yYPV+/Kk6IR3h93DFJe5QW6CNciJyJUahZA6pt0U0xwMAg83mnHwQonVAhuFL8vOge0aOZR07wTyzKy\
+[A
+SOQT/t+cAeI4yeODzG5tzuUmnNlC5/B5ZtEFIwL7t/i9qBFq3KnZLfa96Gd5DUW1J1bhiGjE3rBQWq5\
+[A
+9Ddgg4FvdzEtojh4MYgWrbs4zvF7kA39sVQKgkUz7wbD9cQOgqomqTuALT4YYd3Ey0DTyF5Lswq7vEX\
+[A
+3rox8OFIJ/RXy9qRuAT8ftLvaLmOtDM9tY/BD0eCvhYHo3iyWMKu6/J8wX7yOdhzxQfr5EVEESsFU= \
+[A
+jgordo39@remote06[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mid_rsa.pub  [0m[39;49m[30m[48;5;250m   All L2     (Fundamental) ---------------------------[39;49m
+[A[10d[?12l[?25h[?12;25h[H[2J[49d[K[H[?25l[7mFile Edit Options Buffers Tools Help                                                          [0m[39;49m[27m
+[A
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDQ1OVToxy37PM1EUeIhs2KCEkT0It593ISZtxHd+x1Hp3AAeeG3kW3R\
+[A
+7NILVaMlxrbrNsThROzhyg1SGQYgxF8zKGtUe7G/ebisZt3a3TVGckuc5i+pK0coF5CB9OpSqpeKojoHtrb4qKWrHUUK8\
+[A
+0mquMGLSuWlkHQZClazj8xkGUgetERu1aVceLgOWEFs4IkcVvlfyYPV+/Kk6IR3h93DFJe5QW6CNciJyJUahZA6pt0U0x\
+[A
+wMAg83mnHwQonVAhuFL8vOge0aOZR07wTyzKySOQT/t+cAeI4yeODzG5tzuUmnNlC5/B5ZtEFIwL7t/i9qBFq3KnZLfa9\
+[A
+6Gd5DUW1J1bhiGjE3rBQWq59Ddgg4FvdzEtojh4MYgWrbs4zvF7kA39sVQKgkUz7wbD9cQOgqomqTuALT4YYd3Ey0DTyF\
+[A
+5Lswq7vEX3rox8OFIJ/RXy9qRuAT8ftLvaLmOtDM9tY/BD0eCvhYHo3iyWMKu6/J8wX7yOdhzxQfr5EVEESsFU= jgord\
+[A
+o39@remote06[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mid_rsa.pub  [0m[39;49m[30m[48;5;250m   All L2     (Fundamental) -----------------------------------------[39;49m
+[A[9d[?12l[?25h[?12;25h[49d[K[?1004l[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49mjgordo39@remote01:~$ emacs ~/.ssh/id_rsa.pub[1P ~/.ssh/id_rsa.pub[1P ~/.ssh/id_rsa.pub[1P ~/.ssh/id_rsa.pub[1P ~/.ssh/id_rsa.pub[1P ~/.ssh/id_rsa.pubc ~/.ssh/id_rsa.puba ~/.ssh/id_rsa.pubs ~/.ssh/id_rsa.pub[2Pemacs ~/.ssh/id_rsat[4Pls ~/.ssh/id_rsaemacs ~/.ssh/id_rsatcas ~/.ssh/id_rsa.pub[C[1P ~/.ssh/id_rsa.pubt ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDQ1OVTox
