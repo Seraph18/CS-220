@@ -563,4 +563,117 @@ main (argc=2, argv=0x7fffffffe718) at hello.c:44
 (gdb) n[Kp out
 No symbol "out" in current context.
 (gdb) p [K[Kup
-Initial frame selected; you cannot go 
+Initial frame selected; you cannot go up.
+(gdb) down
+Bottom (innermost) frame selected; you cannot go down.
+(gdb) p[Kl
+39	  else {
+40	    for (int i = 1; i < argc; i++) {
+41	      const char *name = argv[i];
+42	      char friendlyName[strlen(name)];
+43	      upcase_words(name, friendlyName);
+44	      say_hello(friendlyName);
+45	    }
+46	  }
+47	  return 0;
+48	}
+(gdb) p name
+$8 = 0x7fffffffea4c "lisa simpson"
+(gdb) p friendlyName
+$9 = "Lisa SimpsoU"
+(gdb) c
+Continuing.
+Hello Lisa SimpsoUUU
+[Inferior 1 (process 1395066) exited normally]
+(gdb) q
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ gdb helloemacs hello.c./hello 'bart simpson', 'lisa simpson'[25Pemacs hello.c
+
+fg
+^X^Z
+[1]+  Stopped                 emacs hello.c
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ make
+cc -g -Wall -std=c18    hello.c   -o hello
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ ./hello
+usage: ./hello NAME...
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ ./hello "lisa si[Kimpson;[K'
+> 
+> ^C
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ ./hello "lisa simpson'
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 
+> 
+> ^C
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ ./hello "lisa simpson
+
+^C
+
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C^C
+
+
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ la
+bash: la: command not found
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ ls
+hello  hello.c	hello.c~  Makefile  README
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ ./hello 'lisa siu[Kmpson;[K'
+Hello Lisa Simpson
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ ./hello 'lisa simpson'
+Hello Lisa Simpson
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ ./hello 'lisa simpson'[C[1@'[1@b[1@a[1@r[1@t[1@ [1@s[1@i[1@m[1@p[1@s[1@o[1@n[C[1@'[1@ 
+Hello Bart Simpson
+Hello Lisa Simpson
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ ./hello 'bart simpson' 'lisa simpson'
+Hello Bart Simpson
+Hello Lisa Simpson
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ ./hello 'bart simpson' 'lisa simpson'[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[15@bart simpson' '[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[1@l[1@i[1@s[1@t[1@a[1P[1P[1P[1P[1P[1P[1@ [C[1@'[1@l[1@i[1@s[1@a[1@ [1@s[1@i[1@m[1@p[1@s[1@o[1@n[1@i[1@a[1@n[1@ [1P[C[1@'[1@ 
+Hello Lisa Simpsonian
+Hello Bart Simpson
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ [Kjgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ [Kjgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises/2-hello-upcase-args$ c d ..
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2/exercises$ cd ..
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2$ git comm[K[K[K[K[K[K[K[Kgit add .
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2$ gt [K[Kit commit -m 'Started lba[K[Kab 2'
+[lab2 eb1c18c] Started lab 2
+ Committer: Joshua Gordon <jgordo39@cs.binghamton.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 11 files changed, 721 insertions(+)
+ create mode 100644 submit/lab2/exercises/1-hello-args/.gitignore
+ create mode 100644 submit/lab2/exercises/1-hello-args/Makefile
+ create mode 100644 submit/lab2/exercises/1-hello-args/README
+ create mode 100644 submit/lab2/exercises/1-hello-args/hello.c
+ create mode 100644 submit/lab2/exercises/1-hello-args/hello.c~
+ create mode 100644 submit/lab2/exercises/2-hello-upcase-args/.gitignore
+ create mode 100644 submit/lab2/exercises/2-hello-upcase-args/Makefile
+ create mode 100644 submit/lab2/exercises/2-hello-upcase-args/README
+ create mode 100644 submit/lab2/exercises/2-hello-upcase-args/hello.c
+ create mode 100644 submit/lab2/exercises/2-hello-upcase-args/hello.c~
+ create mode 100644 submit/lab2/lab2.LOG
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2$ git push -u origin lab2
+Enumerating objects: 18, done.
+Counting objects:   5% (1/18)Counting objects:  11% (2/18)Counting objects:  16% (3/18)Counting objects:  22% (4/18)Counting objects:  27% (5/18)Counting objects:  33% (6/18)Counting objects:  38% (7/18)Counting objects:  44% (8/18)Counting objects:  50% (9/18)Counting objects:  55% (10/18)Counting objects:  61% (11/18)Counting objects:  66% (12/18)Counting objects:  72% (13/18)Counting objects:  77% (14/18)Counting objects:  83% (15/18)Counting objects:  88% (16/18)Counting objects:  94% (17/18)Counting objects: 100% (18/18)Counting objects: 100% (18/18), done.
+Delta compression using up to 8 threads
+Compressing objects:   7% (1/14)Compressing objects:  14% (2/14)Compressing objects:  21% (3/14)Compressing objects:  28% (4/14)Compressing objects:  35% (5/14)Compressing objects:  42% (6/14)Compressing objects:  50% (7/14)Compressing objects:  57% (8/14)Compressing objects:  64% (9/14)Compressing objects:  71% (10/14)Compressing objects:  78% (11/14)Compressing objects:  85% (12/14)Compressing objects:  92% (13/14)Compressing objects: 100% (14/14)Compressing objects: 100% (14/14), done.
+Writing objects:   6% (1/16)Writing objects:  12% (2/16)Writing objects:  18% (3/16)Writing objects:  25% (4/16)Writing objects:  31% (5/16)Writing objects:  37% (6/16)Writing objects:  43% (7/16)Writing objects:  50% (8/16)Writing objects:  56% (9/16)Writing objects:  68% (11/16)Writing objects:  75% (12/16)Writing objects:  81% (13/16)Writing objects:  93% (15/16)Writing objects: 100% (16/16)Writing objects: 100% (16/16), 5.02 KiB | 857.00 KiB/s, done.
+Total 16 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/3)[Kremote: Resolving deltas:  33% (1/3)[Kremote: Resolving deltas:  66% (2/3)[Kremote: Resolving deltas: 100% (3/3)[Kremote: Resolving deltas: 100% (3/3), completed with 1 local object.[K
+remote: 
+remote: Create a pull request for 'lab2' on GitHub by visiting:[K
+remote:      https://github.com/Seraph18/i220a/pull/new/lab2[K
+remote: 
+To github.com:Seraph18/i220a.git
+ * [new branch]      lab2 -> lab2
+Branch 'lab2' set up to track remote branch 'lab2' from 'origin'.
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2$ ls
+exercises  lab2.LOG
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2$ exit
+There are stopped jobs.
+jgordo39@g7-28:/import/linux/home1/jgordo39/i220a/submit/lab2$ cd ..
+jgordo39@g7-28:/import/linux/home1/jgor
