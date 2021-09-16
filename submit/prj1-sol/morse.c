@@ -6,74 +6,79 @@
 #include <stddef.h>
 #include <string.h>
 
-typedef struct {
+typedef struct
+{
   char c;
   const char *code;
 } TextMorse;
 
 //<https://en.wikipedia.org/wiki/Morse_code#/media/File:International_Morse_Code.svg>
 static const TextMorse charCodes[] = {
-  { 'A', ".-" },
-  { 'B', "-..." },
-  { 'C', "_._." },
-  { 'D', "-.." },
-  { 'E', "." },
-  { 'F', "..-." },
-  { 'G', "--." },
-  { 'H', "...." },
-  { 'I', ".." },
-  { 'J', ".---" },
-  { 'K', "-.-" },
-  { 'L', ".-.." },
-  { 'M', "--" },
-  { 'N', "-." },
-  { 'O', "---" },
-  { 'P', ".--." },
-  { 'Q', "--.-" },
-  { 'R', ".-." },
-  { 'S', "..." },
-  { 'T', "-" },
-  { 'U', "..-" },
-  { 'V', "...-" },
-  { 'W', ".--" },
-  { 'X', "-..-" },
-  { 'Y', "-.--" },
-  { 'Z', "--.." },
+    {'A', ".-"},
+    {'B', "-..."},
+    {'C', "_._."},
+    {'D', "-.."},
+    {'E', "."},
+    {'F', "..-."},
+    {'G', "--."},
+    {'H', "...."},
+    {'I', ".."},
+    {'J', ".---"},
+    {'K', "-.-"},
+    {'L', ".-.."},
+    {'M', "--"},
+    {'N', "-."},
+    {'O', "---"},
+    {'P', ".--."},
+    {'Q', "--.-"},
+    {'R', ".-."},
+    {'S', "..."},
+    {'T', "-"},
+    {'U', "..-"},
+    {'V', "...-"},
+    {'W', ".--"},
+    {'X', "-..-"},
+    {'Y', "-.--"},
+    {'Z', "--.."},
 
-  { '1', ".----" },
-  { '2', "..---" },
-  { '3', "...--" },
-  { '4', "....-" },
-  { '5', "....." },
-  { '6', "-...." },
-  { '7', "--..." },
-  { '8', "---.." },
-  { '9', "----." },
-  { '0', "-----" },
+    {'1', ".----"},
+    {'2', "..---"},
+    {'3', "...--"},
+    {'4', "....-"},
+    {'5', "....."},
+    {'6', "-...."},
+    {'7', "--..."},
+    {'8', "---.."},
+    {'9', "----."},
+    {'0', "-----"},
 
-  { '\0', ".-.-." }, //AR Prosign indicating End-of-message
+    {'\0', ".-.-."}, //AR Prosign indicating End-of-message
                      //<https://en.wikipedia.org/wiki/Prosigns_for_Morse_code>
 };
-
 
 /** Return NUL-terminated code string for char c. Returns NULL if
  *  there is no code for c.
  */
 static const char *
-charToCode(Byte c) {
-  for (int i = 0; i < sizeof(charCodes)/sizeof(charCodes[0]); i++) {
-    if (charCodes[i].c == c) return charCodes[i].code;
+charToCode(Byte c)
+{
+  for (int i = 0; i < sizeof(charCodes) / sizeof(charCodes[0]); i++)
+  {
+    if (charCodes[i].c == c)
+      return charCodes[i].code;
   }
   return NULL;
 }
 
-
 /** Return char for code. Returns < 0 if code is invalid.
  */
 static int
-codeToChar(const char *code) {
-  for (int i = 0; i < sizeof(charCodes)/sizeof(charCodes[0]); i++) {
-    if (strcmp(charCodes[i].code, code) == 0) return charCodes[i].c;
+codeToChar(const char *code)
+{
+  for (int i = 0; i < sizeof(charCodes) / sizeof(charCodes[0]); i++)
+  {
+    if (strcmp(charCodes[i].code, code) == 0)
+      return charCodes[i].c;
   }
   return -1;
 }
@@ -109,7 +114,6 @@ codeToChar(const char *code) {
  *
  */
 
-
 /** Return mask for a Byte with bit at bitIndex set to 1, all other
  *  bits set to 0.  Note that bitIndex == 0 represents the MSB,
  *  bitIndex == 1 represents the next significant bit and so on.
@@ -117,32 +121,61 @@ codeToChar(const char *code) {
 static inline unsigned
 byteBitMask(unsigned bitIndex)
 {
-  //TODO
-  return 0;
+  unsigned b = 1;
+  b <<= bitIndex;
+  return b;
 }
 
 /** Given a power-of-2 powerOf2, return log2(powerOf2) */
 static inline unsigned
 getLog2PowerOf2(unsigned powerOf2)
 {
-  //TODO
-  return 0;
+  unsigned temp = 1;
+  int count = 0;
+  while (temp != powerOf2)
+  {
+    temp <<= 1;
+    ++count;
+  }
+  return count;
 }
 
 /** Given a bitOffset return the bitIndex part of the bitOffset. */
 static inline unsigned
 getBitIndex(unsigned bitOffset)
 {
-  //TODO
-  return 0;
+  unsigned mask = getLog2PowerOf2(bitOffset);
+
+  int count = 0;
+  while (mask > 9)
+  {
+    unsigned temp = mask % 10;
+    if (temp == 1)
+    {
+      return count;
+    }
+    else
+    {
+      mask = mask / 10;
+      ++count;
+    }
+  }
+
+  if (mask == 1)
+  {
+    return count + 1;
+  }
+  else
+  {
+    return -1;
+  }
 }
 
 /** Given a bitOffset return the byte offset part of the bitOffset */
 static inline unsigned
 getOffset(unsigned bitOffset)
 {
-  //TODO
-  return 0;
+  unsigned mask = getLog2PowerOf2(bitOffset);
 }
 
 /** Return bit at offset bitOffset in array[]; i.e., return
@@ -173,7 +206,6 @@ setBitsAtOffset(Byte array[], unsigned bitOffset, unsigned bit, unsigned count)
   return 0;
 }
 
-
 /** Convert text[nText] into a binary encoding of morse code in
  *  morse[].  It is assumed that array morse[] is initially all zero
  *  and is large enough to represent the morse code for all characters
@@ -184,8 +216,7 @@ setBitsAtOffset(Byte array[], unsigned bitOffset, unsigned bit, unsigned count)
  *
  *  Returns count of number of bytes used within morse[].
  */
-int
-textToMorse(const Byte text[], unsigned nText, Byte morse[])
+int textToMorse(const Byte text[], unsigned nText, Byte morse[])
 {
   //TODO
   return 0;
@@ -201,7 +232,6 @@ runLength(const Byte bytes[], unsigned nBytes, unsigned bitOffset)
   return 0;
 }
 
-
 /** Convert AR-prosign terminated binary Morse encoding in
  *  morse[nMorse] into text in text[].  It is assumed that array
  *  text[] is large enough to represent the decoding of the code in
@@ -210,8 +240,7 @@ runLength(const Byte bytes[], unsigned nBytes, unsigned bitOffset)
  *
  *  Returns count of number of bytes used within text[], < 0 on error.
  */
-int
-morseToText(const Byte morse[], unsigned nMorse, Byte text[])
+int morseToText(const Byte morse[], unsigned nMorse, Byte text[])
 {
   //TODO
   return 0;
