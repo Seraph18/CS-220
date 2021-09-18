@@ -176,6 +176,7 @@ static inline unsigned
 getOffset(unsigned bitOffset)
 {
   unsigned mask = getLog2PowerOf2(bitOffset);
+  return bitOffset && mask;
 }
 
 /** Return bit at offset bitOffset in array[]; i.e., return
@@ -185,15 +186,20 @@ static inline int
 getBitAtOffset(const Byte array[], unsigned bitOffset)
 {
   //TODO
-  return 0;
+  unsigned byteOffset = getOffset(bitOffset); 
+  Byte currentByte = array[byteOffset];
+  int index = bitOffset % 8;
+  return currentByte[index];
 }
 
 /** Set bit selected by bitOffset in array to bit. */
 static inline void
 setBitAtOffset(Byte array[], unsigned bitOffset, unsigned bit)
 {
-  //TODO
-  return;
+  unsigned byteOffset = getOffset(bitOffset); 
+  Byte *currentByte = array[byteOffset];
+  int index = bitOffset % 8;
+  currentByte[index] = bit;
 }
 
 /** Set count bits in array[] starting at bitOffset to bit.  Return
