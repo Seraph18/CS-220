@@ -1,0 +1,312 @@
+Script started on 2021-09-23 11:02:20-04:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"]
+jgordo39@g7-12:~/i220a/submit/lab3$ cd exercises
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls
+4  c-stdin-stdout
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ mkf[K[K[Kcd 4
+jgordo39@g7-12:~/i220a/submit/lab3/exercises/4$ ls
+-  Makefile  sum-ints.c  test1.in
+jgordo39@g7-12:~/i220a/submit/lab3/exercises/4$ cd ..
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ git pull
+[33mhint: Pulling without specifying how to reconcile divergent branches is[m
+[33mhint: discouraged. You can squelch this message by running one of the following[m
+[33mhint: commands sometime before your next pull:[m
+[33mhint: [m
+[33mhint:   git config pull.rebase false  # merge (the default strategy)[m
+[33mhint:   git config pull.rebase true   # rebase[m
+[33mhint:   git config pull.ff only       # fast-forward only[m
+[33mhint: [m
+[33mhint: You can replace "git config" with "git config --global" to set a default[m
+[33mhint: preference for all repositories. You can also pass --rebase, --no-rebase,[m
+[33mhint: or --ff-only on the command line to override the configured default per[m
+[33mhint: invocation.[m
+Already up to date.
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ git branch -l
+[?1h=  lab0[m[m
+  lab1[m[m
+  lab2[m[m
+* [32mlab3[m[m
+  main[m[m
+  prj1[m[m
+[K[?1l>jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls
+4  c-stdin-stdout
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ mkfir[K[K[Kdir dir
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ touch t1.c T1.s v.c v1.s x.c fi[K[Kdir/T 2.s1 dir/t3
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls
+4  c-stdin-stdout  dir	t1.c  T1.s  v1.s  v.c  x.c
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls tl[K[K[K -tl
+total 0
+drwxr-x--- 2 jgordo39 jgordo39  39 Sep 23 11:05 dir
+-rw-r----- 1 jgordo39 jgordo39   0 Sep 23 11:05 x.c
+-rw-r----- 1 jgordo39 jgordo39   0 Sep 23 11:05 v1.s
+-rw-r----- 1 jgordo39 jgordo39   0 Sep 23 11:05 v.c
+-rw-r----- 1 jgordo39 jgordo39   0 Sep 23 11:05 t1.c
+-rw-r----- 1 jgordo39 jgordo39   0 Sep 23 11:05 T1.s
+drwxr-x--- 2 jgordo39 jgordo39 102 Sep 23 10:57 c-stdin-stdout
+lrwxrwxrwx 1 jgordo39 jgordo39  14 Sep 23 10:57 4 -> c-stdin-stdout
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ lsl[K
+4  c-stdin-stdout  dir	t1.c  T1.s  v1.s  v.c  x.c
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls /fir[K[K[Kdir-/dirt/dirl/dir /dir
+ls: cannot access '/dir': No such file or directory
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls -tl /dir[1Pdir
+total 0
+-rw-r----- 1 jgordo39 jgordo39 0 Sep 23 11:05 T2.s1
+-rw-r----- 1 jgordo39 jgordo39 0 Sep 23 11:05 t3
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls -tl dir[1P
+total 0
+-rw-r----- 1 jgordo39 jgordo39 0 Sep 23 11:05 T2.s1
+-rw-r----- 1 jgordo39 jgordo39 0 Sep 23 11:05 t3
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ [Kjgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls dir
+T2.s1  t3
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls -l dir
+total 0
+-rw-r----- 1 jgordo39 jgordo39 0 Sep 23 11:05 T2.s1
+-rw-r----- 1 jgordo39 jgordo39 0 Sep 23 11:05 t3
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls -tl dir
+total 0
+-rw-r----- 1 jgordo39 jgordo39 0 Sep 23 11:05 T2.s1
+-rw-r----- 1 jgordo39 jgordo39 0 Sep 23 11:05 t3
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls [K[K[Kcd dir
+jgordo39@g7-12:~/i220a/submit/lab3/exercises/dir$ ls -tl[K
+T2.s1  t3
+jgordo39@g7-12:~/i220a/submit/lab3/exercises/dir$ cd.. [K
+bash: cd..: command not found
+jgordo39@g7-12:~/i220a/submit/lab3/exercises/dir$ cd ..
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls
+4  c-stdin-stdout  dir	t1.c  T1.s  v1.s  v.c  x.c
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ touch /dir[K[K[K[Kdir/t2.c
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls
+4  c-stdin-stdout  dir	t1.c  T1.s  v1.s  v.c  x.c
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls dr[Kir
+t2.c  T2.s1  t3
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls -l dir
+total 0
+-rw-r----- 1 jgordo39 jgordo39 0 Sep 23 11:11 t2.c
+-rw-r----- 1 jgordo39 jgordo39 0 Sep 23 11:05 T2.s1
+-rw-r----- 1 jgordo39 jgordo39 0 Sep 23 11:05 t3
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls
+4  c-stdin-stdout  dir	t1.c  T1.s  v1.s  v.c  x.c
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls -t dir
+t2.c  T2.s1  t3
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls -t dirl dir
+total 0
+-rw-r----- 1 jgordo39 jgordo39 0 Sep 23 11:11 t2.c
+-rw-r----- 1 jgordo39 jgordo39 0 Sep 23 11:05 T2.s1
+-rw-r----- 1 jgordo39 jgordo39 0 Sep 23 11:05 t3
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls -tl dir[1P dir
+t2.c  T2.s1  t3
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls
+4  c-stdin-stdout  dir	t1.c  T1.s  v1.s  v.c  x.c
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls T* ls dir/*[K[K[K[K[K[K[K[K[K[K*
+T1.s
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls dir/*.?
+dir/t2.c
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls [t-v]*.c
+t1.c  v.c
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls
+4  c-stdin-stdout  dir	t1.c  T1.s  v1.s  v.c  x.c
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls bin/?[p-s]
+ls: cannot access 'bin/?[p-s]': No such file or directory
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls bin/?[p-s].*
+ls: cannot access 'bin/?[p-s].*': No such file or directory
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls
+4  c-stdin-stdout  dir	t1.c  T1.s  v1.s  v.c  x.c
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ cd 4
+jgordo39@g7-12:~/i220a/submit/lab3/exercises/4$ ls
+-  Makefile  sum-ints.c  test1.in
+jgordo39@g7-12:~/i220a/submit/lab3/exercises/4$ cd ..
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls ~/cs220/bin/?[]p]-]s][C*
+ls: cannot access '/home/jgordo39/cs220/bin/?[p-s]*': No such file or directory
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ cd ..
+jgordo39@g7-12:~/i220a/submit/lab3$ ls
+exercises  lab3.LOG
+jgordo39@g7-12:~/i220a/submit/lab3$ cd ..
+jgordo39@g7-12:~/i220a/submit$ ls
+lab0  lab1  lab2  lab3	prj1-sol
+jgordo39@g7-12:~/i220a/submit$ cd
+jgordo39@g7-12:~$ ls 22[K[K[K[K[Kcd 220
+bash: cd: 220: No such file or directory
+jgordo39@g7-12:~$ cd 220c220d220[1P220s220
+jgordo39@g7-12:~/cs220$ ls
+announce.html  assets  docs	  hw	 index.html  labs  projects   slides
+announce.umt   bin     exercises  index  index.umt   misc  README.md  umt.make
+jgordo39@g7-12:~/cs220$ cd bin
+jgordo39@g7-12:~/cs220/bin$ ls
+changes.sh     student.emacs  student.logout   student.rc
+student.cshrc  student.login  student.profile
+jgordo39@g7-12:~/cs220/bin$ lscd bin[4Pls[Kls[K[Kcd
+jgordo39@g7-12:~$ ls[K[Kcd i220a
+jgordo39@g7-12:~/i220a$ ls
+README.md  submit
+jgordo39@g7-12:~/i220a$ cd submit
+jgordo39@g7-12:~/i220a/submit$ ls
+lab0  lab1  lab2  lab3	prj1-sol
+jgordo39@g7-12:~/i220a/submit$ cd lab3
+jgordo39@g7-12:~/i220a/submit/lab3$ cd[K[Kls
+exercises  lab3.LOG
+jgordo39@g7-12:~/i220a/submit/lab3$ cd exercises
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls
+4  c-stdin-stdout  dir	t1.c  T1.s  v1.s  v.c  x.c
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ lscd exercisesls[Kcd lab3ls[Kcd submitls[Kcd i220a[Klscd bin[4Plscd cs220[2P220[Klscd ..[3Plscd ..ls ~/cs220/bin/?[p-s]*.*
+ls: cannot access '/home/jgordo39/cs220/bin/?[p-s]*.*': No such file or directory
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls ~/cs220/bin/?[p-s]*.*[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Klscd exercisesls[Kcd exercisesls[K
+4  c-stdin-stdout  dir	t1.c  T1.s  v1.s  v.c  x.c
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls dir
+t2.c  T2.s1  t3
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls
+4  c-stdin-stdout  dir	t1.c  T1.s  v1.s  v.c  x.c
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls /
+backup	    home1	    lib32		    mnt			 root  var
+bin	    home.local	    lib64		    nslcd.conf.linux	 run   vmlinuz
+boot	    home.save	    libnss-ldap.conf.linux  opt			 sbin  vmlinuz.old
+dev	    import	    libx32		    opt.local		 srv
+etc	    initrd.img	    lost+found		    opt.old		 sys
+events.bin  initrd.img.old  media		    pam_ldap.conf.linux  tmp
+home	    lib		    microchip		    proc		 usr
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls /bin
+bash	       fusermount      ntfscat	      systemd
+bunzip2        getfacl	       ntfscluster    systemd-ask-password
+busybox        grep	       ntfscmp	      systemd-escape
+bzcat	       gunzip	       ntfsfallocate  systemd-hwdb
+bzcmp	       gzexe	       ntfsfix	      systemd-inhibit
+bzdiff	       gzip	       ntfsinfo       systemd-machine-id-setup
+bzegrep        hciconfig       ntfsls	      systemd-notify
+bzexe	       hostname        ntfsmove       systemd-sysusers
+bzfgrep        ip	       ntfsrecover    systemd-tmpfiles
+bzgrep	       journalctl      ntfssecaudit   systemd-tty-ask-password-agent
+bzip2	       kbd_mode        ntfstruncate   tar
+bzip2recover   keyctl	       ntfsusermap    tcsh
+bzless	       kill	       ntfswipe       tempfile
+bzmore	       kmod	       openvt	      touch
+cat	       ln	       pidof	      true
+chacl	       loadkeys        ping	      udevadm
+chgrp	       login	       ping4	      ulockmgr_server
+chmod	       loginctl        ping6	      umount
+chown	       lowntfs-3g      ps	      uname
+chvt	       ls	       pwd	      uncompress
+cp	       lsblk	       rbash	      unicode_start
+cpio	       lsmod	       readlink       vdir
+csh	       mkdir	       red	      wdctl
+dash	       mknod	       rm	      which
+date	       mktemp	       rmdir	      ypdomainname
+dd	       more	       rnano	      zcat
+df	       mount	       run-parts      zcmp
+dir	       mountpoint      rzsh	      zdiff
+dmesg	       mt	       sed	      zegrep
+dnsdomainname  mt-gnu	       setfacl	      zfgrep
+domainname     mv	       setfont	      zforce
+dumpkeys       nano	       setupcon       zgrep
+echo	       nc	       sh	      zless
+ed	       nc.traditional  sh.distrib     zmore
+egrep	       netcat	       sleep	      znew
+false	       netstat	       ss	      zsh
+fgconsole      networkctl      stty	      zsh5
+fgrep	       nisdomainname   su
+findmnt        ntfs-3g	       sync
+fuser	       ntfs-3g.probe   systemctl
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls .[K/bin[p-s]*
+ls: cannot access '/bin[p-s]*': No such file or directory
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls /bin[p-s]*[K
+ls: cannot access '/bin[p-s]': No such file or directory
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls /bin[p-s][C/[p-s]?[p-s]
+/bin/cp  /bin/ip  /bin/ls  /bin/ps  /bin/ss
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls /bin/?[p-s][1P/?[p-s][1P/?[p-s][1P/?[p-s]e/?[p-s]t/?[p-s]s/?[p-s][C[C[1P[p-s]*[p-s][C[C[C[C[C[K[K[K[K[Krc
+ls: cannot access '/ets/*rc': No such file or directory
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls /ets/*rc[C[1P/*rcc/*rc
+/etc/bash.bashrc    /etc/gnashrc	   /etc/matplotlibrc  /etc/quilt.quiltrc  /etc/wgetrc
+/etc/chktexrc	    /etc/gnashthumbnailrc  /etc/Muttrc	      /etc/sbclrc
+/etc/csh.cshrc	    /etc/inputrc	   /etc/nanorc	      /etc/screenrc
+/etc/gnashpluginrc  /etc/mail.rc	   /etc/pbuilderrc    /etc/slsh.rc
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls /etc/*rc[K[K[K???
+/etc/rmt  /etc/rpc
+
+/etc/apm:
+event.d
+
+/etc/apt:
+apt.conf.d   listchanges.conf  sources.list   sources.list.csp1  trusted.gpg   trusted.gpg.d
+auth.conf.d  preferences.d     sources.list~  sources.list.d	 trusted.gpg~
+
+/etc/csh:
+login.d
+
+/etc/gdb:
+gdbinit
+
+/etc/gss:
+mech.d
+
+/etc/opt:
+
+/etc/php:
+7.0  7.3
+
+/etc/ppp:
+chap-secrets  ip-down.d  ip-up.d    ipv6-down.d  ipv6-up.d  pap-secrets
+ip-down       ip-up	 ipv6-down  ipv6-up	 options    peers
+
+/etc/ssh:
+moduli		     sshd_config	   ssh_host_dsa_key.pub    ssh_host_ed25519_key.pub
+ssh_config	     sshd_config.d	   ssh_host_ecdsa_key	   ssh_host_rsa_key
+ssh_config.d	     sshd_config.ucf-dist  ssh_host_ecdsa_key.pub  ssh_host_rsa_key.pub
+ssh_config.dpkg-old  ssh_host_dsa_key	   ssh_host_ed25519_key
+
+/etc/ssl:
+cacert_2017.pem  cacert_2021.pem  cacert.pem  certs  openssl.cnf  private
+
+/etc/ufw:
+applications.d
+
+/etc/vim:
+gvimrc	vimrc  vimrc.tiny
+
+/etc/w3m:
+config	mailcap
+
+/etc/X11:
+app-defaults		 xorg.conf.basic			      xorg.conf.qxx-00
+conf			 xorg.conf.g7				      xorg.conf.radeon
+default-display-manager  xorg.conf.g7-00-nouveau		      Xreset
+fonts			 xorg.conf.g7-00-nvidia			      Xreset.d
+old.xorg.conf.class00	 xorg.conf.G98				      Xresources
+old.xorg.conf.g7-00	 xorg.conf.jessie-current-working-2016-12-28  Xsession
+rgb.txt			 xorg.conf.lab				      Xsession.d
+X			 xorg.conf.nvidia			      Xsession.options
+xinit			 xorg.conf.nvidia-xconfig-original	      xsm
+xkb			 xorg.conf.omega			      XvMCConfig
+xorg.conf		 xorg.conf.optimus			      Xvnc-session
+xorg.conf.backup	 xorg.conf.optimus-w			      Xwrapper.config
+
+/etc/xdg:
+accept-languages.codes	   kcoreaddons.categories	      kxmlgui.categories
+ark.categories		   kcrash.categories		      kxmlrpcclient.categories
+attica.categories	   kdbusaddons.categories	      kxmlrpcclient.renamecategories
+autostart		   kglobalaccel.categories	      menus
+cantor_kalgebra.knsrc	   kiconthemes.categories	      new-xfce4
+cantor.knsrc		   kidletime.categories		      okular.categories
+cantor_lua.knsrc	   kinit.categories		      org_kde_kwayland.categories
+cantor_octave.knsrc	   kio.categories		      save-xfce4
+cantor_qalculate.knsrc	   kitemmodels.categories	      solid.categories
+cantor_scilab.knsrc	   kjobwidgets.categories	      sonnet.categories
+drkonqi.categories	   knewstuff.categories		      systemd
+filelightrc		   knotifications.categories	      Thunar
+kactivities.categories	   kservice.categories		      tumbler
+karchive.categories	   kshorturifilterrc		      ui
+kauth.categories	   ktexteditor.categories	      user-dirs.conf
+kbookmarks.categories	   kwallet.categories		      user-dirs.defaults
+kcodecs.categories	   kwindowsystem.categories	      xfce4
+kconfigwidgets.categories  kwindowsystem.kwayland.categories
+
+/etc/xml:
+catalog		    docbook-xml.xml.old      rarian-compat.xml	    w3c-dtd-xhtml.xml
+catalog.old	    docbook-xsl.xml	     rarian-compat.xml.old  w3c-dtd-xhtml.xml.old
+dia-common.xml	    docbook-xsl.xml.old      resolver		    xml-core.xml
+dia-common.xml.old  docutils-common.xml      sgml-data.xml	    xml-core.xml.old
+docbook-xml.xml     docutils-common.xml.old  sgml-data.xml.old
+
+/etc/zsh:
+newuser.zshrc.recommended  zlogin  zlogout  zprofile  zshenv  zshrc
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ ls /etc/???[1P/???[1P/???[1P/???b/???i/???n/???
+/bin/cat  /bin/csh  /bin/dir  /bin/pwd	/bin/red  /bin/sed  /bin/tar  /bin/zsh
+jgordo39@g7-12:~/i220a/submit/lab3/exercises$ exit
+
+Script done on 2021-09-23 11:37:26-04:00 [COMMAND_EXIT_CODE="0"]
