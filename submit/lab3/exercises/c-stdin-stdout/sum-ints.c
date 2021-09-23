@@ -34,10 +34,8 @@ main(int argc, const char *argv[])
     fprintf(stderr, "cannot read %s: %s\n", inName, strerror(errno));
     exit(1);
   }
-
-  FILE *out = argc < 3 ? stdout : fopen(argv[2], "w");
-  if(strcmp(inName, "-") == 0){
-    out = stdout;
+  
+  FILE *out = argc < 3 && strcmp(inName, "-") == 0 ? stdout : fopen(argv[2], "w");
   }
   if (!out) {
     fprintf(stderr, "cannot write %s: %s\n", argv[2], strerror(errno));
