@@ -20918,4 +20918,66 @@ jgordo39@remote03:~/i220a/submit/lab4$ git branch
 [K[?1l>jgordo39@remote03:~/i220a/submit/lab4$ ls
 exercises  lab4.LOG
 jgordo39@remote03:~/i220a/submit/lab4$ git commit ''C'o'm'p'l'e'e'[1P't'e's'[1P'd' 'l'a'b'4'
-error: pathspec 'Compl
+error: pathspec 'Completed lab4' did not match any file(s) known to git
+jgordo39@remote03:~/i220a/submit/lab4$ git commit 'Completed lab4'[C[1@ [1@-[1@m
+On branch lab4
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   lab4.LOG[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m../lab1/exercises/4-from-scratch/Makefile[m
+	[31m../lab1/exercises/4-from-scratch/Makefile~[m
+	[31m../lab1/exercises/4-from-scratch/key-value.tar.gz[m
+	[31m../lab1/exercises/temp/[m
+	[31m../lab1/lab1.LOG[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+jgordo39@remote03:~/i220a/submit/lab4$ git add .
+jgordo39@remote03:~/i220a/submit/lab4$ git add .commit -m 'Completed lab4'
+[lab4 2af96fd] Completed lab4
+ Committer: Joshua Gordon <jgordo39@cs.binghamton.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 395 insertions(+), 1 deletion(-)
+jgordo39@remote03:~/i220a/submit/lab4$ git push
+fatal: The current branch lab4 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin lab4
+
+jgordo39@remote03:~/i220a/submit/lab4$ git push -u origin
+fatal: The current branch lab4 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin lab4
+
+jgordo39@remote03:~/i220a/submit/lab4$ git push -u origin lab4
+Enumerating objects: 63, done.
+Counting objects:   1% (1/63)Counting objects:   3% (2/63)Counting objects:   4% (3/63)Counting objects:   6% (4/63)Counting objects:   7% (5/63)Counting objects:   9% (6/63)Counting objects:  11% (7/63)Counting objects:  12% (8/63)Counting objects:  14% (9/63)Counting objects:  15% (10/63)Counting objects:  17% (11/63)Counting objects:  19% (12/63)Counting objects:  20% (13/63)Counting objects:  22% (14/63)Counting objects:  23% (15/63)Counting objects:  25% (16/63)Counting objects:  26% (17/63)Counting objects:  28% (18/63)Counting objects:  30% (19/63)Counting objects:  31% (20/63)Counting objects:  33% (21/63)Counting objects:  34% (22/63)Counting objects:  36% (23/63)Counting objects:  38% (24/63)Counting objects:  39% (25/63)Counting objects:  41% (26/63)Counting objects:  42% (27/63)Counting objects:  44% (28/63)Counting objects:  46% (29/63)Counting objects:  47% (30/63)Counting objects:  49% (31/63)Counting objects:  50% (32/63)Counting objects:  52% (33/63)Counting objects:  53% (34/63)Counting objects:  55% (35/63)Counting objects:  57% (36/63)Counting objects:  58% (37/63)Counting objects:  60% (38/63)Counting objects:  61% (39/63)Counting objects:  63% (40/63)Counting objects:  65% (41/63)Counting objects:  66% (42/63)Counting objects:  68% (43/63)Counting objects:  69% (44/63)Counting objects:  71% (45/63)Counting objects:  73% (46/63)Counting objects:  74% (47/63)Counting objects:  76% (48/63)Counting objects:  77% (49/63)Counting objects:  79% (50/63)Counting objects:  80% (51/63)Counting objects:  82% (52/63)Counting objects:  84% (53/63)Counting objects:  85% (54/63)Counting objects:  87% (55/63)Counting objects:  88% (56/63)Counting objects:  90% (57/63)Counting objects:  92% (58/63)Counting objects:  93% (59/63)Counting objects:  95% (60/63)Counting objects:  96% (61/63)Counting objects:  98% (62/63)Counting objects: 100% (63/63)Counting objects: 100% (63/63), done.
+Delta compression using up to 8 threads
+Compressing objects:   2% (1/40)Compressing objects:   5% (2/40)Compressing objects:   7% (3/40)Compressing objects:  10% (4/40)Compressing objects:  12% (5/40)Compressing objects:  15% (6/40)Compressing objects:  17% (7/40)Compressing objects:  20% (8/40)Compressing objects:  22% (9/40)Compressing objects:  25% (10/40)Compressing objects:  27% (11/40)Compressing objects:  30% (12/40)Compressing objects:  32% (13/40)Compressing objects:  35% (14/40)Compressing objects:  37% (15/40)Compressing objects:  40% (16/40)Compressing objects:  42% (17/40)Compressing objects:  45% (18/40)Compressing objects:  47% (19/40)Compressing objects:  50% (20/40)Compressing objects:  52% (21/40)Compressing objects:  55% (22/40)Compressing objects:  57% (23/40)Compressing objects:  60% (24/40)Compressing objects:  62% (25/40)Compressing objects:  65% (26/40)Compressing objects:  67% (27/40)Compressing objects:  70% (28/40)Compressing objects:  72% (29/40)Compressing objects:  75% (30/40)Compressing objects:  77% (31/40)Compressing objects:  80% (32/40)Compressing objects:  82% (33/40)Compressing objects:  85% (34/40)Compressing objects:  87% (35/40)Compressing objects:  90% (36/40)Compressing objects:  92% (37/40)Compressing objects:  95% (38/40)Compressing objects:  97% (39/40)Compressing objects: 100% (40/40)Compressing objects: 100% (40/40), done.
+Writing objects:   1% (1/54)Writing objects:   3% (2/54)Writing objects:   5% (3/54)Writing objects:   7% (4/54)Writing objects:   9% (5/54)Writing objects:  11% (6/54)Writing objects:  12% (7/54)Writing objects:  14% (8/54)Writing objects:  16% (9/54)Writing objects:  18% (10/54)Writing objects:  20% (11/54)Writing objects:  22% (12/54)Writing objects:  24% (13/54)Writing objects:  25% (14/54)Writing objects:  27% (15/54)Writing objects:  29% (16/54)Writing objects:  31% (17/54)Writing objects:  33% (18/54)Writing objects:  35% (19/54)Writing objects:  40% (22/54)Writing objects:  42% (23/54)Writing objects:  44% (24/54)Writing objects:  46% (25/54)Writing objects:  48% (26/54)Writing objects:  50% (27/54)Writing objects:  51% (28/54)Writing objects:  53% (29/54)Writing objects:  55% (30/54)Writing objects:  57% (31/54)Writing objects:  59% (32/54)Writing objects:  61% (33/54)Writing objects:  62% (34/54)Writing objects:  64% (35/54)Writing objects:  66% (36/54)Writing objects:  68% (37/54)Writing objects:  70% (38/54)Writing objects:  72% (39/54)Writing objects:  74% (40/54)Writing objects:  75% (41/54)Writing objects:  77% (42/54)Writing objects:  79% (43/54)Writing objects:  81% (44/54)Writing objects:  83% (45/54)Writing objects:  85% (46/54)Writing objects:  87% (47/54)Writing objects:  88% (48/54)Writing objects:  90% (49/54)Writing objects:  92% (50/54)Writing objects:  94% (51/54)Writing objects:  96% (52/54)Writing objects:  98% (53/54)Writing objects: 100% (54/54)Writing objects: 100% (54/54), 132.92 KiB | 2.42 MiB/s, done.
+Total 54 (delta 15), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/15)[Kremote: Resolving deltas:   6% (1/15)[Kremote: Resolving deltas:  13% (2/15)[Kremote: Resolving deltas:  20% (3/15)[Kremote: Resolving deltas:  26% (4/15)[Kremote: Resolving deltas:  33% (5/15)[Kremote: Resolving deltas:  40% (6/15)[Kremote: Resolving deltas:  46% (7/15)[Kremote: Resolving deltas:  53% (8/15)[Kremote: Resolving deltas:  60% (9/15)[Kremote: Resolving deltas:  66% (10/15)[Kremote: Resolving deltas:  73% (11/15)[Kremote: Resolving deltas:  80% (12/15)[Kremote: Resolving deltas:  86% (13/15)[Kremote: Resolving deltas:  93% (14/15)[Kremote: Resolving deltas: 100% (15/15)[Kremote: Resolving deltas: 100% (15/15), completed with 7 local objects.[K
+remote: 
+remote: Create a pull request for 'lab4' on GitHub by visiting:[K
+remote:      https://github.com/Seraph18/i220a/pull/new/lab4[K
+remote: 
+To github.com:Seraph18/i220a.git
+ * [new branch]      lab4 -> lab4
+Branch 'lab4' set up to track remote branch 'lab4' from 'origin'.
+jgordo39@remote03:~/i220a/submit/lab4$ bra[K[K[Kgit branch
+[?1h=  
