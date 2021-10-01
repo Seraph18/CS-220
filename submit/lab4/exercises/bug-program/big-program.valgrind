@@ -1,0 +1,276 @@
+==1916102== Memcheck, a memory error detector
+==1916102== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1916102== Using Valgrind-3.14.0-353a3587bb-20181007X and LibVEX; rerun with -h for copyright info
+==1916102== Command: ./bug-program
+==1916102== 
+--1916102-- Valgrind options:
+--1916102--    -v
+--1916102--    --leak-check=yes
+--1916102-- Contents of /proc/version:
+--1916102--   Linux version 5.7.0-0.bpo.2-amd64 (debian-kernel@lists.debian.org) (gcc version 8.3.0 (Debian 8.3.0-6), GNU ld (GNU Binutils for Debian) 2.31.1) #1 SMP Debian 5.7.10-1~bpo10+1 (2020-07-30)
+--1916102-- 
+--1916102-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
+--1916102-- Page sizes: currently 4096, max supported 4096
+--1916102-- Valgrind library directory: /usr/lib/x86_64-linux-gnu/valgrind
+--1916102-- Reading syms from /import/linux/home1/jgordo39/projects/i220a/submit/lab4/exercises/bug-program/bug-program
+--1916102-- Reading syms from /lib/x86_64-linux-gnu/ld-2.28.so
+--1916102--   Considering /usr/lib/debug/.build-id/f2/5dfd7b95be4ba386fd71080accae8c0732b711.debug ..
+--1916102--   .. build-id is valid
+--1916102-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux
+--1916102--   Considering /usr/lib/debug/.build-id/32/2e77af97f403c3d34ff09edf60b089e72ec889.debug ..
+--1916102--   .. build-id is valid
+--1916102--    object doesn't have a dynamic symbol table
+--1916102-- Scheduler: using generic scheduler lock implementation.
+--1916102-- Reading suppressions file: /usr/lib/x86_64-linux-gnu/valgrind/default.supp
+==1916102== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-1916102-by-jgordo39-on-???
+==1916102== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-1916102-by-jgordo39-on-???
+==1916102== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-1916102-by-jgordo39-on-???
+==1916102== 
+==1916102== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==1916102== don't want to do, unless you know exactly what you're doing,
+==1916102== or are doing some strange experiment):
+==1916102==   /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=1916102 ...command...
+==1916102== 
+==1916102== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==1916102==   /path/to/gdb ./bug-program
+==1916102== and then give GDB the following command
+==1916102==   target remote | /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=1916102
+==1916102== --pid is optional if only one valgrind process is running
+==1916102== 
+--1916102-- REDIR: 0x401e2f0 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c9ce2 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--1916102-- REDIR: 0x401e0d0 (ld-linux-x86-64.so.2:index) redirected to 0x580c9cfc (vgPlain_amd64_linux_REDIR_FOR_index)
+--1916102-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_core-amd64-linux.so
+--1916102--   Considering /usr/lib/debug/.build-id/34/fbc4cdfbfce1bfc3d2e522a01a050bf724c930.debug ..
+--1916102--   .. build-id is valid
+--1916102-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so
+--1916102--   Considering /usr/lib/debug/.build-id/ca/bb7898ea982d936cbfadd70ae831c6eb63623f.debug ..
+--1916102--   .. build-id is valid
+==1916102== WARNING: new redirection conflicts with existing -- ignoring it
+--1916102--     old: 0x0401e2f0 (strlen              ) R-> (0000.0) 0x580c9ce2 vgPlain_amd64_linux_REDIR_FOR_strlen
+--1916102--     new: 0x0401e2f0 (strlen              ) R-> (2007.0) 0x04838d80 strlen
+--1916102-- REDIR: 0x401ab10 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4839e40 (strcmp)
+--1916102-- REDIR: 0x401e830 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x483d860 (mempcpy)
+--1916102-- Reading syms from /lib/x86_64-linux-gnu/libm-2.28.so
+--1916102--   Considering /usr/lib/debug/.build-id/88/5dda4b4a5cea600e7b5b98c1ad86996c8d2299.debug ..
+--1916102--   .. build-id is valid
+--1916102-- Reading syms from /lib/x86_64-linux-gnu/libc-2.28.so
+--1916102--   Considering /usr/lib/debug/.build-id/18/b9a9a8c523e5cfe5b5d946d605d09242f09798.debug ..
+--1916102--   .. build-id is valid
+--1916102-- REDIR: 0x4a88f70 (libc.so.6:memmove) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a88160 (libc.so.6:strncpy) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a89250 (libc.so.6:strcasecmp) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a87b70 (libc.so.6:strcat) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a88190 (libc.so.6:rindex) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a8a890 (libc.so.6:rawmemchr) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4aa3230 (libc.so.6:wmemchr) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4aa2cd0 (libc.so.6:wcscmp) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a890e0 (libc.so.6:mempcpy) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a88f10 (libc.so.6:bcmp) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a88100 (libc.so.6:strncmp) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a87be0 (libc.so.6:strcmp) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a89040 (libc.so.6:memset) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4aa2ca0 (libc.so.6:wcschr) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a880a0 (libc.so.6:strnlen) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a87c70 (libc.so.6:strcspn) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a892a0 (libc.so.6:strncasecmp) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a87c40 (libc.so.6:strcpy) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a893e0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4aa44d0 (libc.so.6:wcsnlen) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a881c0 (libc.so.6:strpbrk) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a87ba0 (libc.so.6:index) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a88070 (libc.so.6:strlen) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a8f280 (libc.so.6:memrchr) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a892f0 (libc.so.6:strcasecmp_l) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a88ee0 (libc.so.6:memchr) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4aa2db0 (libc.so.6:wcslen) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a88460 (libc.so.6:strspn) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a89220 (libc.so.6:stpncpy) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a891f0 (libc.so.6:stpcpy) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a8a8c0 (libc.so.6:strchrnul) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4a89340 (libc.so.6:strncasecmp_l) redirected to 0x482d1b0 (_vgnU_ifunc_wrapper)
+--1916102-- REDIR: 0x4b5bfa0 (libc.so.6:__strrchr_avx2) redirected to 0x4838790 (rindex)
+--1916102-- REDIR: 0x4a84350 (libc.so.6:malloc) redirected to 0x4835710 (malloc)
+--1916102-- REDIR: 0x4b5c170 (libc.so.6:__strlen_avx2) redirected to 0x4838c60 (strlen)
+--1916102-- REDIR: 0x4a9d100 (libc.so.6:__strcpy_sse2_unaligned) redirected to 0x4838db0 (strcpy)
+==1916102== Invalid write of size 1
+==1916102==    at 0x4838DD7: strcpy (vg_replace_strmem.c:512)
+==1916102==    by 0x109244: add_key_value (bug-program.c:30)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102==  Address 0x4bc4094 is 0 bytes after a block of size 4 alloc'd
+==1916102==    at 0x483577F: malloc (vg_replace_malloc.c:299)
+==1916102==    by 0x1091E9: add_key_value (bug-program.c:24)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102== 
+==1916102== Invalid write of size 4
+==1916102==    at 0x109257: add_key_value (bug-program.c:34)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102==  Address 0x4bc4048 is 0 bytes after a block of size 8 alloc'd
+==1916102==    at 0x483577F: malloc (vg_replace_malloc.c:299)
+==1916102==    by 0x1091D1: add_key_value (bug-program.c:21)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102== 
+==1916102== Invalid write of size 8
+==1916102==    at 0x109262: add_key_value (bug-program.c:35)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102==  Address 0x4bc4050 is 8 bytes after a block of size 8 alloc'd
+==1916102==    at 0x483577F: malloc (vg_replace_malloc.c:299)
+==1916102==    by 0x1091D1: add_key_value (bug-program.c:21)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102== 
+==1916102== Invalid read of size 4
+==1916102==    at 0x10942F: main (bug-program.c:74)
+==1916102==  Address 0x4bc4e08 is 0 bytes after a block of size 8 alloc'd
+==1916102==    at 0x483577F: malloc (vg_replace_malloc.c:299)
+==1916102==    by 0x1091D1: add_key_value (bug-program.c:21)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102== 
+--1916102-- REDIR: 0x4b5bdb0 (libc.so.6:__strchrnul_avx2) redirected to 0x483d390 (strchrnul)
+==1916102== Invalid read of size 1
+==1916102==    at 0x4838C74: strlen (vg_replace_strmem.c:460)
+==1916102==    by 0x4A519EE: vfprintf (vfprintf.c:1638)
+==1916102==    by 0x4A58605: printf (printf.c:33)
+==1916102==    by 0x10944C: main (bug-program.c:74)
+==1916102==  Address 0x4bc4e58 is 0 bytes after a block of size 8 alloc'd
+==1916102==    at 0x483577F: malloc (vg_replace_malloc.c:299)
+==1916102==    by 0x1091E9: add_key_value (bug-program.c:24)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102== 
+--1916102-- REDIR: 0x4b5c690 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x483d4a0 (mempcpy)
+==1916102== Invalid read of size 8
+==1916102==    at 0x109451: main (bug-program.c:73)
+==1916102==  Address 0x4bc4e10 is 8 bytes after a block of size 8 alloc'd
+==1916102==    at 0x483577F: malloc (vg_replace_malloc.c:299)
+==1916102==    by 0x1091D1: add_key_value (bug-program.c:21)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102== 
+--1916102-- REDIR: 0x4a849a0 (libc.so.6:free) redirected to 0x4836940 (free)
+==1916102== Invalid read of size 8
+==1916102==    at 0x109292: free_key_values (bug-program.c:45)
+==1916102==    by 0x10946B: main (bug-program.c:76)
+==1916102==  Address 0x4bc4e10 is 8 bytes after a block of size 8 free'd
+==1916102==    at 0x48369AB: free (vg_replace_malloc.c:530)
+==1916102==    by 0x10928D: free_key_values (bug-program.c:46)
+==1916102==    by 0x10946B: main (bug-program.c:76)
+==1916102==  Block was alloc'd at
+==1916102==    at 0x483577F: malloc (vg_replace_malloc.c:299)
+==1916102==    by 0x1091D1: add_key_value (bug-program.c:21)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102== 
+==1916102== 
+==1916102== HEAP SUMMARY:
+==1916102==     in use at exit: 100 bytes in 23 blocks
+==1916102==   total heap usage: 47 allocs, 24 frees, 1,308 bytes allocated
+==1916102== 
+==1916102== Searching for pointers to 23 not-freed blocks
+==1916102== Checked 72,200 bytes
+==1916102== 
+==1916102== 100 bytes in 23 blocks are definitely lost in loss record 1 of 1
+==1916102==    at 0x483577F: malloc (vg_replace_malloc.c:299)
+==1916102==    by 0x1091E9: add_key_value (bug-program.c:24)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102== 
+==1916102== LEAK SUMMARY:
+==1916102==    definitely lost: 100 bytes in 23 blocks
+==1916102==    indirectly lost: 0 bytes in 0 blocks
+==1916102==      possibly lost: 0 bytes in 0 blocks
+==1916102==    still reachable: 0 bytes in 0 blocks
+==1916102==         suppressed: 0 bytes in 0 blocks
+==1916102== 
+==1916102== ERROR SUMMARY: 162 errors from 8 contexts (suppressed: 0 from 0)
+==1916102== 
+==1916102== 23 errors in context 1 of 8:
+==1916102== Invalid read of size 8
+==1916102==    at 0x109292: free_key_values (bug-program.c:45)
+==1916102==    by 0x10946B: main (bug-program.c:76)
+==1916102==  Address 0x4bc4e10 is 8 bytes after a block of size 8 free'd
+==1916102==    at 0x48369AB: free (vg_replace_malloc.c:530)
+==1916102==    by 0x10928D: free_key_values (bug-program.c:46)
+==1916102==    by 0x10946B: main (bug-program.c:76)
+==1916102==  Block was alloc'd at
+==1916102==    at 0x483577F: malloc (vg_replace_malloc.c:299)
+==1916102==    by 0x1091D1: add_key_value (bug-program.c:21)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102== 
+==1916102== 
+==1916102== 23 errors in context 2 of 8:
+==1916102== Invalid read of size 8
+==1916102==    at 0x109451: main (bug-program.c:73)
+==1916102==  Address 0x4bc4e10 is 8 bytes after a block of size 8 alloc'd
+==1916102==    at 0x483577F: malloc (vg_replace_malloc.c:299)
+==1916102==    by 0x1091D1: add_key_value (bug-program.c:21)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102== 
+==1916102== 
+==1916102== 23 errors in context 3 of 8:
+==1916102== Invalid read of size 1
+==1916102==    at 0x4838C74: strlen (vg_replace_strmem.c:460)
+==1916102==    by 0x4A519EE: vfprintf (vfprintf.c:1638)
+==1916102==    by 0x4A58605: printf (printf.c:33)
+==1916102==    by 0x10944C: main (bug-program.c:74)
+==1916102==  Address 0x4bc4e58 is 0 bytes after a block of size 8 alloc'd
+==1916102==    at 0x483577F: malloc (vg_replace_malloc.c:299)
+==1916102==    by 0x1091E9: add_key_value (bug-program.c:24)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102== 
+==1916102== 
+==1916102== 23 errors in context 4 of 8:
+==1916102== Invalid read of size 4
+==1916102==    at 0x10942F: main (bug-program.c:74)
+==1916102==  Address 0x4bc4e08 is 0 bytes after a block of size 8 alloc'd
+==1916102==    at 0x483577F: malloc (vg_replace_malloc.c:299)
+==1916102==    by 0x1091D1: add_key_value (bug-program.c:21)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102== 
+==1916102== 
+==1916102== 23 errors in context 5 of 8:
+==1916102== Invalid write of size 8
+==1916102==    at 0x109262: add_key_value (bug-program.c:35)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102==  Address 0x4bc4050 is 8 bytes after a block of size 8 alloc'd
+==1916102==    at 0x483577F: malloc (vg_replace_malloc.c:299)
+==1916102==    by 0x1091D1: add_key_value (bug-program.c:21)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102== 
+==1916102== 
+==1916102== 23 errors in context 6 of 8:
+==1916102== Invalid write of size 4
+==1916102==    at 0x109257: add_key_value (bug-program.c:34)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102==  Address 0x4bc4048 is 0 bytes after a block of size 8 alloc'd
+==1916102==    at 0x483577F: malloc (vg_replace_malloc.c:299)
+==1916102==    by 0x1091D1: add_key_value (bug-program.c:21)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102== 
+==1916102== 
+==1916102== 23 errors in context 7 of 8:
+==1916102== Invalid write of size 1
+==1916102==    at 0x4838DD7: strcpy (vg_replace_strmem.c:512)
+==1916102==    by 0x109244: add_key_value (bug-program.c:30)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102==  Address 0x4bc4094 is 0 bytes after a block of size 4 alloc'd
+==1916102==    at 0x483577F: malloc (vg_replace_malloc.c:299)
+==1916102==    by 0x1091E9: add_key_value (bug-program.c:24)
+==1916102==    by 0x1093F9: make_key_values (bug-program.c:63)
+==1916102==    by 0x10941C: main (bug-program.c:72)
+==1916102== 
+==1916102== ERROR SUMMARY: 162 errors from 8 contexts (suppressed: 0 from 0)
