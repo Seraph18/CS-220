@@ -20415,4 +20415,113 @@ emacs bug-program.c
 [30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mbug-program.c[0m[39;49m[30m[48;5;250m   44% L59    (C/*l Abbrev) 10:44PM 1.01 ----------------[39;49m
 [A[24;17H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m8[39;49m[23;17H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m7[39;49m[22;17H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m6[39;49m[21;17H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m5[39;49m[20;1H[?12l[?25h[?12;25h[38;59H[?25l[30m[48;5;250m5PM 0.90[39;49m[20;1H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m4[39;49m[19;17H[?12l[?25h[?12;25h[?25l[1@/[38;6H[30m[48;5;250m**[39;49m[19;4H[?12l[?25h[?12;25h[?25l[38;5;124m//printf("\n\n\n\n\n"); [39;49m                                                         
 [19;5H[?12l[?25h[?12;25h[C[C		[C[C[C[C[C[C		[C[C[C[C[C[C		[C[C[?25l[38;5;124m [39;49m[?12l[?25h[?12;25h[?25l[38;5;124m/ [39;49m[?12l[?25h[?12;25h[?25l[38;5;124m/ [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mD [39;49m[?12l[?25h[?12;25h[?25l[38;5;124me [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mb [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mu [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mg [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mg [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mi [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mn [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mg [39;49m[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m5[39;49m[20;1H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m6[39;49m[21;36H[?12l[?25h[?12;25h[38d[?25l[30m[48;5;250m7[39;49m[22;23H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m8[39;49m[23;29H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m9[39;49m[24;35H[?12l[?25h[?12;25h[38d[?25l[30m[48;5;250m60[39;49m[25;2H[?12l[?25h[?12;25h[39;1H[?25lAuto-saving...[25;2H[?12l[?25h[?12;25h[39;15H[?25ldone[25;2H[?12l[?25h[?12;25h[39;1H[K[38;35H[?25l[30m[48;5;250m59[39;49m[24;35H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m8[39;49m[23;29H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m7[39;49m[22;23H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m6[39;49m[21;36H[?12l[?25h[?12;25h[38d[?25l[30m[48;5;250m7[39;49m[22;23H[?12l[?25h[?12;25h[?25l[1@/[?12l[?25h[?12;25h[?25l[38;5;124m//printf("%d\n", i); [39;49m                                                          
-[22;7H[?12l[?25h[?12;25h		[C[C[C[C[C[C		[C[C[C[C[C[C		[C[?25l[38;5;124m [39;49m[?12l[?25h[?12;25h[?25l[38;5;124md [39;49m[?12l[?25h[?12;25h[?25l[38;5;124me [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mb [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mu [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mg [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mg [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mi [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mn [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mg [39;49m[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m6[39;49m[21;35H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m5[39;49m[20;1H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m4[39;49m[19;35H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m3[39;49m[18;4H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m2[39;49m[17;4H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m1[39;49m[16;13H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m0[39;49m[15;27H[?12l[?25h[?12;25h[38;35H[?25l[30m[48;5;250m49[39;49m[14;25H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m8[39;49m[13;1H[?12l[
+[22;7H[?12l[?25h[?12;25h		[C[C[C[C[C[C		[C[C[C[C[C[C		[C[?25l[38;5;124m [39;49m[?12l[?25h[?12;25h[?25l[38;5;124md [39;49m[?12l[?25h[?12;25h[?25l[38;5;124me [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mb [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mu [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mg [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mg [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mi [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mn [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mg [39;49m[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m6[39;49m[21;35H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m5[39;49m[20;1H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m4[39;49m[19;35H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m3[39;49m[18;4H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m2[39;49m[17;4H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m1[39;49m[16;13H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m0[39;49m[15;27H[?12l[?25h[?12;25h[38;35H[?25l[30m[48;5;250m49[39;49m[14;25H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m8[39;49m[13;1H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m7[39;49m[12;35H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m8[39;49m[13;1H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m9[39;49m[14;25H[?12l[?25h[?12;25h[38;35H[?25l[30m[48;5;250m50[39;49m[15;27H[?12l[?25h[?12;25h[?25l[1@/[38;31H[30m[48;5;250m3[39;49m[15;6H[?12l[?25h[?12;25h[?25l[38;5;124m//printf("%d\n", index); [39;49m                                                      
+[15;7H[?12l[?25h[?12;25h		[C[C[C[C[C[C		[C[C[C[C[C[C		[C[C[39;1H[?25lAuto-saving...[15;27H[?12l[?25h[?12;25h[39;15H[?25ldone[15;27H[?12l[?25h[?12;25h[39;1H[K[15;28H[C[C[?25l[38;5;124m [39;49m[?12l[?25h[?12;25h[?25l[38;5;124m/ [39;49m[?12l[?25h[?12;25h[?25l[38;5;124m/ [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mD [39;49m[?12l[?25h[?12;25h[?25l[38;5;124me [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mb [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mu [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mg [39;49m[?12l[?25h[?12;25h[?25l[38;5;124m [39;49m [?12l[?25h[?12;25h[?25l[38;5;124m [39;49m [?12l[?25h[?12;25h[?25l[38;5;124m [39;49m [?12l[?25h[?12;25h[?25l[38;5;124m [39;49m [?12l[?25h[?12;25h[?25l[38;5;124m [39;49m [?12l[?25h[?12;25h[?25l[38;5;124m [39;49m [?12l[?25h[?12;25h[?25l[38;5;124m [39;49m [?12l[?25h[?12;25h[?25l[38;5;124md [39;49m[?12l[?25h[?12;25h[?25l[38;5;124me [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mb [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mu [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mg [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mg [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mi [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mn [39;49m[?12l[?25h[?12;25h[?25l[38;5;124mg [39;49m[?12l[?25h[?12;25h[C[?25l[38;5;124mebugging [39;49m [15;30H[?12l[?25h[?12;25h[?25l[38;5;124m/ebugging [39;49m[15;31H[?12l[?25h[?12;25h[?25l[38;5;124m/ebugging [39;49m				[?12l[?25h[?12;25h[?25l[38;5;124mDebugging [39;49m				[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m1[39;49m[16;13H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m2[39;49m[17;4H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m3[39;49m[18;4H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m4[39;49m[19;33H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m5[39;49m[20;1H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m6[39;49m[21;33H[?12l[?25h[?12;25h[38;36H[?25l[30m[48;5;250m7[39;49m[22;32H[?12l[?25h[?12;25h[?25l[38;5;124mebugging [39;49m [22;26H[?12l[?25h[?12;25h[?25l[38;5;124mDebugging [39;49m[22;27H[?12l[?25h[?12;25h[?25l[38;5;124m/Debugging [39;49m[22;27H[?12l[?25h[?12;25h[?25l[38;5;124m/Debugging [39;49m[22;28H[?12l[?25h[?12;25h[1;38r[37;1H[1M[1;39r[39;1H[?25l.[ASaving file /home/jgordo39/i220a/submit/lab4/exercises/bug-program/bug-program.c..\
+[A[22;28H[?12l[?25h[?12;25h[39;1H[K[A[?25lWrote /home/jgordo39/i220a/submit/lab4/exercises/bug-program/bug-program.c[K[22;28H[?12l[?25h[?12;25h[1;39r[38;1H[1L[1;39r[37;1H[?25l    [38;5;89m"all"[39;49m, [38;5;89m"mimsy"[39;49m, [38;5;89m"were"[39;49m, [38;5;89m"the"[39;49m, [38;5;89m"borogoves"[39;49m,[K
+[30m[48;5;250m-UU-:----F1  [39;49m[1m[30m[48;5;250mbug-program.c[0m[39;49m[30m[48;5;250m   43% L57    (C/*l Abbrev) 10:45PM 0.90 ----------------[39;49m
+[A[22;28H[?12l[?25h[?12;25h[39;1H[K[?1004l[?2004l[?1l>[?12l[?25h[?1049l[23;0;0t[39;49m
+[1]+  Stopped                 emacs bug-program.c
+jgordo39@remote03:~/i220a/submit/lab4/exercises/bug-program$ fgvalgrind --leak-check=yes ./bug-program[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pmake -f ../Makefile
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+gcc  -g -Wall -Wno-unused-parameter -std=c18 -lm  bug-program.c   -o bug-program
+jgordo39@remote03:~/i220a/submit/lab4/exercises/bug-program$ make -f ../Makefilefg[Kvalgrind --leak-check=yes ./bug-program
+==3045805== Memcheck, a memory error detector
+==3045805== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3045805== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==3045805== Command: ./bug-program
+==3045805== 
+outgrabe: 22
+raths: 21
+mome: 20
+the: 19
+and: 18
+borogoves: 17
+the: 16
+were: 15
+mimsy: 14
+all: 13
+wabe: 12
+the: 11
+in: 10
+gimble: 9
+and: 8
+gyre: 7
+did: 6
+toves: 5
+slithy: 4
+the: 3
+and: 2
+brillig: 1
+twas: 0
+==3045805== 
+==3045805== HEAP SUMMARY:
+==3045805==     in use at exit: 0 bytes in 0 blocks
+==3045805==   total heap usage: 47 allocs, 47 frees, 1,699 bytes allocated
+==3045805== 
+==3045805== All heap blocks were freed -- no leaks are possible
+==3045805== 
+==3045805== For counts of detected and suppressed errors, rerun with: -v
+==3045805== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+jgordo39@remote03:~/i220a/submit/lab4/exercises/bug-program$ clear
+[H[2J[3Jjgordo39@remote03:~/i220a/submit/lab4/exercises/bug-program$ ls
+big-program.valgrind  bug-program  bug-program.c  bug-program.c~
+jgordo39@remote03:~/i220a/submit/lab4/exercises/bug-program$ cd ..
+jgordo39@remote03:~/i220a/submit/lab4/exercises$ cd ..
+jgordo39@remote03:~/i220a/submit/lab4$ git add .
+jgordo39@remote03:~/i220a/submit/lab4$ git [K[K[K[Kgit stati[Kus -s
+ [31mM[m ../lab3/lab3.LOG
+[32mA[m  exercises/1
+[32mA[m  exercises/2
+[32mA[m  exercises/3
+[32mA[m  exercises/4
+[32mA[m  exercises/5
+[32mA[m  exercises/6
+[32mA[m  exercises/7
+[32mA[m  exercises/Makefile
+[32mA[m  exercises/bad-types/.gitignore
+[32mA[m  exercises/bad-types/bad-types.c
+[32mA[m  exercises/bug-program/.gitignore
+[32mA[m  exercises/bug-program/big-program.valgrind
+[32mA[m  exercises/bug-program/bug-program.c
+[32mA[m  exercises/bug-program/bug-program.c~
+[32mA[m  exercises/cast-types/.gitignore
+[32mA[m  exercises/cast-types/cast-types.c
+[32mA[m  exercises/in-pointers/.gitignore
+[32mA[m  exercises/in-pointers/in-pointers.c
+[32mA[m  exercises/in-voids/.gitignore
+[32mA[m  exercises/in-voids/in-voids.c
+[32mA[m  exercises/pointers/.gitignore
+[32mA[m  exercises/pointers/pointers.c
+[32mA[m  exercises/void-pointers/.gitignore
+[32mA[m  exercises/void-pointers/void-pointers.c
+[32mA[m  lab4.LOG
+ [31mM[m ../prj1-sol/.vscode/configurationCache.log
+ [31mM[m ../prj1-sol/.vscode/dryrun.log
+ [31mM[m ../prj1-sol/.vscode/targets.log
+[31m??[m ../lab1/exercises/4-from-scratch/Makefile
+[31m??[m ../lab1/exercises/4-from-scratch/Makefile~
+[31m??[m ../lab1/exercises/4-from-scratch/key-value.tar.gz
+[31m??[m ../lab1/exercises/temp/
+[31m??[m ../lab1/lab1.LOG
+jgordo39@remote03:~/i220a/submit/lab4$ git add .
+jgordo39@remote03:~/i220a/submit/lab4$ git commit -m ''F'i'n's'i'h'e'd'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'C'o'm'p'l'e't'e'd' 'L'a'b'[1P'[1P'[1P'l'a'b'4'
+[lab4 84d945f] Completed lab4
+ Committer: Joshua Gordon <jgordo39@cs.binghamton.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 25 files changed, 21083 insertions(+)
+ create mode 120000 submit/lab4/exercises/1
+ create mode 120000 submit/lab4/exercises/2
+ create mode 120000 submit/lab4/exercises/3
+ create mode 120000 submit/lab4/exercises/4
+ create mode 120000 submit/lab4/exercise

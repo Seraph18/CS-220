@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Sep 22 18:46:44 2021
+# Make data base, printed on Fri Sep 24 15:51:42 2021
 
 # Variables
 
@@ -39,7 +39,7 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-_ = /import/linux/home1/jgordo39/.vscode-server/bin/83bd43bc519d15e50c4272c6cf5c1479df196a4d/node
+_ = /import/linux/home1/jgordo39/.vscode-server/bin/7f6ab5485bbc008386c4386d08766667e155244e/node
 # makefile (from 'makefile', line 1)
 MAKEFILE_LIST :=  makefile
 # 'override' directive
@@ -51,17 +51,17 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 VSCODE_CWD = /import/linux/home1/jgordo39
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_15291_4rzvZs8XNf
+KRB5CCNAME = FILE:/tmp/krb5cc_15291_FYSwljz70Z
 # environment
-SSH_CONNECTION = 149.125.82.114 43738 128.226.114.204 22
+SSH_CONNECTION = 149.125.81.30 42858 128.226.114.200 22
 # environment
-PATH = /import/linux/home1/jgordo39/.vscode-server/bin/83bd43bc519d15e50c4272c6cf5c1479df196a4d/bin:/home/jgordo39/cs220/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+PATH = /import/linux/home1/jgordo39/.vscode-server/bin/7f6ab5485bbc008386c4386d08766667e155244e/bin:/home/jgordo39/cs220/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
 # environment
 XDG_RUNTIME_DIR = /run/user/15291
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/15291/vscode-ipc-9c3d4be7-133a-4e90-9465-eb686c5ce52a.sock
+VSCODE_IPC_HOOK_CLI = /run/user/15291/vscode-ipc-07056f1f-da95-4c1b-bec4-23f1c0e909f3.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # automatic
@@ -105,7 +105,7 @@ SHLVL = 1
 # environment
 JAVA_HOME = /usr/lib/jvm/java-8-oracle
 # environment
-XDG_SESSION_ID = 20585
+XDG_SESSION_ID = 21772
 # environment
 USER = jgordo39
 # makefile
@@ -114,6 +114,8 @@ USER = jgordo39
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := make
+# environment
+OLDPWD = /home/jgordo39/.vscode-server/bin/7f6ab5485bbc008386c4386d08766667e155244e
 # default
 .VARIABLES := 
 # automatic
@@ -123,11 +125,11 @@ MAKEFLAGS = pqrR
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_CLIENT = 149.125.82.114 43738 22
+SSH_CLIENT = 149.125.81.30 42858 22
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
-BROWSER = /import/linux/home1/jgordo39/.vscode-server/bin/83bd43bc519d15e50c4272c6cf5c1479df196a4d/bin/helpers/browser.sh
+BROWSER = /import/linux/home1/jgordo39/.vscode-server/bin/7f6ab5485bbc008386c4386d08766667e155244e/bin/helpers/browser.sh
 # default
 MAKEFILES := 
 # automatic
@@ -143,7 +145,7 @@ SUFFIXES :=
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
-VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /import/linux/home1/jgordo39/.vscode-server/bin/83bd43bc519d15e50c4272c6cf5c1479df196a4d/remote/node_modules
+VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /import/linux/home1/jgordo39/.vscode-server/bin/7f6ab5485bbc008386c4386d08766667e155244e/remote/node_modules
 # environment
 DERBY_HOME = /usr/lib/jvm/java-8-oracle/db
 # default
@@ -157,7 +159,7 @@ LANG = C
 # environment
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # variable set hash-table stats:
-# Load=73/1024=7%, Rehash=0, Collisions=10/101=10%
+# Load=74/1024=7%, Rehash=0, Collisions=10/102=10%
 
 # Pattern-specific Variable Values
 
@@ -165,9 +167,9 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 
 # Directories
 
-# . (device 64, inode 99190861851): 14 files, no impossibilities.
+# . (device 64, inode 99190861851): 18 files, no impossibilities.
 
-# 14 files, no impossibilities in 1 directories.
+# 18 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -200,7 +202,7 @@ all: main
 # Not a target:
 main.c:
 #  Implicit rule search has been done.
-#  Last modified 2021-09-18 16:50:45.570076775
+#  Last modified 2021-09-22 19:08:20.122748171
 #  File has been updated.
 #  Successfully updated.
 
@@ -227,7 +229,7 @@ tests: tests.o file-utils.o morse.o
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-09-22 18:46:33.156912444
+#  Last modified 2021-09-22 19:08:20.126748165
 #  File has been updated.
 #  Successfully updated.
 
@@ -283,14 +285,14 @@ main: main.o file-utils.o morse.o
 main.o: main.c
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: ''
-#  File does not exist.
+ 
+#  Last modified 2021-09-22 18:52:35.672335719
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
 # @ := main.o
 # automatic
 # % := 
- 
 # automatic
 # * := 
 # automatic
@@ -322,12 +324,12 @@ file-utils.c:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 26 / storage = 219 B / avg = 8 B
-# current buf: size = 8162 B / used = 219 B / count = 26 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 28 / storage = 245 B / avg = 8 B
+# current buf: size = 8162 B / used = 245 B / count = 28 / avg = 8 B
 
-# strcache performance: lookups = 53 / hit rate = 50%
+# strcache performance: lookups = 57 / hit rate = 50%
 # hash-table stats:
-# Load=26/8192=0%, Rehash=0, Collisions=1/53=2%
-# Finished Make data base on Wed Sep 22 18:46:44 2021
+# Load=28/8192=0%, Rehash=0, Collisions=1/57=2%
+# Finished Make data base on Fri Sep 24 15:51:42 2021
 
  

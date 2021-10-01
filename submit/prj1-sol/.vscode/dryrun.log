@@ -1,4 +1,4 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/import/linux/home1/jgordo39/projects/i220a/submit/prj1-sol'
 gcc -std=c18 -g -Wall -c main.c
 gcc -std=c18 -g -Wall -c file-utils.c
