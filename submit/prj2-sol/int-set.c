@@ -1,13 +1,13 @@
 #include "int-set.h"
 
 typedef struct NodeStruct
-{ //Node for linked list
+{ // Node for linked list
     int data;
     struct NodeStruct *next;
 } Node;
 
 typedef struct
-{ //Header for linked list
+{ // Header for linked list
     int nElements;
     Node dummyNode;
 } Header;
@@ -41,23 +41,21 @@ int isInIntSet(void *intSet, int element)
     {
         return -1;
     }
-    Node *currNode = &tempHead->dummyNode;
+    Node *currNode = tempHead->dummyNode.next;
 
-    for (int i = 0; i < tempHead->nElements - 1; ++i)
+    for (int i = 1; i < tempHead->nElements; ++i)
     {
         if (currNode->data == element)
         {
-            //Returns 1 if element is in set
+            // Returns 1 if element is in set
             return 1;
         }
-        currNode = currNode->next;
+        if (i + 1 < tempHead->nElements)
+        {
+            currNode = currNode->next;
+        }
     }
-    //Check he final node that seperatly because it has a null next pointer
-    if (currNode->data == element)
-    {
-        return 1;
-    }
-    //Return -1 is element is not in set
+    // Return -1 is element is not in set
     return -1;
 }
 
@@ -69,29 +67,37 @@ int addIntSet(void *intSet, int element)
 {
 
     if (intSet == NULL)
-    { //Check for no set
+    { // Check for no set
         return -1;
     }
 
     Header *tempHead = (Header *)intSet;
 
-    //Check if element already exists
+    // Check if element already exists
     if (isInIntSet(intSet, element) == 1)
     {
-        //Do nothing if it is already in the set
+        // Do nothing if it is already in the set
     }
     else
     {
-        Node *newNode = malloc(sizeof *newNode);
-        newNode->data = element;
-        //Check if set is empty
+        Node *newNode = calloc(1, sizeof *newNode);
+        newNode->data = element; //add data to new node
+
+        // Check if set is empty
         if (tempHead->nElements == 0)
-        {
-            tempHead->dummyNode.next = malloc(sizeof *newNode);
-            tempHead->dummyNode.next->data = element;
+        { // Add Node to header
+            tempHead->dummyNode.next = newNode;
+        }
+        else
+        { // Add Node to end
+            Node *lastNode = tempHead->dummyNode.next;
+
+            for (int i = 0; i < tempHead->nElements - 1; ++i){
+                lastNode = lastNode->next;
+            }
+            lastNode->next = newNode;
         }
         tempHead->nElements = tempHead->nElements + 1;
-        free(newNode);
     }
 
     return tempHead->nElements;
@@ -121,7 +127,7 @@ int addMultipleIntSet(void *intSet, const int elements[], int nElements)
  */
 int unionIntSet(void *intSetA, void *intSetB)
 {
-    //TODO
+    // TODO
     return 0;
 }
 
@@ -130,7 +136,7 @@ int unionIntSet(void *intSetA, void *intSetB)
  */
 int intersectionIntSet(void *intSetA, void *intSetB)
 {
-    //TODO
+    // TODO
     return 0;
 }
 
@@ -142,24 +148,22 @@ void freeIntSet(void *intSet)
 
     Node *nodeArr[numberOfElements];
 
-    Node *currNode;
-    currNode = &tempHeader->dummyNode;
+    Node *currNode = &tempHeader->dummyNode;
     int currNodeIndex = 0;
-    for (int i = 0; i < tempHeader->nElements - 1; ++i)
+    for (int i = 0; i < tempHeader->nElements; ++i)
     {
-        nodeArr[currNodeIndex] = currNode;
         currNode = currNode->next;
+        nodeArr[i] = currNode;
         ++currNodeIndex;
     }
 
-    //Do last one seperatly because it will cause a null pointer error/Valgrind will get mad
-    nodeArr[currNodeIndex] = currNode;
-
-    for (int i = currNodeIndex - 1; i >= 0; --i)
+    for (int i = 0; i < currNodeIndex; ++i)
     {
-        free(nodeArr[i]->next);
+        free(nodeArr[i]);
     }
+
     free((void *)tempHeader);
+    
 }
 
 /** Return a new iterator for intSet.  Returns NULL if intSet
@@ -167,14 +171,14 @@ void freeIntSet(void *intSet)
  */
 const void *newIntSetIterator(const void *intSet)
 {
-    //TODO
+    // TODO
     return 0;
 }
 
 /** Return current element for intSetIterator. */
 int intSetIteratorElement(const void *intSetIterator)
 {
-    //TODO
+    // TODO
     return 0;
 }
 
@@ -183,6 +187,6 @@ int intSetIteratorElement(const void *intSetIterator)
  */
 const void *stepIntSetIterator(const void *intSetIterator)
 {
-    //TODO
+    // TODO
     return 0;
 }

@@ -2,6 +2,7 @@
 #define INT_SET_H_
 
 #include <stdlib.h>
+#include <stdio.h>
 
 
 /** Abstract data type for set of int's.  Note that sets do not allow

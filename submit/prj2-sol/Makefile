@@ -6,7 +6,10 @@ CC = gcc
 all:  main
 
 main: main.o int-set.o int-set-strings.o
-	$(CC) int-set.o int-set-strings.o -o main
+	$(CC) main.o int-set.o int-set-strings.o -o main
+
+main.o: main.c 
+	$(CC) $(CFLAGS) main.c 
 
 int-set.o: int-set.c int-set.h
 	$(CC) $(CFLAGS) int-set.c
