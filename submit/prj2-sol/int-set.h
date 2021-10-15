@@ -57,5 +57,6 @@ int intSetIteratorElement(const void *intSetIterator);
  */
 const void *stepIntSetIterator(const void *intSetIterator);
 
+void printIntSet(const void *inSet, int nElements);
 
 #endif //ifndef INT_SET_H_

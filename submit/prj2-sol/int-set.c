@@ -12,6 +12,8 @@ typedef struct
     Node dummyNode;
 } Header;
 
+
+
 /** Abstract data type for set of int's.  Note that sets do not allow
  *  duplicates.
  */
@@ -39,11 +41,11 @@ int isInIntSet(void *intSet, int element)
 
     if (tempHead->nElements == 0)
     {
-        return -1;
+        return 0;
     }
     Node *currNode = tempHead->dummyNode.next;
 
-    for (int i = 1; i < tempHead->nElements; ++i)
+    for (int i = 0; i < tempHead->nElements; ++i)
     {
         if (currNode->data == element)
         {
@@ -55,8 +57,8 @@ int isInIntSet(void *intSet, int element)
             currNode = currNode->next;
         }
     }
-    // Return -1 is element is not in set
-    return -1;
+    // Return 0 is element is not in set
+    return 0;
 }
 
 /** Change intSet by adding element to it.  Returns # of elements
@@ -81,23 +83,71 @@ int addIntSet(void *intSet, int element)
     else
     {
         Node *newNode = calloc(1, sizeof *newNode);
-        newNode->data = element; //add data to new node
+        newNode->data = element; // add data to new node
 
         // Check if set is empty
         if (tempHead->nElements == 0)
         { // Add Node to header
             tempHead->dummyNode.next = newNode;
+            tempHead->nElements = tempHead->nElements + 1;
+            return tempHead->nElements;
         }
         else
         { // Add Node to end
-            Node *lastNode = tempHead->dummyNode.next;
+            Node *currNode = tempHead->dummyNode.next;
+            Node *prevNode = tempHead->dummyNode.next;
+            int firstRun = 1;
 
-            for (int i = 0; i < tempHead->nElements - 1; ++i){
-                lastNode = lastNode->next;
+            // Find Where to put the newNode
+            for (int i = 0; i < tempHead->nElements - 1; ++i)
+            {
+                // Looking to put node in correct order
+                if (currNode->data < newNode->data)
+                { // Check if the current node is smaller than the new node; if the current node is smaller, keep looking
+                    if (firstRun == 1)
+                    { // Don't advance prevNode on the first run through
+                        firstRun = 0;
+                        currNode = currNode->next; // go to next node
+                    }
+                    else
+                    {
+                        currNode = currNode->next;
+                        prevNode = prevNode->next;
+                    }
+                }
+                else
+                {
+                    // Found spot to put it before the very end
+                    if (firstRun == 1)
+                    { // First runthrough, and therefore will be attached to the head
+                        newNode->next = tempHead->dummyNode.next;
+                        tempHead->dummyNode.next = newNode;
+                    }
+                    else
+                    {
+                        newNode->next = currNode;
+                        prevNode->next = newNode;
+                    }
+
+                    // Finished run
+                    tempHead->nElements = tempHead->nElements + 1;
+                    return tempHead->nElements;
+                }
             }
-            lastNode->next = newNode;
+
+            // Do last check seperatly
+            if (newNode->data < currNode->data)
+            {
+                newNode->next = currNode;
+                prevNode->next = newNode;
+            }
+            else
+            {
+                currNode->next = newNode;
+            }
+
+            tempHead->nElements = tempHead->nElements + 1;
         }
-        tempHead->nElements = tempHead->nElements + 1;
     }
 
     return tempHead->nElements;
@@ -163,7 +213,6 @@ void freeIntSet(void *intSet)
     }
 
     free((void *)tempHeader);
-    
 }
 
 /** Return a new iterator for intSet.  Returns NULL if intSet
@@ -171,15 +220,18 @@ void freeIntSet(void *intSet)
  */
 const void *newIntSetIterator(const void *intSet)
 {
-    // TODO
-    return 0;
+
+    const Header *tempHead = (Header *)intSet;
+    Node *n = tempHead->dummyNode.next;
+    return n;
 }
 
 /** Return current element for intSetIterator. */
 int intSetIteratorElement(const void *intSetIterator)
 {
-    // TODO
-    return 0;
+
+    const Node *currNode = (Node *)intSetIterator;
+    return currNode->data;
 }
 
 /** Step intSetIterator and return stepped iterator.  Return
@@ -187,6 +239,20 @@ int intSetIteratorElement(const void *intSetIterator)
  */
 const void *stepIntSetIterator(const void *intSetIterator)
 {
-    // TODO
-    return 0;
+
+    const Node *currNode = (Node *)intSetIterator;
+    return currNode->next;
+}
+
+void printIntSet(const void *intSet, int nElements)
+{
+    Header *tempHead = (Header *)intSet;
+    Node *currNode = tempHead->dummyNode.next;
+    printf("\n{");
+    for (int i = 0; i < nElements - 1; ++i)
+    {
+        printf("%d, ", currNode->data);
+        currNode = currNode->next;
+    }
+    printf("%d }\n", currNode->data);
 }

@@ -23,7 +23,7 @@ int-set-strings.o: int-set-strings.c int-set-strings.h
 clean: cleanFiles clearScreen
 	
 cleanFiles:
-	rm -f *~ *.o tests
+	rm -f *~ *.o tests main
 
 clearScreen:
 	clear
