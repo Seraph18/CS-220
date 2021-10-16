@@ -1,21 +1,20 @@
 CFLAGS = -g -Wall -std=c18
 CC = gcc
-
 #Target for compiling entire program at once
 
-all:  main
+all:  int-set
 
-main: main.o int-set.o int-set-strings.o
-	$(CC) main.o int-set.o int-set-strings.o -o main
+int-set: int-set-strings.o int-set.o main.o
+	$(CC) $(CFLAGS) int-set-strings.o int-set.o main.o -o int-set
 
 main.o: main.c 
-	$(CC) $(CFLAGS) main.c 
+	$(CC) $(CFLAGS) -c main.c 
 
 int-set.o: int-set.c int-set.h
-	$(CC) $(CFLAGS) int-set.c
+	$(CC) $(CFLAGS) -c int-set.c 
 
 int-set-strings.o: int-set-strings.c int-set-strings.h
-	$(CC) $(CFLAGS) int-set-strings.c
+	$(CC) $(CFLAGS) -c int-set-strings.c 
 
 
 #Clean up extra files

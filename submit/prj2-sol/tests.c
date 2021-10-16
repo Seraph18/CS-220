@@ -547,8 +547,7 @@ intersectionTest(const int arr1[], int nArr1, const int arr2[], int nArr2,
   int n = intersectionIntSet(set1, set2);
   ck_assert_int_eq(n, nIntersectionArr);
   int i = 0;
-  for (const void *iter = newIntSetIterator(set1); iter != NULL;
-       iter = stepIntSetIterator(iter))
+  for (const void *iter = newIntSetIterator(set1); iter != NULL; iter = stepIntSetIterator(iter))
   {
     int v = intSetIteratorElement(iter);
     ck_assert_int_eq(v, intersectionArr[i++]);
@@ -574,6 +573,80 @@ END_TEST
 
 // TODO: add more intersection tests.
 
+START_TEST(equalIntersectingDisjoint)
+{
+  const int elements1[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+  int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int elements2[] = {10, 11, 12, 13, 14, 15, 16, 17, 18};
+  int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  intersectionTest(elements1, nElements1, elements2, nElements2, NULL, 0);
+}
+END_TEST
+
+START_TEST(unequalIntersectingDisjoint)
+{
+  const int elements1[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+  int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int elements2[] = {10, 11, 12};
+  int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  intersectionTest(elements1, nElements1, elements2, nElements2, NULL, 0);
+}
+END_TEST
+
+START_TEST(intersectingSimpleOrdered)
+{
+  const int elements1[] = {52, 78, 104, 115, 120};
+  int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int elements2[] = {24, 52, 104, 118, 120};
+  int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  const int intersectingElements[] = {
+      52,
+      104,
+      120};
+  intersectionTest(elements1, nElements1, elements2, nElements2, intersectingElements, 3);
+}
+END_TEST
+
+START_TEST(intersectingSimpleUnordered)
+{
+  const int elements1[] = {12, 48, 5, 87, 42, 112};
+  int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int elements2[] = {54, 51, 112, 24, 12, 10};
+  int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  const int intersectingElements[] = {
+      12,
+      112};
+  intersectionTest(elements1, nElements1, elements2, nElements2, intersectingElements, 2);
+}
+END_TEST
+
+START_TEST(intersectingOrderedWithDuplicates)
+{
+  const int elements1[] = {12, 12, 45, 50, 51, 51};
+  int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int elements2[] = {12, 12, 48, 50, 50 , 51};
+  int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  const int intersectingElements[] = {
+      12,
+      50,
+      51};
+  intersectionTest(elements1, nElements1, elements2, nElements2, intersectingElements, 3);
+}
+END_TEST
+
+START_TEST(intersectingUnorderedWithDuplicates)
+{
+  const int elements1[] = {48, 12, 48, 5, 87, 64, 64, 42, 112, 112};
+  int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int elements2[] = {54, 51, 112, 24, 51, 12, 12, 10};
+  int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  const int intersectingElements[] = {
+      12,
+      112};
+  intersectionTest(elements1, nElements1, elements2, nElements2, intersectingElements, 2);
+}
+END_TEST
+
 static Suite *
 intersectionIntSetSuite(void)
 {
@@ -581,7 +654,14 @@ intersectionIntSetSuite(void)
   TCase *intersectionTests = tcase_create("intersection");
   tcase_add_test(intersectionTests, emptyEmptyIntersection);
   tcase_add_test(intersectionTests, emptyNonEmptyIntersection);
+
   // TODO: for each test added above tcase_add_test(intersectionTests, ...)
+  tcase_add_test(intersectionTests, equalIntersectingDisjoint);
+  tcase_add_test(intersectionTests, unequalIntersectingDisjoint);
+  tcase_add_test(intersectionTests, intersectingSimpleOrdered);
+  tcase_add_test(intersectionTests, intersectingSimpleUnordered);
+  tcase_add_test(intersectionTests, intersectingOrderedWithDuplicates);
+  tcase_add_test(intersectionTests, intersectingUnorderedWithDuplicates);
 
   suite_add_tcase(suite, intersectionTests);
   return suite;

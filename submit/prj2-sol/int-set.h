@@ -44,6 +44,9 @@ int intersectionIntSet(void *intSetA, void *intSetB);
 /** Free all resources used by previously created intSet. */
 void freeIntSet(void *intSet);
 
+//removes all nodes from set but keeps head intact - also erases nElements and dummyNode.next
+void freeIntSetButKeepHead(void *intSet);
+
 /** Return a new iterator for intSet.  Returns NULL if intSet
  *  is empty.
  */
@@ -58,5 +61,8 @@ int intSetIteratorElement(const void *intSetIterator);
 const void *stepIntSetIterator(const void *intSetIterator);
 
 void printIntSet(const void *inSet, int nElements);
+
+void *
+orderAndRemoveDuplicatesFromSet(const void *intSet);
 
 #endif //ifndef INT_SET_H_
