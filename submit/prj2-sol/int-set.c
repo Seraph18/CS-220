@@ -112,16 +112,15 @@ int addMultipleIntSet(void *intSet, const int elements[], int nElements)
     for (int i = 0; i < nElements; ++i)
     {
         addIntSet(intSet, elements[i]);
-    }
+     
     return tempHeader->nElements;
 }
 
 /** Set intSetA to the union of intSetA and intSetB.  Return # of
  *  elements in the updated intSetA.  Returns < 0 on error.
  */
-int unionIntSet(void *intSetA, void *intSetB)
-{
-    //TODO
+int unionIntSet(void *intSetA, void *intSetB){
+    // TODO
     return 0;
 }
 
@@ -159,7 +158,7 @@ void freeIntSet(void *intSet)
     {
         free(nodeArr[i]->next);
     }
-    free((void *)tempHeader);
+    free(tempHeader);
 }
 
 /** Return a new iterator for intSet.  Returns NULL if intSet
@@ -184,5 +183,4 @@ int intSetIteratorElement(const void *intSetIterator)
 const void *stepIntSetIterator(const void *intSetIterator)
 {
     //TODO
-    return 0;
 }
