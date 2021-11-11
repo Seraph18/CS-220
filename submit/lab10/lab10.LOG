@@ -1,0 +1,465 @@
+Script started on 2021-11-11 09:50:07-05:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="94" LINES="49"]
+jgordo39@g7-13:~/i220a/submit/lab10$ ls
+exercises  lab10.LOG
+jgordo39@g7-13:~/i220a/submit/lab10$ clear
+[H[2J[3Jjgordo39@g7-13:~/i220a/submit/lab10$ ls
+exercises  lab10.LOG
+jgordo39@g7-13:~/i220a/submit/lab10$ cd exercises
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ clear
+[H[2J[3Jjgordo39@g7-13:~/i220a/submit/lab10/exercises$ ls
+inexact  ints  loop  nan  negeq  uints	ulp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ cd uints
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/uints$ ls
+Makefile  uints.c
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/uints$ emacs uints.c
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/uints$ emav[Kcs Makefile
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/uints$ ./[K[Kmake
+cc -g -Wall -std=c18    uints.c   -o uints
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/uints$ makeemacs Makefilemake[K[K./uints
+65535
+uint = 65535 (0xffff); ushort = 65535 (0xffff)
+65536
+uint = 65536 (0x10000); ushort = 0 (0x0)
+65537
+uint = 65537 (0x10001); ushort = 1 (0x1)
+4294967297
+uint = 1 (0x1); ushort = 1 (0x1)
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/uints$ cd ..
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ ls
+inexact  ints  loop  nan  negeq  uints	ulp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ cd ints
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ints$ ls
+ints.c	Makefile
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ints$ emac [Ks ints.c
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ints$ m[Kmake
+cc -g -Wall -std=c18    ints.c   -o ints
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ints$ ./ints
+32768
+int = 32768 (0x8000); short = -32768 (0xffff8000)
+32767
+int = 32767 (0x7fff); short = 32767 (0x7fff)
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ints$ cd ..
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ ls
+inexact  ints  loop  nan  negeq  uints	ulp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ cd negeq
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/negeq$ ls
+Makefile  negeq.c
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/negeq$ emacs negeq.c
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/negeq$ make
+cc -g -Wall -std=c18    negeq.c   -o negeq
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/negeq$ ./negf[Keq
+a
+10 != -10
+s
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/negeq$ ./negeq[3Pmake
+make: 'negeq' is up to date.
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/negeq$ make./negeq
+7 172
+370 != -370
+0
+0 == -0
+done
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/negeq$ cd ..
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ ls
+inexact  ints  loop  nan  negeq  uints	ulp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ python
+Python 2.7.16 (default, Oct 10 2019, 22:02:15) 
+[GCC 8.3.0] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 10**10000[K-1.0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+OverflowError: long int too large to convert to float
+>>> 10**1000-1.0[K[K
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999L
+>>> 
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ ls
+inexact  ints  loop  nan  negeq  uints	ulp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ clear
+[H[2J[3Jjgordo39@g7-13:~/i220a/submit/lab10/exercises$ ls
+inexact  ints  loop  nan  negeq  uints	ulp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ cd nan
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/nan$ 
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/nan$ ;[Ks[Kls
+Makefile  nan.c
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/nan$ cd[K[Kemacs nan.c
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/nan$ cd ..
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ lsa
+bash: lsa: command not found
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ l
+bash: l: command not found
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ sls
+bash: sls: command not found
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ ls
+inexact  ints  loop  nan  negeq  uints	ulp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ cd inexact
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/inexact$ ls
+0.1.c  Makefile
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/inexact$ clear
+[H[2J[3Jjgordo39@g7-13:~/i220a/submit/lab10/exercises/inexact$ ls
+0.1.c  Makefile
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/inexact$ eacs[K[K[Kmacs 0.1.c
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/inexact$ make
+cc -g -Wall -std=c18    0.1.c   -o 0.1
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/inexact$ ls
+0.1  0.1.c  Makefile
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/inexact$ ./0.1
+0.99999999999999988898 0
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/inexact$ cd ..
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ ka
+bash: ka: command not found
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ la
+bash: la: command not found
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ la[Ks
+inexact  ints  loop  nan  negeq  uints	ulp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ cs[Kd nan
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/nan$ clear
+[H[2J[3Jjgordo39@g7-13:~/i220a/submit/lab10/exercises/nan$ ls
+Makefile  nan.c
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/nan$ make
+cc -g -Wall -std=c18    nan.c   -o nan
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/nan$ make[2Plscleard nan[1Plear[3Plsmake[K./nana[K
+10
+x = 1
+loop exit
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/nan$ ls
+Makefile  nan  nan.c
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/nan$ ./nan
+0 .9999999
+x = 1
+loop exit
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/nan$ ./nan[3Pls./nan[1Pmake[2Plsmake./nan~[K
+2**34
+x = 1
+loop exit
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/nan$ ./nan\[K
+Nan N
+x = nan
+
+NO aN
+
+NaN
+^C
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/nan$ cd ..
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ ls
+inexact  ints  loop  nan  negeq  uints	ulp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ cd ulp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ulp$ make
+cc -g -Wall -std=c18    ulp.c  -lm -o ulp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ulp$ ./ulp
+usage ./ulp data|lg-data|verbose
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ulp$ ./ulp verbose
+v = 0x1 (1), ulp = 1.1920928955078e-07
+v = 0x2 (2), ulp = 2.3841857910156e-07
+v = 0x4 (4), ulp = 4.7683715820312e-07
+v = 0x8 (8), ulp = 9.5367431640625e-07
+v = 0x10 (16), ulp = 1.9073486328125e-06
+v = 0x20 (32), ulp = 3.814697265625e-06
+v = 0x40 (64), ulp = 7.62939453125e-06
+v = 0x80 (128), ulp = 1.52587890625e-05
+v = 0x100 (256), ulp = 3.0517578125e-05
+v = 0x200 (512), ulp = 6.103515625e-05
+v = 0x400 (1024), ulp = 0.0001220703125
+v = 0x800 (2048), ulp = 0.000244140625
+v = 0x1000 (4096), ulp = 0.00048828125
+v = 0x2000 (8192), ulp = 0.0009765625
+v = 0x4000 (16384), ulp = 0.001953125
+v = 0x8000 (32768), ulp = 0.00390625
+v = 0x10000 (65536), ulp = 0.0078125
+v = 0x20000 (131072), ulp = 0.015625
+v = 0x40000 (262144), ulp = 0.03125
+v = 0x80000 (524288), ulp = 0.0625
+v = 0x100000 (1.04858e+06), ulp = 0.125
+v = 0x200000 (2.09715e+06), ulp = 0.25
+v = 0x400000 (4.1943e+06), ulp = 0.5
+v = 0x800000 (8.38861e+06), ulp = 1
+v = 0x1000000 (1.67772e+07), ulp = 2
+v = 0x2000000 (3.35544e+07), ulp = 4
+v = 0x4000000 (6.71089e+07), ulp = 8
+v = 0x8000000 (1.34218e+08), ulp = 16
+v = 0x10000000 (2.68435e+08), ulp = 32
+v = 0x20000000 (5.36871e+08), ulp = 64
+v = 0x40000000 (1.07374e+09), ulp = 128
+v = 0x80000000 (2.14748e+09), ulp = 256
+v = 0x100000000 (4.29497e+09), ulp = 512
+v = 0x200000000 (8.58993e+09), ulp = 1024
+v = 0x400000000 (1.71799e+10), ulp = 2048
+v = 0x800000000 (3.43597e+10), ulp = 4096
+v = 0x1000000000 (6.87195e+10), ulp = 8192
+v = 0x2000000000 (1.37439e+11), ulp = 16384
+v = 0x4000000000 (2.74878e+11), ulp = 32768
+v = 0x8000000000 (5.49756e+11), ulp = 65536
+v = 0x10000000000 (1.09951e+12), ulp = 131072
+v = 0x20000000000 (2.19902e+12), ulp = 262144
+v = 0x40000000000 (4.39805e+12), ulp = 524288
+v = 0x80000000000 (8.79609e+12), ulp = 1048576
+v = 0x100000000000 (1.75922e+13), ulp = 2097152
+v = 0x200000000000 (3.51844e+13), ulp = 4194304
+v = 0x400000000000 (7.03687e+13), ulp = 8388608
+v = 0x800000000000 (1.40737e+14), ulp = 16777216
+v = 0x1000000000000 (2.81475e+14), ulp = 33554432
+v = 0x2000000000000 (5.6295e+14), ulp = 67108864
+v = 0x4000000000000 (1.1259e+15), ulp = 134217728
+v = 0x8000000000000 (2.2518e+15), ulp = 268435456
+v = 0x10000000000000 (4.5036e+15), ulp = 536870912
+v = 0x20000000000000 (9.0072e+15), ulp = 1073741824
+v = 0x40000000000000 (1.80144e+16), ulp = 2147483648
+v = 0x80000000000000 (3.60288e+16), ulp = 4294967296
+v = 0x100000000000000 (7.20576e+16), ulp = 8589934592
+v = 0x200000000000000 (1.44115e+17), ulp = 17179869184
+v = 0x400000000000000 (2.8823e+17), ulp = 34359738368
+v = 0x800000000000000 (5.76461e+17), ulp = 68719476736
+v = 0x1000000000000000 (1.15292e+18), ulp = 137438953472
+v = 0x2000000000000000 (2.30584e+18), ulp = 274877906944
+v = 0x4000000000000000 (4.61169e+18), ulp = 549755813888
+v = 0x8000000000000000 (9.22337e+18), ulp = 1099511627776
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ulp$ ,/[K[K./ulp data >ulp.data
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ulp$ ls
+Makefile  ulp  ulp.c  ulp.data	ulp.gp	ulp-lg.gp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ulp$ emacs[K[K[K[K[Kcat ulp.data
+1 1.19209e-07
+2 2.38419e-07
+4 4.76837e-07
+8 9.53674e-07
+16 1.90735e-06
+32 3.8147e-06
+64 7.62939e-06
+128 1.52588e-05
+256 3.05176e-05
+512 6.10352e-05
+1024 0.00012207
+2048 0.000244141
+4096 0.000488281
+8192 0.000976562
+16384 0.00195312
+32768 0.00390625
+65536 0.0078125
+131072 0.015625
+262144 0.03125
+524288 0.0625
+1.04858e+06 0.125
+2.09715e+06 0.25
+4.1943e+06 0.5
+8.38861e+06 1
+1.67772e+07 2
+3.35544e+07 4
+6.71089e+07 8
+1.34218e+08 16
+2.68435e+08 32
+5.36871e+08 64
+1.07374e+09 128
+2.14748e+09 256
+4.29497e+09 512
+8.58993e+09 1024
+1.71799e+10 2048
+3.43597e+10 4096
+6.87195e+10 8192
+1.37439e+11 16384
+2.74878e+11 32768
+5.49756e+11 65536
+1.09951e+12 131072
+2.19902e+12 262144
+4.39805e+12 524288
+8.79609e+12 1.04858e+06
+1.75922e+13 2.09715e+06
+3.51844e+13 4.1943e+06
+7.03687e+13 8.38861e+06
+1.40737e+14 1.67772e+07
+2.81475e+14 3.35544e+07
+5.6295e+14 6.71089e+07
+1.1259e+15 1.34218e+08
+2.2518e+15 2.68435e+08
+4.5036e+15 5.36871e+08
+9.0072e+15 1.07374e+09
+1.80144e+16 2.14748e+09
+3.60288e+16 4.29497e+09
+7.20576e+16 8.58993e+09
+1.44115e+17 1.71799e+10
+2.8823e+17 3.43597e+10
+5.76461e+17 6.87195e+10
+1.15292e+18 1.37439e+11
+2.30584e+18 2.74878e+11
+4.61169e+18 5.49756e+11
+9.22337e+18 1.09951e+12
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ulp$ gnuplot -p ulp.gp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ulp$ ./ulp lg-data > ulp-lg.data
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ulp$ ./ulp lg-data > ulp-lg.data[10Pgnuplot -p ulp.gp[5Pcat ulp.datagnuplot -p ulp.gp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ulp$ gnuplot -p ulp.gp./ulp lg-data > ulp-lg.data[10Pgnuplot -p ulp.gp[5Pcat ulp.datals[Kcat ulp.data
+1 1.19209e-07
+2 2.38419e-07
+4 4.76837e-07
+8 9.53674e-07
+16 1.90735e-06
+32 3.8147e-06
+64 7.62939e-06
+128 1.52588e-05
+256 3.05176e-05
+512 6.10352e-05
+1024 0.00012207
+2048 0.000244141
+4096 0.000488281
+8192 0.000976562
+16384 0.00195312
+32768 0.00390625
+65536 0.0078125
+131072 0.015625
+262144 0.03125
+524288 0.0625
+1.04858e+06 0.125
+2.09715e+06 0.25
+4.1943e+06 0.5
+8.38861e+06 1
+1.67772e+07 2
+3.35544e+07 4
+6.71089e+07 8
+1.34218e+08 16
+2.68435e+08 32
+5.36871e+08 64
+1.07374e+09 128
+2.14748e+09 256
+4.29497e+09 512
+8.58993e+09 1024
+1.71799e+10 2048
+3.43597e+10 4096
+6.87195e+10 8192
+1.37439e+11 16384
+2.74878e+11 32768
+5.49756e+11 65536
+1.09951e+12 131072
+2.19902e+12 262144
+4.39805e+12 524288
+8.79609e+12 1.04858e+06
+1.75922e+13 2.09715e+06
+3.51844e+13 4.1943e+06
+7.03687e+13 8.38861e+06
+1.40737e+14 1.67772e+07
+2.81475e+14 3.35544e+07
+5.6295e+14 6.71089e+07
+1.1259e+15 1.34218e+08
+2.2518e+15 2.68435e+08
+4.5036e+15 5.36871e+08
+9.0072e+15 1.07374e+09
+1.80144e+16 2.14748e+09
+3.60288e+16 4.29497e+09
+7.20576e+16 8.58993e+09
+1.44115e+17 1.71799e+10
+2.8823e+17 3.43597e+10
+5.76461e+17 6.87195e+10
+1.15292e+18 1.37439e+11
+2.30584e+18 2.74878e+11
+4.61169e+18 5.49756e+11
+9.22337e+18 1.09951e+12
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ulp$ cat ulp.data-.datal.datag.data
+0 -23
+1 -22
+2 -21
+3 -20
+4 -19
+5 -18
+6 -17
+7 -16
+8 -15
+9 -14
+10 -13
+11 -12
+12 -11
+13 -10
+14 -9
+15 -8
+16 -7
+17 -6
+18 -5
+19 -4
+20 -3
+21 -2
+22 -1
+23 0
+24 1
+25 2
+26 3
+27 4
+28 5
+29 6
+30 7
+31 8
+32 9
+33 10
+34 11
+35 12
+36 13
+37 14
+38 15
+39 16
+40 17
+41 18
+42 19
+43 20
+44 21
+45 22
+46 23
+47 24
+48 25
+49 26
+50 27
+51 28
+52 29
+53 30
+54 31
+55 32
+56 33
+57 34
+58 35
+59 36
+60 37
+61 38
+62 39
+63 40
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ulp$ cat ulp-lg.data[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kd[Kgnup[[K[Kplot -p ulpp-[K[K-lg.gp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/ulp$ cd ..
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ ls
+inexact  ints  loop  nan  negeq  uints	ulp
+jgordo39@g7-13:~/i220a/submit/lab10/exercises$ cd loop
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/loop$ ls
+loop.c	Makefile
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/loop$ cd[K[Kemacs loop.c
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/loop$ make
+cc -g -Wall -std=c18    loop.c   -o loop
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/loop$ ./loop
+2
+loop exited with x = 2002
+2
+loop exited with x = 2002
+3
+loop exited with x = 2003
+4
+loop exited with x = 2004
+^X^C
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/loop$ l[K./loop[2Pmakeemacs loop.c
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/loop$ emacs loop.c[6P./loop
+19209e-07
+^C
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/loop$ ./loopemacs loop.c[6P./loop
+19209e-07
+loop exited with x = 2000.001953125
+^[[A^[[A        0
+loop exited with x = 2000
+0
+loop exited with x = 2000
+0
+loop exited with x = 2000
+0
+loop exited with x = 2000
+2
+loop exited with x = 2002
+1
+loop exited with x = 2001
+^C
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/loop$ ./loopemacs loop.c
+jgordo39@g7-13:~/i220a/submit/lab10/exercises/loop$ emacs loop.c[6P./loop
+NaN
+loop exited with x = nan
+a
+loop exited with x = nan
+
+
+Had to get rid of the back half as the file was 130 mb due to the infinite loops and I could not navigate the file in any real way
