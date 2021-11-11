@@ -34,7 +34,7 @@ START_TEST(addElement)
   void *set = newIntSet();
   int result1 = addIntSet(set, 33);
   int result2 = addIntSet(set, -22);
-  int result3 = addIntSet(set, 33);  //duplicate should be ignored
+  int result3 = addIntSet(set, 33); // duplicate should be ignored
   ck_assert_int_eq(result1, 1);
   ck_assert_int_eq(result2, 2);
   ck_assert_int_eq(result3, 2);
@@ -53,9 +53,7 @@ addIntSetSuite(void)
   return suite;
 }
 
-
 /*********************** nElementsIntSet Tests ************************/
-
 
 START_TEST(nElements)
 {
@@ -72,7 +70,6 @@ START_TEST(nElements)
 }
 END_TEST
 
-
 static Suite *
 nElementsIntSetSuite(void)
 {
@@ -83,20 +80,18 @@ nElementsIntSetSuite(void)
   return suite;
 }
 
-
 /********************** addMultipleIntSet Tests ************************/
 
 START_TEST(multiAdd)
 {
   void *set = newIntSet();
-  const int elements[] = { 33, -53, 54, 2, 0, -1 };
-  const int nElements = sizeof(elements)/sizeof(elements[0]);
+  const int elements[] = {33, -53, 54, 2, 0, -1};
+  const int nElements = sizeof(elements) / sizeof(elements[0]);
   int n = addMultipleIntSet(set, elements, nElements);
   freeIntSet(set);
   ck_assert_int_eq(n, nElements);
 }
 END_TEST
-
 
 static Suite *
 addMultipleIntSetSuite(void)
@@ -108,36 +103,45 @@ addMultipleIntSetSuite(void)
   return suite;
 }
 
-
 /************************* isInIntSet Tests ****************************/
 
 START_TEST(contains)
 {
   void *set = newIntSet();
-  const int elements[] = { 33, 53, 33, 54, 2, };
-  const int nElements = sizeof(elements)/sizeof(elements[0]);
+  const int elements[] = {
+      33,
+      53,
+      33,
+      54,
+      2,
+  };
+  const int nElements = sizeof(elements) / sizeof(elements[0]);
   int n = addMultipleIntSet(set, elements, nElements);
   ck_assert_int_eq(n, nElements - 1);
-  for (int i = 0; i < nElements; i++) {
+  for (int i = 0; i < nElements; i++)
+  {
     ck_assert_int_eq(isInIntSet(set, elements[i]), 1);
   }
   freeIntSet(set);
-
 }
 END_TEST
-
 
 START_TEST(notContains)
 {
   void *set = newIntSet();
-  const int elements[] = { 33, 53, 33, 54, 2, };
-  const int nElements = sizeof(elements)/sizeof(elements[0]);
+  const int elements[] = {
+      33,
+      53,
+      33,
+      54,
+      2,
+  };
+  const int nElements = sizeof(elements) / sizeof(elements[0]);
   int n = addMultipleIntSet(set, elements, nElements);
   ck_assert_int_eq(n, nElements - 1);
   ck_assert_int_eq(isInIntSet(set, 44), 0);
   ck_assert_int_eq(isInIntSet(set, 55), 0);
   freeIntSet(set);
-
 }
 END_TEST
 
@@ -152,21 +156,21 @@ isInIntSetSuite(void)
   return suite;
 }
 
-
 /**************************** iterator Tests ***************************/
 
 START_TEST(iterator)
 {
   void *set = newIntSet();
-  const int elements[] = { 33, 53, 54, -22, 33, -22 };
-  const int nElements = sizeof(elements)/sizeof(elements[0]);
-  const int sortElements[] = { -22, 33, 53, 54 };
-  const int nSortElements = sizeof(sortElements)/sizeof(sortElements[0]);
+  const int elements[] = {33, 53, 54, -22, 33, -22};
+  const int nElements = sizeof(elements) / sizeof(elements[0]);
+  const int sortElements[] = {-22, 33, 53, 54};
+  const int nSortElements = sizeof(sortElements) / sizeof(sortElements[0]);
   int n = addMultipleIntSet(set, elements, nElements);
   ck_assert_int_eq(n, nSortElements);
   int i = 0;
   for (const void *iter = newIntSetIterator(set); iter != NULL;
-       iter = stepIntSetIterator(iter)) {
+       iter = stepIntSetIterator(iter))
+  {
     int v = intSetIteratorElement(iter);
     ck_assert_int_eq(v, sortElements[i++]);
   }
@@ -178,16 +182,22 @@ END_TEST
 START_TEST(manyElementsIter)
 {
   void *set = newIntSet();
-  const int LO = -1000; //inclusive
-  const int HI = 1000;  //exclusive
+  const int LO = -1000; // inclusive
+  const int HI = 1000;  // exclusive
   const int K = 5;
-  for (int k = 0; k < 5; k++) {
-    for (int i = LO; i < HI; i += K) addIntSet(set, i + k);
+  for (int k = 0; k < 5; k++)
+  {
+    for (int i = LO; i < HI; i += K)
+    {
+      addIntSet(set, i + k);
+    }
   }
   ck_assert_int_eq(nElementsIntSet(set), HI - LO);
   int i = LO;
+  // printIntSet(set, nElementsIntSet(set));
   for (const void *iter = newIntSetIterator(set); iter != NULL;
-       iter = stepIntSetIterator(iter)) {
+       iter = stepIntSetIterator(iter))
+  {
     int v = intSetIteratorElement(iter);
     ck_assert_int_eq(v, i++);
   }
@@ -195,7 +205,6 @@ START_TEST(manyElementsIter)
   freeIntSet(set);
 }
 END_TEST
-
 
 static Suite *
 iteratorSuite(void)
@@ -208,7 +217,6 @@ iteratorSuite(void)
   return suite;
 }
 
-
 /****************************** scan Tests *****************************/
 
 static void
@@ -216,21 +224,25 @@ scanTest(const char *str, int arr[], int nArr, int expectErr)
 {
   int n;
   void *set = sscanIntSet(str, &n);
-  if (expectErr) {
-    ck_assert_ptr_eq(set, NULL);  //ck_assert_ptr_null() not declared!!
+  if (expectErr)
+  {
+    ck_assert_ptr_eq(set, NULL); // ck_assert_ptr_null() not declared!!
   }
-  else {
-    ck_assert_ptr_ne(set, NULL); //ck_assert_ptr_nonnumm() not declared!!
+  else
+  {
+    ck_assert_ptr_ne(set, NULL); // ck_assert_ptr_nonnumm() not declared!!
     ck_assert_int_eq(n, strlen(str));
     int i = 0;
     for (const void *iter = newIntSetIterator(set); iter != NULL;
-         iter = stepIntSetIterator(iter)) {
+         iter = stepIntSetIterator(iter))
+    {
       int v = intSetIteratorElement(iter);
       ck_assert_int_eq(v, arr[i++]);
     }
     ck_assert_int_eq(i, nArr);
   }
-  if (set != NULL) freeIntSet(set);
+  if (set != NULL)
+    freeIntSet(set);
 }
 
 START_TEST(scanEmpty)
@@ -247,43 +259,43 @@ END_TEST
 
 START_TEST(scan1Element)
 {
-  scanTest("  { 22 }", (int[1]) { 22 }, 1, 0);
+  scanTest("  { 22 }", (int[1]){22}, 1, 0);
 }
 END_TEST
 
 START_TEST(scan1Negative)
 {
-  scanTest("  { -22 }", (int[1]) { -22 }, 1, 0);
+  scanTest("  { -22 }", (int[1]){-22}, 1, 0);
 }
 END_TEST
 
 START_TEST(scan1ElementRepeat)
 {
-  scanTest("  { 22, 22 }", (int[1]) { 22 }, 1, 0);
+  scanTest("  { 22, 22 }", (int[1]){22}, 1, 0);
 }
 END_TEST
 
 START_TEST(scan1ElementTrailingComma)
 {
-  scanTest("  { 22 ,}", (int[1]) { 22 }, 1, 0);
+  scanTest("  { 22 ,}", (int[1]){22}, 1, 0);
 }
 END_TEST
 START_TEST(scan3Elements)
 {
-  scanTest("  { 44, 22, 33 }", (int[3]) { 22, 33, 44 }, 3, 0);
+  scanTest("  { 44, 22, 33 }", (int[3]){22, 33, 44}, 3, 0);
 }
 END_TEST
 
 START_TEST(scan3ElementsRepeat)
 {
-  scanTest("  { 44, 22, 33, 44, 22, 33 }", (int[3]) { 22, 33, 44 }, 3, 0);
+  scanTest("  { 44, 22, 33, 44, 22, 33 }", (int[3]){22, 33, 44}, 3, 0);
 }
 END_TEST
 
 START_TEST(scanMulti)
 {
   scanTest("  { -44, 22, -33, 44, 22, 33 }",
-           (int[5]) { -44, -33, 22, 33, 44 }, 5, 0);
+           (int[5]){-44, -33, 22, 33, 44}, 5, 0);
 }
 END_TEST
 
@@ -304,7 +316,6 @@ START_TEST(scanExtraCommaErr)
   scanTest(" { 44, 22, 33, , 44, 22, 33 }", NULL, 0, 1);
 }
 END_TEST
-
 
 static Suite *
 sscanIntSetSuite(void)
@@ -333,7 +344,10 @@ static void
 snprintTest(const int arr[], int nArr, const char *str)
 {
   void *set = newIntSet();
-  for (int i = 0; i < nArr; i++) { addIntSet(set, arr[i]); }
+  for (int i = 0; i < nArr; i++)
+  {
+    addIntSet(set, arr[i]);
+  }
   int n = snprintIntSet(set, NULL, 0);
   char buf[n + 1];
   int n1 = snprintIntSet(set, buf, n + 1);
@@ -350,19 +364,19 @@ END_TEST
 
 START_TEST(snprint1)
 {
-  snprintTest((int[1]){ 22 }, 1, "{ 22, }");
+  snprintTest((int[1]){22}, 1, "{ 22, }");
 }
 END_TEST
 
 START_TEST(snprint1Negative)
 {
-  snprintTest((int[1]){ -22 }, 1, "{ -22, }");
+  snprintTest((int[1]){-22}, 1, "{ -22, }");
 }
 END_TEST
 
 START_TEST(snprintMulti)
 {
-  snprintTest((int[6]){ -22, 33, -22, 1, 0, 33 }, 6,
+  snprintTest((int[6]){-22, 33, -22, 1, 0, 33}, 6,
               "{ -22, 0, 1, 33, }");
 }
 END_TEST
@@ -394,7 +408,8 @@ unionTest(const int arr1[], int nArr1, const int arr2[], int nArr2,
   ck_assert_int_eq(n, nUnionArr);
   int i = 0;
   for (const void *iter = newIntSetIterator(set1); iter != NULL;
-       iter = stepIntSetIterator(iter)) {
+       iter = stepIntSetIterator(iter))
+  {
     int v = intSetIteratorElement(iter);
     ck_assert_int_eq(v, unionArr[i++]);
   }
@@ -411,32 +426,47 @@ END_TEST
 
 START_TEST(emptyNonEmptyUnion)
 {
-  const int elements2[] = { 33, 54, 53, 33, 53 };
-  const int nElements2 = sizeof(elements2)/sizeof(elements2[0]);
-  const int unionElements[] = { 33, 53, 54, };
-  const int nUnionElements = sizeof(unionElements)/sizeof(unionElements[0]);
+  const int elements2[] = {33, 54, 53, 33, 53};
+  const int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  const int unionElements[] = {
+      33,
+      53,
+      54,
+  };
+  const int nUnionElements = sizeof(unionElements) / sizeof(unionElements[0]);
   unionTest(NULL, 0, elements2, nElements2, unionElements, nUnionElements);
 }
 END_TEST
 
 START_TEST(nonEmptyEmptyUnion)
 {
-  const int elements1[] = { 1, 3, 2, 3, 1 };
-  const int nElements1 = sizeof(elements1)/sizeof(elements1[0]);
-  const int unionElements[] = { 1, 2, 3, };
-  const int nUnionElements = sizeof(unionElements)/sizeof(unionElements[0]);
+  const int elements1[] = {1, 3, 2, 3, 1};
+  const int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int unionElements[] = {
+      1,
+      2,
+      3,
+  };
+  const int nUnionElements = sizeof(unionElements) / sizeof(unionElements[0]);
   unionTest(elements1, nElements1, NULL, 0, unionElements, nUnionElements);
 }
 END_TEST
 
 START_TEST(smallerLargerUnion)
 {
-  const int elements1[] = { 1, 3, 2, 3, 1 };
-  const int nElements1 = sizeof(elements1)/sizeof(elements1[0]);
-  const int elements2[] = { 33, 54, 53, 33, 53 };
-  const int nElements2 = sizeof(elements2)/sizeof(elements2[0]);
-  const int unionElements[] = { 1, 2, 3, 33, 53, 54, };
-  const int nUnionElements = sizeof(unionElements)/sizeof(unionElements[0]);
+  const int elements1[] = {1, 3, 2, 3, 1};
+  const int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int elements2[] = {33, 54, 53, 33, 53};
+  const int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  const int unionElements[] = {
+      1,
+      2,
+      3,
+      33,
+      53,
+      54,
+  };
+  const int nUnionElements = sizeof(unionElements) / sizeof(unionElements[0]);
   unionTest(elements1, nElements1, elements2, nElements2,
             unionElements, nUnionElements);
 }
@@ -444,12 +474,19 @@ END_TEST
 
 START_TEST(largerSmallerUnion)
 {
-  const int elements1[] = { 33, 54, 53, 33, 53 };
-  const int nElements1 = sizeof(elements1)/sizeof(elements1[0]);
-  const int elements2[] = { 1, 3, 2, 3, 1 };
-  const int nElements2 = sizeof(elements2)/sizeof(elements2[0]);
-  const int unionElements[] = { 1, 2, 3, 33, 53, 54, };
-  const int nUnionElements = sizeof(unionElements)/sizeof(unionElements[0]);
+  const int elements1[] = {33, 54, 53, 33, 53};
+  const int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int elements2[] = {1, 3, 2, 3, 1};
+  const int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  const int unionElements[] = {
+      1,
+      2,
+      3,
+      33,
+      53,
+      54,
+  };
+  const int nUnionElements = sizeof(unionElements) / sizeof(unionElements[0]);
   unionTest(elements1, nElements1, elements2, nElements2,
             unionElements, nUnionElements);
 }
@@ -457,12 +494,26 @@ END_TEST
 
 START_TEST(interleavedUnion)
 {
-  const int elements1[] = { 1, 33, 54, 3, 45,   };
-  const int nElements1 = sizeof(elements1)/sizeof(elements1[0]);
-  const int elements2[] = { 1, 3, 33, 45, 2, 53, 53 };
-  const int nElements2 = sizeof(elements2)/sizeof(elements2[0]);
-  const int unionElements[] = { 1, 2, 3, 33, 45, 53, 54, };
-  const int nUnionElements = sizeof(unionElements)/sizeof(unionElements[0]);
+  const int elements1[] = {
+      1,
+      33,
+      54,
+      3,
+      45,
+  };
+  const int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int elements2[] = {1, 3, 33, 45, 2, 53, 53};
+  const int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  const int unionElements[] = {
+      1,
+      2,
+      3,
+      33,
+      45,
+      53,
+      54,
+  };
+  const int nUnionElements = sizeof(unionElements) / sizeof(unionElements[0]);
   unionTest(elements1, nElements1, elements2, nElements2,
             unionElements, nUnionElements);
 }
@@ -496,8 +547,8 @@ intersectionTest(const int arr1[], int nArr1, const int arr2[], int nArr2,
   int n = intersectionIntSet(set1, set2);
   ck_assert_int_eq(n, nIntersectionArr);
   int i = 0;
-  for (const void *iter = newIntSetIterator(set1); iter != NULL;
-       iter = stepIntSetIterator(iter)) {
+  for (const void *iter = newIntSetIterator(set1); iter != NULL; iter = stepIntSetIterator(iter))
+  {
     int v = intSetIteratorElement(iter);
     ck_assert_int_eq(v, intersectionArr[i++]);
   }
@@ -514,15 +565,87 @@ END_TEST
 
 START_TEST(emptyNonEmptyIntersection)
 {
-  const int elements2[] = { 33, 54, 53, 33, 53 };
-  const int nElements2 = sizeof(elements2)/sizeof(elements2[0]);
+  const int elements2[] = {33, 54, 53, 33, 53};
+  const int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
   intersectionTest(NULL, 0, elements2, nElements2, NULL, 0);
 }
 END_TEST
 
+// TODO: add more intersection tests.
 
-//TODO: add more intersection tests.
+START_TEST(equalIntersectingDisjoint)
+{
+  const int elements1[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+  int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int elements2[] = {10, 11, 12, 13, 14, 15, 16, 17, 18};
+  int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  intersectionTest(elements1, nElements1, elements2, nElements2, NULL, 0);
+}
+END_TEST
 
+START_TEST(unequalIntersectingDisjoint)
+{
+  const int elements1[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+  int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int elements2[] = {10, 11, 12};
+  int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  intersectionTest(elements1, nElements1, elements2, nElements2, NULL, 0);
+}
+END_TEST
+
+START_TEST(intersectingSimpleOrdered)
+{
+  const int elements1[] = {52, 78, 104, 115, 120};
+  int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int elements2[] = {24, 52, 104, 118, 120};
+  int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  const int intersectingElements[] = {
+      52,
+      104,
+      120};
+  intersectionTest(elements1, nElements1, elements2, nElements2, intersectingElements, 3);
+}
+END_TEST
+
+START_TEST(intersectingSimpleUnordered)
+{
+  const int elements1[] = {12, 48, 5, 87, 42, 112};
+  int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int elements2[] = {54, 51, 112, 24, 12, 10};
+  int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  const int intersectingElements[] = {
+      12,
+      112};
+  intersectionTest(elements1, nElements1, elements2, nElements2, intersectingElements, 2);
+}
+END_TEST
+
+START_TEST(intersectingOrderedWithDuplicates)
+{
+  const int elements1[] = {12, 12, 45, 50, 51, 51};
+  int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int elements2[] = {12, 12, 48, 50, 50 , 51};
+  int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  const int intersectingElements[] = {
+      12,
+      50,
+      51};
+  intersectionTest(elements1, nElements1, elements2, nElements2, intersectingElements, 3);
+}
+END_TEST
+
+START_TEST(intersectingUnorderedWithDuplicates)
+{
+  const int elements1[] = {48, 12, 48, 5, 87, 64, 64, 42, 112, 112};
+  int nElements1 = sizeof(elements1) / sizeof(elements1[0]);
+  const int elements2[] = {54, 51, 112, 24, 51, 12, 12, 10};
+  int nElements2 = sizeof(elements2) / sizeof(elements2[0]);
+  const int intersectingElements[] = {
+      12,
+      112};
+  intersectionTest(elements1, nElements1, elements2, nElements2, intersectingElements, 2);
+}
+END_TEST
 
 static Suite *
 intersectionIntSetSuite(void)
@@ -531,7 +654,14 @@ intersectionIntSetSuite(void)
   TCase *intersectionTests = tcase_create("intersection");
   tcase_add_test(intersectionTests, emptyEmptyIntersection);
   tcase_add_test(intersectionTests, emptyNonEmptyIntersection);
-  //TODO: for each test added above tcase_add_test(intersectionTests, ...)
+
+  // TODO: for each test added above tcase_add_test(intersectionTests, ...)
+  tcase_add_test(intersectionTests, equalIntersectingDisjoint);
+  tcase_add_test(intersectionTests, unequalIntersectingDisjoint);
+  tcase_add_test(intersectionTests, intersectingSimpleOrdered);
+  tcase_add_test(intersectionTests, intersectingSimpleUnordered);
+  tcase_add_test(intersectionTests, intersectingOrderedWithDuplicates);
+  tcase_add_test(intersectionTests, intersectingUnorderedWithDuplicates);
 
   suite_add_tcase(suite, intersectionTests);
   return suite;
@@ -539,28 +669,26 @@ intersectionIntSetSuite(void)
 
 /*************************** Main Test Function ************************/
 
-
 typedef Suite *SuiteMaker(void);
 static SuiteMaker *makers[] = {
-  newIntSetSuite,
-  addIntSetSuite,
-  nElementsIntSetSuite,
-  addMultipleIntSetSuite,
-  isInIntSetSuite,
-  iteratorSuite,
-  sscanIntSetSuite,
-  snprintIntSetSuite,
-  unionIntSetSuite,
-  intersectionIntSetSuite,
+    newIntSetSuite,
+    addIntSetSuite,
+    nElementsIntSetSuite,
+    addMultipleIntSetSuite,
+    isInIntSetSuite,
+    iteratorSuite,
+    sscanIntSetSuite,
+    snprintIntSetSuite,
+    unionIntSetSuite,
+    intersectionIntSetSuite,
 };
 
-
-int
-main(void)
+int main(void)
 {
   Suite *dummy = suite_create("IntSet Tests");
   SRunner *runner = srunner_create(dummy);
-  for (int i = 0; i < sizeof(makers)/sizeof(makers[0]); i++) {
+  for (int i = 0; i < sizeof(makers) / sizeof(makers[0]); i++)
+  {
     srunner_add_suite(runner, makers[i]());
   }
   srunner_set_fork_status(runner, CK_NOFORK);
