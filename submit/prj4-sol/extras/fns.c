@@ -1,307 +1,313 @@
-static int f0(int a0);
-static int f1(int a0);
-static int f2(int a0, int a1, int a2, int a3, int a4, int a5);
+static int f0(int a0, int a1);
+static int f1(int a0, int a1, int a2, int a3, int a4);
+static int f2(int a0, int a1);
 static int f3(int a0, int a1, int a2);
 static int f4(int a0);
-static int f5(int a0, int a1, int a2);
-static int f6(int a0, int a1, int a2, int a3, int a4);
-static int f7(int a0, int a1, int a2, int a3, int a4, int a5);
-static int f8(int a0, int a1);
-static int f9(int a0, int a1, int a2, int a3);
-static int f10(int a0);
-static int f11(int a0, int a1, int a2, int a3, int a4, int a5);
-static int f12(int a0, int a1, int a2, int a3, int a4);
-static int f13(int a0, int a1, int a2, int a3, int a4);
-static int f14(int a0);
-static int f15(int a0, int a1, int a2, int a3, int a4);
-static int f16(int a0, int a1, int a2, int a3, int a4);
-static int f17(int a0, int a1, int a2, int a3, int a4, int a5);
-static int f18(int a0, int a1, int a2, int a3, int a4);
-static int f19(int a0, int a1, int a2);
+static int f5(int a0, int a1, int a2, int a3, int a4);
+static int f6(int a0, int a1, int a2);
+static int f7(int a0, int a1, int a2);
+static int f8(int a0, int a1, int a2);
+static int f9(int a0, int a1, int a2, int a3, int a4);
+static int f10(int a0, int a1);
+static int f11(int a0, int a1, int a2, int a3, int a4);
+static int f12(int a0, int a1, int a2, int a3);
+static int f13(int a0);
+static int f14(int a0, int a1, int a2, int a3);
+static int f15(int a0);
+static int f16(int a0, int a1, int a2);
+static int f17(int a0, int a1, int a2, int a3);
+static int f18(int a0, int a1, int a2, int a3, int a4, int a5);
+static int f19(int a0, int a1, int a2, int a3, int a4);
 
-static int f0(int a0)
+static int f0(int a0, int a1)
 {
-  int result = -3410416;
+  int result = -1023414337;
   if (a0 > 0) {
-    result += 3389005492*f8(a0 - 9613, a0);
-    result -= 51910*f15(a0 - 8217, 3271560241, a0, 49777, -3942075);
-    result += 13310395*f15(a0 - 9973, a0, a0, a0, -13375);
-    result -= 3892316158*f9(a0 - 7195, -3352, a0, a0);
-    result += 3892323902*f17(a0 - 5390, a0, a0, a0, a0, a0);
-    result -= -872422536*f16(a0 - 6545, -13328, -1334, a0, a0);
-    result += 3389000500*f5(a0 - 5716, a0, -3937823);
-    result += 52222*f1(a0 - 9683);
+    result -= -1023413834*f12(a0 - 6094, a0, a1, 3892315686);
+    result += -1023416352*f7(a0 - 252, a1, a1);
+    result += -8728*f11(a0 - 1848, 49817, a0, 7912, 6888);
+    result += 3892315931*f4(a0 - 149);
+    result -= -1006641547*f2(a0 - 6088, -385876810);
+    result += 13247808*f4(a0 - 5395);
+    result += -1516873*f5(a0 - 3285, a0, -7230, 49677, a0);
+    result += -1560*f1(a0 - 537, a0, a0, -7485, 3892323133);
   }
   return result;
 }
 
-static int f1(int a0)
+static int f1(int a0, int a1, int a2, int a3, int a4)
 {
-  int result = -1085;
+  int result = 3271561233;
   if (a0 > 0) {
-    result -= -15705*f11(a0 - 7317, a0, -8728, a0, a0, -5400);
-    result += -3475211*f16(a0 - 41, -13661, a0, a0, 13245348);
-    result += -9269*f2(a0 - 5566, a0, a0, a0, 50091, -61);
-    result += 5058*f4(a0 - 7121);
-    result -= 49770*f8(a0 - 4100, a0);
-    result += -7477*f19(a0 - 696, a0, a0);
-    result += -13328*f2(a0 - 505, a0, -13762, a0, a0, a0);
+    result += 15208433*f7(a0 - 2190, a4, a4);
+    result -= 12722958*f14(a0 - 6025, 3254784965, a4, a3);
+    result += 2506*f10(a0 - 2090, -3409479);
+    result -= -872421440*f2(a0 - 8025, a2);
+    result += 3254781577*f12(a0 - 5271, a3, a2, 50070);
+    result += -8509*f2(a0 - 1834, -889199151);
   }
   return result;
 }
 
-static int f2(int a0, int a1, int a2, int a3, int a4, int a5)
+static int f2(int a0, int a1)
 {
-  int result = 49778;
+  int result = -889197739;
   if (a0 > 0) {
-    result += 6858*f19(a0 - 3399, a0, -2072);
-    result -= -4413*f10(a0 - 3303);
-    result -= 3389000551*f0(a0 - 4647);
-    result -= -3475086*f17(a0 - 2448, a5, 3271565234, a5, a1, -8254);
-    result -= 3389005859*f5(a0 - 8634, 49854, -13354);
-    result += 7371*f3(a0 - 5502, a0, 3254780403);
+    result += 13240186*f9(a0 - 5750, a1, a0, 13241723, a0);
+    result += 3892315448*f3(a0 - 8015, a1, a1);
   }
   return result;
 }
 
 static int f3(int a0, int a1, int a2)
 {
-  int result = 5314;
+  int result = 3389005311;
   if (a0 > 0) {
-    result -= 3254784521*f11(a0 - 1448, a1, a1, a0, a0, 9192);
-    result += -13347*f4(a0 - 7761);
+    result += 3405776553*f8(a0 - 2633, 51801, a0);
+    result -= -7486*f3(a0 - 702, a0, -889202256);
+    result += -3417133*f4(a0 - 6812);
+    result -= -872423240*f8(a0 - 6794, a1, 13247105);
+    result += -15365*f10(a0 - 5707, -9269);
+    result -= -13338*f10(a0 - 8231, 52201);
+    result += -4007162*f1(a0 - 4636, -6718, a2, a0, a1);
+    result -= -15828*f7(a0 - 1475, a1, a0);
+    result -= 51928*f5(a0 - 9656, a1, a2, a0, 15208701);
+    result += -2072*f4(a0 - 1003);
+    result += -872421942*f4(a0 - 4811);
   }
   return result;
 }
 
 static int f4(int a0)
 {
-  int result = -1560;
+  int result = 13310907;
   if (a0 > 0) {
-    result += 3892320254*f10(a0 - 1164);
-    result += 52039*f2(a0 - 4228, a0, -3482362, a0, 12715313, 49835);
-    result -= 3271562696*f14(a0 - 3301);
-    result += 3271563916*f0(a0 - 9513);
-    result += 707*f13(a0 - 8068, a0, 15207159, a0, a0);
-    result += 12782365*f4(a0 - 2373);
-    result += -7990*f12(a0 - 4487, 5096, 4554, 59582, -5912);
-    result -= -15823*f10(a0 - 8964);
-    result += 50153*f5(a0 - 4123, 15211683, a0);
+    result -= 3530*f15(a0 - 5022);
+    result -= 59534*f7(a0 - 5807, 52010, 3254786510);
+    result += 3254787090*f14(a0 - 474, -1023416677, -9277, a0);
+    result -= 12718887*f13(a0 - 6949);
+    result -= -1511451*f12(a0 - 911, -318, 8387, 3405777040);
+    result -= 50109*f7(a0 - 7250, a0, a0);
+    result += -1509369*f0(a0 - 6479, a0);
+    result -= -3479179*f4(a0 - 3774);
+    result += 2792*f5(a0 - 7159, a0, a0, -6718, 49722);
   }
   return result;
 }
 
-static int f5(int a0, int a1, int a2)
+static int f5(int a0, int a1, int a2, int a3, int a4)
 {
-  int result = 13309678;
+  int result = -3864;
   if (a0 > 0) {
-    result += 52173*f19(a0 - 6181, 13307732, 12783209);
-    result += -3408887*f12(a0 - 3799, a1, a2, a2, a0);
-    result -= -3417626*f4(a0 - 5003);
-    result -= 3389006485*f1(a0 - 6010);
-    result -= -2621*f18(a0 - 7081, a0, a1, a0, a2);
-    result -= 59579*f18(a0 - 7556, a2, -7478, 3388999736, -2613);
-    result -= -1006640376*f13(a0 - 8826, 7626, a0, -13667, a0);
-    result += -3935382*f11(a0 - 9500, 13240180, a0, a0, a2, a0);
-    result += -7990*f6(a0 - 6584, a2, a2, -5954, -3939846);
+    result -= -1023415650*f10(a0 - 2741, -13795);
+    result -= -7478*f15(a0 - 4011);
+    result -= 3254783600*f14(a0 - 5938, 3778, a4, -1516444);
+    result += 3405778472*f5(a0 - 8527, 450, a4, -9496, a1);
+    result += 3271558489*f13(a0 - 3094);
+    result += 3271566359*f5(a0 - 5302, -7997, a4, a2, a2);
+    result += 9163*f6(a0 - 1653, a3, -1023417463);
   }
   return result;
 }
 
-static int f6(int a0, int a1, int a2, int a3, int a4)
+static int f6(int a0, int a1, int a2)
 {
-  int result = 51964;
+  int result = 3786;
   if (a0 > 0) {
-    result -= 52130*f11(a0 - 6737, -889194910, a3, 13311833, a0, 59448);
-    result -= 50005*f19(a0 - 879, a3, 3388999473);
-    result += -13604*f12(a0 - 2439, a3, -2102, a4, -385877220);
-    result += -4157*f3(a0 - 7115, 15206430, -3894);
-    result -= 5059*f7(a0 - 4923, 12779900, a3, 3892321756, -2358, 3271564914);
-    result -= -872415334*f9(a0 - 6769, -3864, a3, 50065);
-    result += -3414161*f19(a0 - 1160, -872423463, 3271559169);
-    result -= 49766*f14(a0 - 4508);
-    result += -7222*f7(a0 - 9673, a0, -889195252, a1, 3892323117, 3271564080);
+    result -= 1218*f6(a0 - 7464, -6936, a1);
+    result -= -872419851*f10(a0 - 4151, -5998);
+    result += 49841*f9(a0 - 4592, -872421061, 6376, a1, a0);
+    result += -15750*f19(a0 - 1277, 13244818, -5950, 3405776753, 450);
+    result -= -4004349*f10(a0 - 148, -2358);
+    result += 51781*f4(a0 - 818);
+    result -= 3271564119*f19(a0 - 6976, -13611, 59537, -7734, a2);
+    result += -3475182*f6(a0 - 2034, a1, a2);
+    result += 3892320153*f3(a0 - 8558, a0, 13312233);
+    result += -15807*f7(a0 - 4153, a0, 6120);
   }
   return result;
 }
 
-static int f7(int a0, int a1, int a2, int a3, int a4, int a5)
+static int f7(int a0, int a1, int a2)
 {
-  int result = -8245;
+  int result = -318;
   if (a0 > 0) {
-    result -= -3934216*f0(a0 - 912);
-    result -= 13308493*f8(a0 - 547, 3405776741);
-    result += -1516225*f7(a0 - 1457, a0, 1000, a0, -3417871, a5);
-    result -= 9667*f18(a0 - 1607, a1, a1, a0, -15613);
-    result -= -3940121*f14(a0 - 4498);
-    result -= -2366*f17(a0 - 1896, a3, a4, a1, -2328, 3892320027);
-    result += 13247525*f17(a0 - 7845, -889200760, a5, 51979, a5, 715);
-    result += -3938309*f17(a0 - 9527, a1, a3, a4, a0, -6462);
-    result += 50165*f16(a0 - 7201, 3405776997, 3254784087, -7478, -4925);
-    result += -1006640645*f8(a0 - 196, a3);
+    result -= -3412853*f12(a0 - 2895, -3999586, -3416394, 7618);
+    result -= -9525*f15(a0 - 8750);
+    result -= -385883754*f3(a0 - 6589, -3934035, a0);
+    result += -1006642451*f8(a0 - 8318, 3816, -3999996);
   }
   return result;
 }
 
-static int f8(int a0, int a1)
+static int f8(int a0, int a1, int a2)
 {
-  int result = -15438;
+  int result = -1023410627;
   if (a0 > 0) {
-    result += -13506*f2(a0 - 7634, a0, 50031, 50173, 49975, 3405779230);
-    result += -3411291*f11(a0 - 3952, -1023419202, a1, -15614, -385876840, -13575);
-    result -= 3271558236*f11(a0 - 347, a0, 1000, a0, a1, a1);
-    result += -1006633878*f2(a0 - 3976, a0, 15208110, a1, a1, a1);
-    result += 12783699*f16(a0 - 1869, a1, -1006637470, 4555, 7882);
-    result += -13340*f9(a0 - 393, a1, a1, -7960);
+    result -= 3892323829*f15(a0 - 706);
+    result += -889195864*f8(a0 - 145, -13675, 12721923);
+    result -= 12715187*f4(a0 - 2792);
+    result -= -872422767*f4(a0 - 1485);
+    result -= -15677*f17(a0 - 2922, a2, a0, -3937885);
+    result -= -9270*f3(a0 - 1142, -1023410599, 3389005320);
+    result += 13306256*f11(a0 - 3598, -3474468, 13243864, a1, a2);
+    result -= -3940115*f9(a0 - 4286, 8680, a2, a1, a0);
+    result -= -1342*f9(a0 - 4792, a2, a1, a1, a1);
+    result += 12786616*f9(a0 - 1166, 3892323546, -385881788, a2, a0);
   }
   return result;
 }
 
-static int f9(int a0, int a1, int a2, int a3)
+static int f9(int a0, int a1, int a2, int a3, int a4)
 {
-  int result = -54;
+  int result = 3254789857;
   if (a0 > 0) {
-    result += 13248021*f14(a0 - 9189);
-    result += 49706*f10(a0 - 8894);
-    result += 59573*f2(a0 - 3849, -889200891, -15818, -13435, 3405780777, 13304752);
-    result += 3389007113*f10(a0 - 1589);
+    result += -5923*f9(a0 - 3808, 12719543, a2, a4, a2);
+    result -= 3254784551*f8(a0 - 4050, a1, a2);
+    result += -8254*f8(a0 - 1076, -5903, a4);
+    result -= 12714348*f16(a0 - 9369, a0, 49867);
+    result += -3938708*f10(a0 - 2194, a3);
   }
   return result;
 }
 
-static int f10(int a0)
+static int f10(int a0, int a1)
 {
-  int result = -1511424;
+  int result = -13811;
   if (a0 > 0) {
-    result += -4000531*f6(a0 - 4180, a0, 5827, a0, 13239418);
-    result += -1507406*f12(a0 - 1202, -872425061, a0, a0, a0);
-    result -= -5989*f19(a0 - 2624, -872420762, a0);
-    result += 6338*f11(a0 - 858, a0, -4000394, a0, 8386, -8253);
+    result -= -3941791*f8(a0 - 3987, 49973, 12788871);
+    result += 12788027*f9(a0 - 1426, -1023418738, 4035, -3482327, a1);
+    result += 3389002984*f2(a0 - 6092, 50005);
+    result -= 3405779763*f18(a0 - 7118, -6063, -7997, a1, 3389001637, -2584);
+    result += 51760*f6(a0 - 3372, a1, -6462);
+    result -= 8650*f18(a0 - 2353, a0, a0, 50107, 59581, a0);
+    result += -15563*f17(a0 - 1711, 13238705, a1, 13311824);
+    result += 13241986*f6(a0 - 5161, -13773, 3271565722);
+    result -= 3389006675*f19(a0 - 8955, -3412057, a0, a1, -13408);
+    result += -1511374*f11(a0 - 6777, -1023410848, a1, -3939928, -53);
+    result += 13306252*f11(a0 - 6376, a1, 12788866, a0, a0);
   }
   return result;
 }
 
-static int f11(int a0, int a1, int a2, int a3, int a4, int a5)
+static int f11(int a0, int a1, int a2, int a3, int a4)
 {
-  int result = -5437;
+  int result = 971;
   if (a0 > 0) {
-    result += 49784*f9(a0 - 8709, a4, a1, 3786);
-    result -= -3893*f13(a0 - 921, -15860, a1, 50092, 8424);
-    result -= 5570*f3(a0 - 5699, a4, 3254788965);
-    result -= 52024*f14(a0 - 5894);
-    result -= -1086*f14(a0 - 3871);
-    result -= 13309798*f4(a0 - 3181);
-    result += 12782176*f16(a0 - 3284, a2, a4, -15582, a4);
-    result += 13240652*f4(a0 - 5260);
-    result -= 3892318505*f2(a0 - 89, 1986, a1, 3254782536, a3, a0);
-    result -= 3389004414*f14(a0 - 570);
-    result += -385876506*f12(a0 - 9068, a5, -5893, a3, -3411384);
+    result += -13812*f15(a0 - 1139);
+    result += 2792*f7(a0 - 5861, a0, 3254785529);
+    result -= -9270*f0(a0 - 7835, 3389000128);
+    result -= -15614*f7(a0 - 5649, 50027, a4);
+    result += -13356*f11(a0 - 1156, a0, -3999383, -2102, a3);
+    result += 13309566*f12(a0 - 6203, a2, a2, a1);
   }
   return result;
 }
 
-static int f12(int a0, int a1, int a2, int a3, int a4)
+static int f12(int a0, int a1, int a2, int a3)
 {
-  int result = 49929;
+  int result = 50008;
   if (a0 > 0) {
-    result += 51936*f13(a0 - 4155, -6936, -13574, a4, a3);
-    result -= -3942136*f14(a0 - 3046);
-    result += -15528*f9(a0 - 563, 3892322540, 51793, a4);
-    result -= -3481840*f1(a0 - 6328);
-    result -= -5941*f3(a0 - 8084, -4405, a3);
-    result += 8130*f13(a0 - 7887, a0, a1, 49785, a1);
+    result -= -889199035*f16(a0 - 484, -13509, a3);
+    result += -1023414590*f13(a0 - 9206);
+    result += 15208612*f8(a0 - 9295, -385884768, a2);
+    result += 5826*f3(a0 - 4707, -1023412414, a2);
+    result -= -5438*f5(a0 - 6602, 8651, -9789, a1, 51746);
+    result += 12786866*f9(a0 - 3484, a0, a0, a1, a1);
+    result -= -3608*f9(a0 - 8380, a1, a1, 49934, -3473861);
+    result += 49757*f13(a0 - 7186);
   }
   return result;
 }
 
-static int f13(int a0, int a1, int a2, int a3, int a4)
+static int f13(int a0)
 {
-  int result = 3254780667;
+  int result = 49681;
   if (a0 > 0) {
-    result += -1509176*f6(a0 - 3368, a1, a1, -6710, a2);
-    result += -13501*f14(a0 - 6375);
+    result -= -8510*f13(a0 - 3958);
+    result -= 12721753*f10(a0 - 835, 52040);
+    result += 51791*f2(a0 - 3468, a0);
+    result -= -3934802*f4(a0 - 9128);
+    result += -1514350*f13(a0 - 7288);
+    result += -1006638896*f17(a0 - 4717, 1995, a0, -889201734);
+    result += -1006639142*f18(a0 - 1643, a0, -2877, a0, -15715, a0);
+    result += -6206*f14(a0 - 5385, 51800, a0, -6074);
   }
   return result;
 }
 
-static int f14(int a0)
+static int f14(int a0, int a1, int a2, int a3)
 {
-  int result = -15815;
+  int result = -13754;
   if (a0 > 0) {
-    result -= 59567*f4(a0 - 4154);
-    result -= 2242*f5(a0 - 9076, -3482597, a0);
-    result += -1023415462*f15(a0 - 5140, -13473, 1994, 13313630, a0);
+    result -= 1512*f6(a0 - 7450, -3933012, a1);
+    result += -3416011*f5(a0 - 3084, -385883716, -6090, 59448, a1);
+    result += 5578*f15(a0 - 8858);
   }
   return result;
 }
 
-static int f15(int a0, int a1, int a2, int a3, int a4)
+static int f15(int a0)
 {
-  int result = 3271559255;
+  int result = 5835;
   if (a0 > 0) {
-    result -= 3388997713*f17(a0 - 5307, 12719983, -3481265, 59415, a3, a0);
-    result -= 50053*f13(a0 - 5463, 7362, a3, -15421, a1);
-    result += 488*f3(a0 - 1448, a1, a1);
-    result += -872419841*f9(a0 - 5344, 4290, -15559, a3);
-    result -= -3482245*f16(a0 - 7969, -1023420155, -15602, 3254782175, 15206591);
-    result += -3934101*f15(a0 - 806, -1023414619, a2, 5314, 51969);
-    result -= 49926*f10(a0 - 3541);
-    result += -3481348*f16(a0 - 8515, 15204582, a1, a4, -1006639395);
+    result += 59508*f1(a0 - 7419, 15211217, a0, a0, -385885820);
+    result -= 51760*f3(a0 - 1145, 3405778698, 3389006920);
+    result -= -5988*f5(a0 - 17, a0, a0, a0, 2763);
+    result += 194*f9(a0 - 5785, -9269, -6168, a0, 3405780597);
+    result -= 49855*f17(a0 - 9872, a0, a0, a0);
+    result -= 15212612*f10(a0 - 2258, 4291);
+    result += 7371*f17(a0 - 4581, a0, a0, 3892316324);
+    result -= 3254782175*f1(a0 - 1392, -5907, a0, -9278, a0);
+    result -= 49809*f0(a0 - 3194, 15211965);
+    result += 3254781461*f16(a0 - 9688, a0, a0);
   }
   return result;
 }
 
-static int f16(int a0, int a1, int a2, int a3, int a4)
+static int f16(int a0, int a1, int a2)
 {
-  int result = 4810;
+  int result = 4043;
   if (a0 > 0) {
-    result -= -3998444*f14(a0 - 1648);
-    result += 12782441*f6(a0 - 647, -7486, -385876178, -318, a0);
-    result -= 12714586*f18(a0 - 4770, a1, a2, a4, -1006636783);
-    result -= -1023418704*f10(a0 - 5116);
-    result += -1006635738*f14(a0 - 7638);
-    result += 12784849*f17(a0 - 6775, a4, -15776, 52195, 3271561452, a4);
+    result += 13245277*f13(a0 - 3406);
+    result += -1560*f16(a0 - 5614, -5892, a2);
+    result -= 12723860*f11(a0 - 9489, a0, a0, a0, a0);
+    result -= 50113*f7(a0 - 9753, -1006641125, a0);
+    result += 8130*f17(a0 - 1621, a1, a2, -3940798);
   }
   return result;
 }
 
-static int f17(int a0, int a1, int a2, int a3, int a4, int a5)
+static int f17(int a0, int a1, int a2, int a3)
 {
-  int result = -2878;
+  int result = 5066;
   if (a0 > 0) {
-    result += -1516564*f15(a0 - 1145, a4, a5, -15378, 2251);
-    result -= -15666*f16(a0 - 1162, -15766, 6347, -3478035, -1512766);
-    result += 3388999502*f18(a0 - 5965, a4, a0, a1, 8650);
+    result -= 3389000912*f2(a0 - 7001, -4000701);
+    result += -3474394*f18(a0 - 7557, 52030, 12716649, a2, a0, a2);
   }
   return result;
 }
 
-static int f18(int a0, int a1, int a2, int a3, int a4)
+static int f18(int a0, int a1, int a2, int a3, int a4, int a5)
 {
-  int result = 3271561174;
+  int result = -4001631;
   if (a0 > 0) {
-    result -= -6718*f7(a0 - 8827, 13244546, a2, -1023417751, -4120, a1);
-    result -= -1023416708*f19(a0 - 2464, a1, a0);
-    result += -3893*f12(a0 - 6022, 51812, -3482870, -13505, a0);
-    result -= 3254780409*f0(a0 - 1027);
-    result += 3271557174*f13(a0 - 7175, a2, a1, -1006636568, 3254781641);
-    result -= 3271558696*f1(a0 - 401);
-    result -= 13306778*f14(a0 - 2145);
-    result += 52127*f1(a0 - 8877);
-    result += 51774*f19(a0 - 1275, 3388998497, -3998664);
+    result += 13247543*f0(a0 - 7126, a1);
+    result += -13606*f5(a0 - 7782, -385883790, -3938013, 3388999588, a0);
+    result -= 13242609*f9(a0 - 13, 3530, a3, a4, 13310660);
+    result -= 3787*f1(a0 - 7144, -1006634161, 50162, 4584, -7960);
+    result += -2869*f19(a0 - 3333, 12721718, 3405782318, -13527, a3);
   }
   return result;
 }
 
-static int f19(int a0, int a1, int a2)
+static int f19(int a0, int a1, int a2, int a3, int a4)
 {
-  int result = -1511941;
+  int result = 49787;
   if (a0 > 0) {
-    result += 50051*f0(a0 - 4312);
-    result += 52078*f18(a0 - 7882, 52082, 13241907, a1, 488);
-    result += 50028*f16(a0 - 1246, a1, a1, -15523, 3405781445);
-    result += 7882*f0(a0 - 5070);
-    result += 3892316386*f0(a0 - 3329);
+    result -= 3271559387*f6(a0 - 3242, a1, -4669);
+    result += -4006143*f17(a0 - 3253, -15456, a3, a1);
+    result += 12721684*f0(a0 - 126, a0);
   }
   return result;
 }
@@ -309,7 +315,7 @@ static int f19(int a0, int a1, int a2)
 int 
 testFn()
 {
-  return f0(8650);
+  return f0(3271557197, -2109);
 }
 
 #ifdef TEST_TESTFN

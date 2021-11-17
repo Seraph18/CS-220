@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/import/linux/home1/jgordo39/i220a/submit/prj4-sol'
+make: 'fn-trace' is up to date.
+make: Leaving directory '/import/linux/home1/jgordo39/i220a/submit/prj4-sol'
+ 
