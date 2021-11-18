@@ -21,10 +21,6 @@ $(TARGET):	$(OBJS)
 fns:		fns.c
 		$(CC) $(CFLAGS) -shared $< -o $@
 
-test: fns.c
-	cc -DTEST_TESTFN -g -Wall -std=c18  -fPIC fns.c -o fnsTest
-
-
 r: fn-trace
 	./fn-trace fns testFn
 
