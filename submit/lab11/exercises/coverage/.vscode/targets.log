@@ -1,0 +1,248 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+ 
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Nov 18 11:25:17 2021
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AGENT_FOLDER = /home/jgordo39/.vscode-server
+# environment
+XDG_SESSION_TYPE = tty
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# default
+MAKE_VERSION := 4.2.1
+# makefile
+CURDIR := /import/linux/home1/jgordo39/i220a/submit/lab11/exercises/coverage
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
+# environment
+_ = /import/linux/home1/jgordo39/.vscode-server/bin/3a6960b964327f0e3882ce18fcebd07ed191b316/node
+# makefile (from 'Makefile', line 1)
+CFLAGS = -g -Wall -std=c18 -fprofile-arcs -ftest-coverage
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# environment
+CHAINENV_CONFIG_ROOT = /home/jgordo39/.config/chainenv
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/15291/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_CWD = /import/linux/home1/jgordo39
+# environment
+SSH_CONNECTION = 149.125.80.67 45204 128.226.114.205 22
+# environment
+PATH = /import/linux/home1/jgordo39/.vscode-server/bin/3a6960b964327f0e3882ce18fcebd07ed191b316/bin:/home/jgordo39/cs220/bin:/home/jgordo39/.config/chainenv/shims:/opt/chainenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+# environment
+XDG_RUNTIME_DIR = /run/user/15291
+# environment
+VSCODE_LOG_STACK = false
+# environment
+VSCODE_IPC_HOOK_CLI = /run/user/15291/vscode-ipc-2759b894-b3a5-4b72-b203-d3477b04412b.sock
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# automatic
+%F = $(notdir $%)
+# environment
+CHAINENV_ROOT = /opt/chainenv
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /import/linux/home1/jgordo39/i220a/submit/lab11/exercises/coverage
+# default
+.LOADED := 
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/server/remoteExtensionHostProcess
+# environment
+HOME = /home/jgordo39
+# environment
+LD_LIBRARY_PATH = .:/home/jgordo39/cs220/lib:.:/home/jgordo39/cs220/lib
+# environment
+J2REDIR = /usr/lib/jvm/java-8-oracle/jre
+# environment
+LOGNAME = jgordo39
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
++F = $(notdir $+)
+# environment
+J2SDKDIR = /usr/lib/jvm/java-8-oracle
+# environment
+CHAINENV_SHELL = bash
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# environment
+JAVA_HOME = /usr/lib/jvm/java-8-oracle
+# environment
+XDG_SESSION_ID = 87742
+# environment
+USER = jgordo39
+# makefile
+.DEFAULT_GOAL := coverage
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# makefile (from 'Makefile', line 3)
+TARGETS = coverage
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_CLIENT = 149.125.80.67 45204 22
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+BROWSER = /import/linux/home1/jgordo39/.vscode-server/bin/3a6960b964327f0e3882ce18fcebd07ed191b316/bin/helpers/browser.sh
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+VIRTUALENVWRAPPER_SCRIPT = /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+# environment
+LC_ALL = C
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /import/linux/home1/jgordo39/.vscode-server/bin/3a6960b964327f0e3882ce18fcebd07ed191b316/remote/node_modules
+# environment
+DERBY_HOME = /usr/lib/jvm/java-8-oracle/db
+# default
+.RECIPEPREFIX := 
+# environment
+_VIRTUALENVWRAPPER_API =  mkvirtualenv rmvirtualenv lsvirtualenv showvirtualenv workon add2virtualenv cdsitepackages cdvirtualenv lssitepackages toggleglobalsitepackages cpvirtualenv setvirtualenvproject mkproject cdproject mktmpenv
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+LANG = C
+# environment
+VSCODE_EXTHOST_WILL_SEND_SOCKET = true
+# variable set hash-table stats:
+# Load=77/1024=8%, Rehash=0, Collisions=10/102=10%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 64, inode 114496856074): 11 files, no impossibilities.
+
+# 11 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+coverage.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+.PHONY: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-16 18:58:09.590755255
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 9):
+		rm -f $(TARGETS) *.o *~ *.gcda *.gcno
+
+coverage: coverage.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=8/1024=1%, Rehash=0, Collisions=0/21=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 18 / storage = 174 B / avg = 9 B
+# current buf: size = 8162 B / used = 174 B / count = 18 / avg = 9 B
+
+# strcache performance: lookups = 28 / hit rate = 35%
+# hash-table stats:
+# Load=18/8192=0%, Rehash=0, Collisions=1/28=4%
+# Finished Make data base on Thu Nov 18 11:25:17 2021
+
+ 

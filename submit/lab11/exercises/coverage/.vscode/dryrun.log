@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/import/linux/home1/jgordo39/i220a/submit/lab11/exercises/coverage'
+cc -g -Wall -std=c18 -fprofile-arcs -ftest-coverage    coverage.c   -o coverage
+make: Leaving directory '/import/linux/home1/jgordo39/i220a/submit/lab11/exercises/coverage'
+ 
