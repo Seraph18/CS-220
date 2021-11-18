@@ -1,1 +1,1 @@
-{"buildTargets":["DEPENDS","clean","fn-trace","fn-trace.o","main.o","x86-64_lde.o"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[]},"fileIndex":[]}}
+{"buildTargets":["DEPENDS","all","clean","clear","fn-trace","fn-trace.o","fns","fns.o","main.o","test","wipeTerminal","x86-64_lde.o"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[]},"fileIndex":[]}}

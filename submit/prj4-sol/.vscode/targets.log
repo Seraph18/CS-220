@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Nov 17 16:56:36 2021
+# Make data base, printed on Wed Nov 17 19:06:04 2021
 
 # Variables
 
@@ -27,7 +27,7 @@ XDG_SESSION_TYPE = tty
 # environment
 VSCODE_LOG_NATIVE = false
 # makefile (from 'Makefile', line 5)
-TARGET = fn-trace
+TARGET = fn-trace 
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -59,7 +59,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/15291/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # makefile (from 'Makefile', line 12)
-OBJS = fn-trace.o main.o x86-64_lde.o
+OBJS = fn-trace.o main.o x86-64_lde.o fns
 # environment
 VSCODE_CWD = /import/linux/home1/jgordo39
 # environment
@@ -185,15 +185,20 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 
 # Directories
 
-# . (device 64, inode 47811180560): 19 files, no impossibilities.
+# . (device 64, inode 47811180560): 21 files, no impossibilities.
 
-# 19 files, no impossibilities in 1 directories.
+# 21 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
+
+clear: clean wipeTerminal
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 x86-64_lde.o: x86-64_lde.c x86-64_lde.h
 #  Implicit rule search has not been done.
@@ -207,6 +212,13 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
+r: fn-trace
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 29):
+	./fn-trace fns testFn
+
 # Not a target:
 main.c:
 #  Implicit rule search has not been done.
@@ -216,15 +228,28 @@ main.c:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-11-15 20:20:16.860064462
+#  Last modified 2021-11-17 19:05:31.701725568
 #  File has been updated.
 #  Successfully updated.
 
-fn-trace: fn-trace.o main.o x86-64_lde.o
+# Not a target:
+fns.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 18):
+
+test: fns.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 25):
+	cc -DTEST_TESTFN -g -Wall -std=c18  -fPIC fns.c -o fnsTest
+
+fn-trace: fn-trace.o main.o x86-64_lde.o fns
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 19):
 		$(CC) $(OBJS) $(LDFLAGS) $(LDLIBS) -o $@
 
 fn-trace.o: fn-trace.c fn-trace.h x86-64_lde.h
@@ -238,11 +263,18 @@ x86-64_lde.c:
 #  Modification time never checked.
 #  File has not been updated.
 
+wipeTerminal:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 35):
+	clear
+
 DEPENDS:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 25):
+#  recipe to execute (from 'Makefile', line 40):
 		gcc $(CFLAGS) -MM *.c
 
 # Not a target:
@@ -256,12 +288,13 @@ x86-64_lde.h:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
 
 clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 21):
+#  recipe to execute (from 'Makefile', line 32):
 		rm -f $(OBJS) $(TARGET) fns fns.o *~
 
 # Not a target:
@@ -281,21 +314,27 @@ fn-trace.h:
 #  Modification time never checked.
 #  File has not been updated.
 
+fns: fns.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 22):
+		$(CC) $(CFLAGS) -shared $< -o $@
+
 # files hash-table stats:
- 
-# Load=15/1024=1%, Rehash=0, Collisions=0/38=0%
+# Load=21/1024=2%, Rehash=0, Collisions=0/51=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 26 / storage = 248 B / avg = 9 B
-# current buf: size = 8162 B / used = 248 B / count = 26 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 32 / storage = 286 B / avg = 8 B
+# current buf: size = 8162 B / used = 286 B / count = 32 / avg = 8 B
 
-# strcache performance: lookups = 50 / hit rate = 48%
+# strcache performance: lookups = 68 / hit rate = 52%
 # hash-table stats:
-# Load=26/8192=0%, Rehash=0, Collisions=1/50=2%
-# Finished Make data base on Wed Nov 17 16:56:36 2021
+# Load=32/8192=0%, Rehash=0, Collisions=1/68=1%
+# Finished Make data base on Wed Nov 17 19:06:04 2021
 
  

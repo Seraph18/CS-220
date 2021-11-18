@@ -8,9 +8,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-enum { INIT_SIZE = 2 };
+enum
+{
+  INIT_SIZE = 2
+};
 
-struct FnsDataImpl {
+struct FnsDataImpl
+{
   //TODO
 };
 
@@ -22,6 +26,19 @@ const FnsData *
 new_fns_data(void *rootFn)
 {
   //TODO
+  //printf("%s\n", root);
+  Lde *decoder = new_lde();
+  const unsigned char *p = rootFn;
+  int lineLength = get_op_length(decoder, p);
+  int totalOffset = 0;
+  while (lineLength > 1)
+  {
+    printf("%d\n", lineLength);
+    totalOffset += lineLength;
+    lineLength = get_op_length(decoder, p + totalOffset);
+  }
+  printf("%d\n", lineLength);
+  free_lde(decoder);
   return NULL;
 }
 
@@ -29,8 +46,7 @@ new_fns_data(void *rootFn)
  *  returned by new_fns_data().  It is not ok to use to fnsData after
  *  this call.
  */
-void
-free_fns_data(FnsData *fnsData)
+void free_fns_data(FnsData *fnsData)
 {
   //TODO
 }
@@ -55,10 +71,10 @@ next_fn_info(const FnsData *fnsData, const FnInfo *lastFnInfo)
   return NULL;
 }
 
-
 /** recognized opcodes for calls and returns */
-enum {
-  CALL_OP = 0xE8,    //used to identify an external call which is traced
+enum
+{
+  CALL_OP = 0xE8, //used to identify an external call which is traced
 
   //used to recognize the end of a function
   RET_FAR_OP = 0xCB,
@@ -68,10 +84,10 @@ enum {
 };
 
 static inline bool is_call(unsigned op) { return op == CALL_OP; }
-static inline bool is_ret(unsigned op) {
-  return
-    op == RET_NEAR_OP || op == RET_NEAR_WITH_POP_OP ||
-    op == RET_FAR_OP || op == RET_FAR_WITH_POP_OP;
+static inline bool is_ret(unsigned op)
+{
+  return op == RET_NEAR_OP || op == RET_NEAR_WITH_POP_OP ||
+         op == RET_FAR_OP || op == RET_FAR_WITH_POP_OP;
 }
 
 //TODO: add auxiliary functions
