@@ -85,24 +85,12 @@ new_fns_data(void *rootFn)
   //Initialize decoder
   Lde *decoder = new_lde();
   const unsigned char *p = rootFn; //Root address aka 'starting point'
+  int totalOffset = 0;             //Offset of address
 
   //Add root function to the FnsData structure
   FnInfo firstFn = {rootFn, get_op_length(decoder, rootFn), 1, 0};
   collectionOfFunc.functionArray[0] = firstFn;
   ++collectionOfFunc.currentIndex;
-
-  fn_trace(rootFn, collectionOfFunc);
-  return NULL;
-}
-
-//TODO: add auxiliary functions
-
-void fn_trace(void *addr, FnsData collectionOfFunc)
-{
-  FnInfo currentFnToTrace = collectionOfFunc.functionArray[checkForExistingFn(collectionOfFunc, addr)];
-  Lde *decoder = new_lde();
-  const unsigned char *p = addr;
-  int totalOffset = 0; //Offset of address
 
   unsigned char currentOpCode = *((unsigned char *)(p)); //Current opcode
 
@@ -117,63 +105,34 @@ void fn_trace(void *addr, FnsData collectionOfFunc)
     //check if opcode is a CALL operation
     if (is_call(currentOpCode))
     {
-      ++currentFnToTrace.nOutCalls;
+
       //find location of the called function
 
       int *offSetOperandForCalledFn = (int *)(p + totalOffset + 1);
       unsigned char *addressOfNextInstruction = ((unsigned char *)(p + totalOffset + lineLength));
       unsigned int *addressOfFunctionBeingCalled = (unsigned int *)(*offSetOperandForCalledFn + addressOfNextInstruction);
-      printf("%p\n", addressOfFunctionBeingCalled); //Print address of called function
+      printf("%x\n", addressOfFunctionBeingCalled); //Print address of called function
 
-      //Check if function already exists within the FnsData data structure
-      int indexOfFn = checkForExistingFn(collectionOfFunc, (void *)addressOfFunctionBeingCalled);
-      if (indexOfFn > -1)
-      {
-        //If it does, increment that nInCalls property of it
-        ++collectionOfFunc.functionArray[indexOfFn].nInCalls;
-      }
-      else //Create a new FnInfo struct for it
-      {
-        FnInfo newFn = {(void *)addressOfFunctionBeingCalled, 0, 1, 0};
-        collectionOfFunc.functionArray[collectionOfFunc.currentIndex] = newFn;
-        ++collectionOfFunc.currentIndex;
-
-        //Check if size needs to be increased
-        if (collectionOfFunc.currentIndex == collectionOfFunc.size - 1)
-        {
-          collectionOfFunc.functionArray = reallocChk(collectionOfFunc.functionArray, sizeof(FnInfo) * (collectionOfFunc.size * 2));
-          collectionOfFunc.size = collectionOfFunc.size * 2;
-        }
-        if (is_call(currentOpCode))
-        {
-          fn_trace((void *)addressOfFunctionBeingCalled, collectionOfFunc);
-        }
-      }
+      checkForExistingFn(collectionOfFunc, (void *)addressOfFunctionBeingCalled); //Check if function already exists within the FnsData data structure
     }
 
     totalOffset += lineLength; //Adds current length to the offset for the next address call;
   }
-  print(collectionOfFunc);
+
+  return NULL;
 }
 
-void print(FnsData fnsData)
-{
-  for (int i = 0; i < fnsData.currentIndex; ++i)
-  {
-    FnInfo tempFnInfo = fnsData.functionArray[i];
-    printf("%p: nInCalls:   %d; nOutCalls:    %d; length:   %d\n", tempFnInfo.address, tempFnInfo.nInCalls, tempFnInfo.nOutCalls, tempFnInfo.length);
-  }
-}
+//TODO: add auxiliary functions
 
 //Check if function has already been seen before
-int checkForExistingFn(FnsData fnsData, void *fnAddress)
+bool checkForExistingFn(FnsData fnsData, void *fnAddress)
 {
   for (int i = 0; i < fnsData.currentIndex; ++i)
   {
     if (fnAddress == fnsData.functionArray[i].address)
     {
-      return i;
+      return true;
     }
   }
-  return -1;
+  return false;
 }
