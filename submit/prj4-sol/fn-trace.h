@@ -1,6 +1,16 @@
 #ifndef FN_TRACE_H_
 #define FN_TRACE_H_
 
+#include "fn-trace.h"
+#include "x86-64_lde.h"
+
+#include "memalloc.h"
+
+#include <assert.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 //.1
 /** Information associated with a function. */
 typedef struct {
@@ -43,5 +53,7 @@ void free_fns_data(FnsData *fnsData);
  */
 const FnInfo *next_fn_info(const FnsData *fnData, const FnInfo *lastFnInfo);
 //.2
+
+bool checkForExistingFn(FnsData fnsData, void *fnAddress);
 
 #endif //#ifndef FN_TRACE_H_

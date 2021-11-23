@@ -1,4 +1,4 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/import/linux/home1/jgordo39/i220a/submit/prj4-sol'
 cc -g -Wall -I /home/jgordo39/cs220/include -Og -std=c18 -fPIC   -c -o fn-trace.o fn-trace.c
 cc -g -Wall -I /home/jgordo39/cs220/include -Og -std=c18 -fPIC   -c -o main.o main.c

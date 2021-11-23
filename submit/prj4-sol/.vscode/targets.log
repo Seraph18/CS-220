@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
- 
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Nov 22 21:39:36 2021
+# Make data base, printed on Mon Nov 22 22:06:40 2021
 
 # Variables
 
@@ -63,7 +61,7 @@ OBJS = fn-trace.o main.o x86-64_lde.o fns
 # environment
 VSCODE_CWD = /import/linux/home1/jgordo39
 # environment
-SSH_CONNECTION = 149.125.81.46 38628 128.226.114.201 22
+SSH_CONNECTION = 149.125.81.46 47642 128.226.114.204 22
 # environment
 PATH = /import/linux/home1/jgordo39/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin:/home/jgordo39/cs220/bin:/home/jgordo39/.config/chainenv/shims:/opt/chainenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
 # environment
@@ -71,7 +69,7 @@ XDG_RUNTIME_DIR = /run/user/15291
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/15291/vscode-ipc-5b8439f4-38a5-494f-bf4f-c2e086b9f47d.sock
+VSCODE_IPC_HOOK_CLI = /run/user/15291/vscode-ipc-b93a55fb-6a08-4872-afa9-b81a4981aa36.sock
 # makefile (from 'Makefile', line 10)
 LDFLAGS = -L $(COURSE_DIR)/lib
 # makefile (from 'Makefile', line 9)
@@ -123,7 +121,7 @@ SHLVL = 1
 # environment
 JAVA_HOME = /usr/lib/jvm/java-8-oracle
 # environment
-XDG_SESSION_ID = 182340
+XDG_SESSION_ID = 182753
 # environment
 USER = jgordo39
 # makefile
@@ -141,7 +139,7 @@ MAKEFLAGS = pqrR
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_CLIENT = 149.125.81.46 38628 22
+SSH_CLIENT = 149.125.81.46 47642 22
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
@@ -185,9 +183,9 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 
 # Directories
 
-# . (device 64, inode 47811180560): 15 files, no impossibilities.
+# . (device 64, inode 47811180560): 16 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 16 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -288,11 +286,13 @@ fn-trace.c:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 wipeScreen:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
+make: *** No rule to make target 'all'.  Stop.
+ 
 #  recipe to execute (from 'Makefile', line 31):
 	clear
 
@@ -322,12 +322,12 @@ fns: fns.c
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 30 / storage = 271 B / avg = 9 B
-# current buf: size = 8162 B / used = 271 B / count = 30 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 31 / storage = 280 B / avg = 9 B
+# current buf: size = 8162 B / used = 280 B / count = 31 / avg = 9 B
 
-# strcache performance: lookups = 59 / hit rate = 49%
+# strcache performance: lookups = 60 / hit rate = 48%
 # hash-table stats:
-# Load=30/8192=0%, Rehash=0, Collisions=1/59=2%
-# Finished Make data base on Mon Nov 22 21:39:36 2021
+# Load=31/8192=0%, Rehash=0, Collisions=1/60=2%
+# Finished Make data base on Mon Nov 22 22:06:40 2021
 
  

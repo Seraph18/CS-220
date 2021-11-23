@@ -68,8 +68,6 @@ static inline bool is_ret(unsigned op)
          op == RET_FAR_OP || op == RET_FAR_WITH_POP_OP;
 }
 
-//TODO: add auxiliary functions
-
 /** Return pointer to opaque data structure containing collection of
  *  FnInfo's for functions which are callable directly or indirectly
  *  from the function whose address is rootFn.
@@ -89,6 +87,11 @@ new_fns_data(void *rootFn)
   const unsigned char *p = rootFn; //Root address aka 'starting point'
   int totalOffset = 0;             //Offset of address
 
+  //Add root function to the FnsData structure
+  FnInfo firstFn = {rootFn, get_op_length(decoder, rootFn), 1, 0};
+  collectionOfFunc.functionArray[0] = firstFn;
+  ++collectionOfFunc.currentIndex;
+
   unsigned char currentOpCode = *((unsigned char *)(p)); //Current opcode
 
   while (!is_ret(currentOpCode)) //Run until a return operation is found
@@ -98,8 +101,38 @@ new_fns_data(void *rootFn)
     printf("%x\n", currentOpCode);                         //Print current Opcode hex value
 
     int lineLength = get_op_length(decoder, p + totalOffset); //Length of whole line in bits
-    totalOffset += lineLength;                                //Adds current length to the offset for the next address call;
+
+    //check if opcode is a CALL operation
+    if (is_call(currentOpCode))
+    {
+
+      //find location of the called function
+
+      int *offSetOperandForCalledFn = (int *)(p + totalOffset + 1);
+      unsigned char *addressOfNextInstruction = ((unsigned char *)(p + totalOffset + lineLength));
+      unsigned int *addressOfFunctionBeingCalled = (unsigned int *)(*offSetOperandForCalledFn + addressOfNextInstruction);
+      printf("%x\n", addressOfFunctionBeingCalled); //Print address of called function
+
+      checkForExistingFn(collectionOfFunc, (void *)addressOfFunctionBeingCalled); //Check if function already exists within the FnsData data structure
+    }
+
+    totalOffset += lineLength; //Adds current length to the offset for the next address call;
   }
 
   return NULL;
+}
+
+//TODO: add auxiliary functions
+
+//Check if function has already been seen before
+bool checkForExistingFn(FnsData fnsData, void *fnAddress)
+{
+  for (int i = 0; i < fnsData.currentIndex; ++i)
+  {
+    if (fnAddress == fnsData.functionArray[i].address)
+    {
+      return true;
+    }
+  }
+  return false;
 }
