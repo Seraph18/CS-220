@@ -15,32 +15,10 @@ enum
 
 struct FnsDataImpl
 {
-  //TODO
+  FnInfo *functionArray;
+  int currentIndex;
+  int size;
 };
-
-/** Return pointer to opaque data structure containing collection of
- *  FnInfo's for functions which are callable directly or indirectly
- *  from the function whose address is rootFn.
- */
-const FnsData *
-new_fns_data(void *rootFn)
-{
-  //TODO
-  //printf("%s\n", root);
-  Lde *decoder = new_lde();
-  const unsigned char *p = rootFn;
-  int lineLength = get_op_length(decoder, p);
-  int totalOffset = 0;
-  while (lineLength > 1)
-  {
-    printf("%d\n", lineLength);
-    totalOffset += lineLength;
-    lineLength = get_op_length(decoder, p + totalOffset);
-  }
-  printf("%d\n", lineLength);
-  free_lde(decoder);
-  return NULL;
-}
 
 /** Free all resources occupied by fnsData. fnsData must have been
  *  returned by new_fns_data().  It is not ok to use to fnsData after
@@ -91,3 +69,37 @@ static inline bool is_ret(unsigned op)
 }
 
 //TODO: add auxiliary functions
+
+/** Return pointer to opaque data structure containing collection of
+ *  FnInfo's for functions which are callable directly or indirectly
+ *  from the function whose address is rootFn.
+ */
+const FnsData *
+new_fns_data(void *rootFn)
+{
+
+  //Initialize the FnsData
+  struct FnsDataImpl collectionOfFunc;
+  collectionOfFunc.functionArray = malloc(sizeof(FnInfo) * INIT_SIZE);
+  collectionOfFunc.size = INIT_SIZE;
+  collectionOfFunc.currentIndex = 0;
+
+  //Initialize decoder
+  Lde *decoder = new_lde();
+  const unsigned char *p = rootFn; //Root address aka 'starting point'
+  int totalOffset = 0;             //Offset of address
+
+  unsigned char currentOpCode = *((unsigned char *)(p)); //Current opcode
+
+  while (!is_ret(currentOpCode)) //Run until a return operation is found
+  {
+
+    currentOpCode = *((unsigned char *)(p + totalOffset)); //Set the current opcode to the correct one at the given address
+    printf("%x\n", currentOpCode);                         //Print current Opcode hex value
+
+    int lineLength = get_op_length(decoder, p + totalOffset); //Length of whole line in bits
+    totalOffset += lineLength;                                //Adds current length to the offset for the next address call;
+  }
+
+  return NULL;
+}

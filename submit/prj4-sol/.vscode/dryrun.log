@@ -1,5 +1,9 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory '/import/linux/home1/jgordo39/i220a/submit/prj4-sol'
-make: 'fn-trace' is up to date.
+cc -g -Wall -I /home/jgordo39/cs220/include -Og -std=c18 -fPIC   -c -o fn-trace.o fn-trace.c
+cc -g -Wall -I /home/jgordo39/cs220/include -Og -std=c18 -fPIC   -c -o main.o main.c
+cc -g -Wall -I /home/jgordo39/cs220/include -Og -std=c18 -fPIC   -c -o x86-64_lde.o x86-64_lde.c
+cc -g -Wall -I /home/jgordo39/cs220/include -Og -std=c18 -fPIC -shared fns.c -o fns
+cc fn-trace.o main.o x86-64_lde.o fns -L /home/jgordo39/cs220/lib -l cs220 -lcapstone -ldl -o fn-trace
 make: Leaving directory '/import/linux/home1/jgordo39/i220a/submit/prj4-sol'
  

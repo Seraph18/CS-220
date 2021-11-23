@@ -2,7 +2,7 @@ COURSE = cs220
 
 COURSE_DIR = $(HOME)/$(COURSE)
 
-TARGET = fn-trace 
+TARGET = fn-trace
 
 CFLAGS = -g -Wall -I $(COURSE_DIR)/include -Og -std=c18 -fPIC
 
@@ -21,20 +21,16 @@ $(TARGET):	$(OBJS)
 fns:		fns.c
 		$(CC) $(CFLAGS) -shared $< -o $@
 
-test: fns.c
-	cc -DTEST_TESTFN -g -Wall -std=c18  -fPIC fns.c -o fnsTest
-
-
 r: fn-trace
 	./fn-trace fns testFn
 
 clean:		
 		rm -f $(OBJS) $(TARGET) fns fns.o *~
 
-wipeTerminal:
+wipeScreen:
 	clear
 
-clear: clean wipeTerminal
+clear: clean wipeScreen
 
 DEPENDS:
 		gcc $(CFLAGS) -MM *.c
@@ -42,4 +38,4 @@ DEPENDS:
 #make DEPENDS output with cs220/include dependencies removed
 fn-trace.o: fn-trace.c fn-trace.h x86-64_lde.h 
 main.o: main.c fn-trace.h
-x86-64_lde.o: x86-64_lde.c x86-64_lde.h
+x86-64_lde.o: x86-64_lde.c x86-64_lde.h 
