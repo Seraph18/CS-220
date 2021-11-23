@@ -15,8 +15,7 @@ enum
 
 struct FnsDataImpl
 {
-  //Dyanmic array to hold info
-  FnInfo *FnsInfoCollection;
+  //TODO
 };
 
 /** Return pointer to opaque data structure containing collection of
@@ -26,36 +25,20 @@ struct FnsDataImpl
 const FnsData *
 new_fns_data(void *rootFn)
 {
-  //Make a new Collection and allocate memory
-  struct FnsDataImpl collection;
-  collection.FnsInfoCollection = malloc(sizeof(FnInfo)*(INIT_SIZE));
-
-
-
-
-  //From Suggested step one in instructions
-
+  //TODO
   //printf("%s\n", root);
-  /*
   Lde *decoder = new_lde();
   const unsigned char *p = rootFn;
   int lineLength = get_op_length(decoder, p);
   int totalOffset = 0;
-  
   while (lineLength > 1)
   {
     printf("%d\n", lineLength);
-    
-    //Print first byte of every line, aka the opcode
-    unsigned char currentOpCode = *((unsigned char *)(p + totalOffset));
-    printf("%x\n", currentOpCode);
     totalOffset += lineLength;
     lineLength = get_op_length(decoder, p + totalOffset);
   }
   printf("%d\n", lineLength);
   free_lde(decoder);
-  */
- 
   return NULL;
 }
 
@@ -65,7 +48,7 @@ new_fns_data(void *rootFn)
  */
 void free_fns_data(FnsData *fnsData)
 {
-  //todo
+  //TODO
 }
 
 /** Iterate over all FnInfo's in fnsData.  Make initial call with NULL

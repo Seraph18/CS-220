@@ -3,10 +3,6 @@
 #Termination argument for call to driver function: first argument to each
 #call is strictly decreasing; recursion bottoms out when first argument
 #becomes 0.
-#
-#Above guarantees termination, but not guarantee when as functions could
-#be multiply recursive (leading to Fibonacci kind of explosion).  Hence
-#running FUNCTION_NAME may never terminate during lifetime of universe!!
 
 NUM_MAX_ARGS = 5;
 MAX_NUM_CALLS = 10;
@@ -90,6 +86,20 @@ int
 END_DRIVER
 end
 
+def gen_main(driver)
+print <<END_MAIN
+#ifdef TEST_#{driver.upcase}
+
+#include <stdio.h>
+
+int main() {
+  printf("%d\\n", #{driver}());
+  return 0;
+}
+
+#endif //ifdef TEST_#{driver.upcase}
+END_MAIN
+end
 
 def go(numFns, driver) 
   arities = { }
@@ -97,6 +107,7 @@ def go(numFns, driver)
   print "\n"
   numFns.times { |fn| gen_definition(fn, arities) }
   gen_driver(driver, arities)
+  gen_main(driver)
 end
 
 USAGE = "#{$0} NUM_FNS FUNCTION_NAME\n";
