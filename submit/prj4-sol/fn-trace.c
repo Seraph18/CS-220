@@ -88,7 +88,6 @@ new_fns_data(void *rootFn)
   return ((FnsData *)&collectionOfFunc);
 }
 
-
 /*
 1. The first time the function is called, the second argument lastFnInfo will be passed as NULL; the function should return the address of the "first" function-info.  
 
@@ -100,11 +99,11 @@ new_fns_data(void *rootFn)
 
 const FnInfo *next_fn_info(const FnsData *fnsData, const FnInfo *lastFnInfo)
 {
-  
-  for (FnInfo *fnInfoP = next_fn_info(fnsData, NULL); fnInfoP != NULL; fnInfoP = next_fn_info(fnsData, fnInfoP)) {
 
-    return fnInfoP->address;
+  for (FnInfo *fnInfoP = next_fn_info(fnsData, NULL); fnInfoP != NULL; fnInfoP = next_fn_info(fnsData, fnInfoP))
+  {
 
+    return lastFnInfo;
   }
   return NULL;
 }
@@ -124,7 +123,7 @@ FnsData fn_trace(void *addr, FnsData collectionOfFunc)
   {
 
     currentOpCode = *((unsigned char *)(p + totalOffset)); //Set the current opcode to the correct one at the given address
-    printf("%x\n", currentOpCode);                         //Print current Opcode hex value
+    //printf("%x\n", currentOpCode);                         //Print current Opcode hex value
 
     int lineLength = get_op_length(decoder, p + totalOffset); //Length of whole line in bits
 
@@ -137,7 +136,7 @@ FnsData fn_trace(void *addr, FnsData collectionOfFunc)
       int *offSetOperandForCalledFn = (int *)(p + totalOffset + 1);
       unsigned char *addressOfNextInstruction = ((unsigned char *)(p + totalOffset + lineLength));
       unsigned int *addressOfFunctionBeingCalled = (unsigned int *)(*offSetOperandForCalledFn + addressOfNextInstruction);
-      printf("%p\n", addressOfFunctionBeingCalled); //Print address of called function
+      //printf("%p\n", addressOfFunctionBeingCalled); //Print address of called function
 
       //Check if function already exists within the FnsData data structure
       int indexOfFn = checkForExistingFn(collectionOfFunc, (void *)addressOfFunctionBeingCalled);
@@ -158,10 +157,9 @@ FnsData fn_trace(void *addr, FnsData collectionOfFunc)
           collectionOfFunc.functionArray = reallocChk(collectionOfFunc.functionArray, sizeof(FnInfo) * (collectionOfFunc.size * 2));
           collectionOfFunc.size = collectionOfFunc.size * 2;
         }
-        if (is_call(currentOpCode))
-        {
-          fn_trace((void *)addressOfFunctionBeingCalled, collectionOfFunc);
-        }
+        //printf("%p\n", addressOfFunctionBeingCalled);
+        printf("%d\n", collectionOfFunc.currentIndex);
+        collectionOfFunc = fn_trace((void *)addressOfFunctionBeingCalled, collectionOfFunc);
       }
     }
 
