@@ -1,6 +1,6 @@
 CFLAGS = -g -Wall -std=c18  -fPIC
 
-TARGETS = fns fnsTest
+TARGETS = fns 
 all:		$(TARGETS)
 
 #Target used to build shared object module containing functions used
@@ -8,11 +8,6 @@ all:		$(TARGETS)
 #generated automatically).
 fns:		fns.c
 		$(CC) $(CFLAGS) -shared $< -o $@
-
-#Target used to build fns.c into a standalone program using 
-#conditionally-included TEST_TESTFN main().
-fnsTest:	fns.c
-		$(CC) -DTEST_TESTFN $(CFLAGS) $< -o $@
 
 clean:
 		rm -f *~ $(TARGETS)

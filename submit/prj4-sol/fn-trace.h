@@ -54,6 +54,10 @@ void free_fns_data(FnsData *fnsData);
 const FnInfo *next_fn_info(const FnsData *fnData, const FnInfo *lastFnInfo);
 //.2
 
-bool checkForExistingFn(FnsData fnsData, void *fnAddress);
+int checkForExistingFn(FnsData fnsData, void *fnAddress);
+
+void print();
+
+FnsData fn_trace(void *addr, FnsData collectionOfFunc);
 
 #endif //#ifndef FN_TRACE_H_

@@ -315,7 +315,7 @@ static int f19(int a0, int a1, int a2, int a3, int a4)
 int 
 testFn()
 {
-  return f0(3271557197, -2109);
+  return f2(3271557197, -2109);
 }
 
 #ifdef TEST_TESTFN

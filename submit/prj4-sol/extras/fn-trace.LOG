@@ -6,17 +6,10 @@ $ ~/cs220/projects/prj4/extras/gen-fns.rb 20 testFn >fns.c
 # compile generated fns
 $ make -f ~/cs220/projects/prj4/extras/Makefile
 cc -g -Wall -std=c18  -fPIC -shared fns.c -o fns
-cc -DTEST_TESTFN -g -Wall -std=c18  -fPIC fns.c -o fnsTest
 
-# run fnsTest to see output
-$ ./fnsTest 
-634923403
-
-# note output below matches output above
 # addresses could differ
 # LD_LIBRARY_PATH should not be necessary if your account is set up
 $ LD_LIBRARY_PATH=".:$HOME/cs220/lib" ./fn-trace  fns testFn
-fns:testFn() = 634923403
 0x7f0a309670f9: nInCalls:       8; nOutCalls:       8; length:     385
 0x7f0a3096727a: nInCalls:       5; nOutCalls:       7; length:     311
 0x7f0a309673b1: nInCalls:       7; nOutCalls:       6; length:     276
@@ -42,7 +35,6 @@ fns:testFn() = 634923403
 # -r uses relative addresses instead
 # LD_LIBRARY_PATH should not be necessary if your account is set up
 $ LD_LIBRARY_PATH=".:$HOME/cs220/lib" ./fn-trace -r fns testFn
-fns:testFn() = 634923403
        0: nInCalls:       8; nOutCalls:       8; length:     385
      385: nInCalls:       5; nOutCalls:       7; length:     311
      696: nInCalls:       7; nOutCalls:       6; length:     276
