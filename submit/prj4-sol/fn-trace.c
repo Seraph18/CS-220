@@ -71,21 +71,21 @@ new_fns_data(void *rootFn)
 {
 
   //Initialize the FnsData
-  struct FnsDataImpl collectionOfFunc;
-  collectionOfFunc.functionArray = malloc(sizeof(FnInfo) * INIT_SIZE);
-  collectionOfFunc.size = INIT_SIZE;
-  collectionOfFunc.currentIndex = 0;
+  FnsData *collectionOfFunc = (FnsData *)calloc(1, sizeof(FnsData));
+  collectionOfFunc->functionArray = malloc(sizeof(FnInfo) * INIT_SIZE);
+  collectionOfFunc->size = INIT_SIZE;
+  collectionOfFunc->currentIndex = 0;
 
   //Initialize decoder
   Lde *decoder = new_lde();
 
   //Add root function to the FnsData structure
   FnInfo firstFn = {rootFn, get_op_length(decoder, rootFn), 1, 0};
-  collectionOfFunc.functionArray[0] = firstFn;
-  ++collectionOfFunc.currentIndex;
+  collectionOfFunc->functionArray[0] = firstFn;
+  ++collectionOfFunc->currentIndex;
 
-  fn_trace(rootFn, collectionOfFunc);
-  return ((FnsData *)&collectionOfFunc);
+  fn_trace(rootFn, *collectionOfFunc);
+  return collectionOfFunc;
 }
 
 /*
@@ -100,19 +100,25 @@ new_fns_data(void *rootFn)
 const FnInfo *next_fn_info(const FnsData *fnsData, const FnInfo *lastFnInfo)
 {
 
-  for (FnInfo *fnInfoP = next_fn_info(fnsData, NULL); fnInfoP != NULL; fnInfoP = next_fn_info(fnsData, fnInfoP))
+  lastFnInfo = NULL;
+  for (const FnInfo *fnInfoP = next_fn_info(fnsData, NULL); fnInfoP != NULL;
+       fnInfoP = next_fn_info(fnsData, fnInfoP))
   {
-
-    return lastFnInfo;
+    if (fnInfoP == NULL)
+    {
+      lastFnInfo = fnInfoP;
+      return lastFnInfo;
+    }
   }
-  return NULL;
+
+  return lastFnInfo;
 }
 
 //TODO: add auxiliary functions
 
 FnsData fn_trace(void *addr, FnsData collectionOfFunc)
 {
-  FnInfo currentFnToTrace = collectionOfFunc.functionArray[checkForExistingFn(collectionOfFunc, addr)];
+  FnInfo *currentFnToTrace = &collectionOfFunc.functionArray[checkForExistingFn(collectionOfFunc, addr)];
   Lde *decoder = new_lde();
   const unsigned char *p = addr;
   int totalOffset = 0; //Offset of address
@@ -130,7 +136,7 @@ FnsData fn_trace(void *addr, FnsData collectionOfFunc)
     //check if opcode is a CALL operation
     if (is_call(currentOpCode))
     {
-      ++currentFnToTrace.nOutCalls;
+      ++currentFnToTrace->nOutCalls;
       //find location of the called function
 
       int *offSetOperandForCalledFn = (int *)(p + totalOffset + 1);
@@ -158,7 +164,7 @@ FnsData fn_trace(void *addr, FnsData collectionOfFunc)
           collectionOfFunc.size = collectionOfFunc.size * 2;
         }
         //printf("%p\n", addressOfFunctionBeingCalled);
-        printf("%d\n", collectionOfFunc.currentIndex);
+        //printf("%d\n", collectionOfFunc.currentIndex);
         collectionOfFunc = fn_trace((void *)addressOfFunctionBeingCalled, collectionOfFunc);
       }
     }
