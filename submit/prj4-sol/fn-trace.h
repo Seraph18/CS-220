@@ -54,10 +54,17 @@ void free_fns_data(FnsData *fnsData);
 const FnInfo *next_fn_info(const FnsData *fnData, const FnInfo *lastFnInfo);
 //.2
 
-int checkForExistingFn(FnsData fnsData, void *fnAddress);
+int checkForExistingFn(FnsData *fnsData, void *fnAddress);
 
-void print();
+//void print();
 
-FnsData fn_trace(void *addr, FnsData collectionOfFunc);
+FnsData *fn_trace(void *addr, FnsData *collectionOfFunc);
+
+//Cmp function
+int cmpfunc(const void *a, const void *b);
+
+
+//Adds new function to FnsData
+FnsData *addFunc(void *address, FnsData *fnsData);
 
 #endif //#ifndef FN_TRACE_H_

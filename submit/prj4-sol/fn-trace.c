@@ -71,20 +71,16 @@ new_fns_data(void *rootFn)
 {
 
   //Initialize the FnsData
-  FnsData *collectionOfFunc = (FnsData *)calloc(1, sizeof(FnsData));
+  FnsData *collectionOfFunc = malloc(sizeof(FnsData) * 2);
   collectionOfFunc->functionArray = malloc(sizeof(FnInfo) * INIT_SIZE);
-  collectionOfFunc->size = INIT_SIZE;
+  collectionOfFunc->size = 1;
   collectionOfFunc->currentIndex = 0;
 
-  //Initialize decoder
-  Lde *decoder = new_lde();
-
   //Add root function to the FnsData structure
-  FnInfo firstFn = {rootFn, get_op_length(decoder, rootFn), 1, 0};
-  collectionOfFunc->functionArray[0] = firstFn;
-  ++collectionOfFunc->currentIndex;
+  collectionOfFunc = fn_trace(rootFn, collectionOfFunc);
 
-  fn_trace(rootFn, *collectionOfFunc);
+  qsort(collectionOfFunc->functionArray, collectionOfFunc->currentIndex, sizeof(FnInfo), cmpfunc);
+
   return collectionOfFunc;
 }
 
@@ -99,81 +95,69 @@ new_fns_data(void *rootFn)
 
 const FnInfo *next_fn_info(const FnsData *fnsData, const FnInfo *lastFnInfo)
 {
-
-  lastFnInfo = NULL;
-  for (const FnInfo *fnInfoP = next_fn_info(fnsData, NULL); fnInfoP != NULL;
-       fnInfoP = next_fn_info(fnsData, fnInfoP))
+  if (fnsData->size == 0)
   {
-    if (fnInfoP == NULL)
+    return NULL;
+  }
+  if (lastFnInfo == NULL)
+  {
+    return &(fnsData->functionArray[0]);
+  }
+  for (int i = 0; i < fnsData->currentIndex - 1; i++)
+  {
+    if (fnsData->functionArray[i].address == lastFnInfo->address)
     {
-      lastFnInfo = fnInfoP;
-      return lastFnInfo;
+      return &fnsData->functionArray[i + 1];
     }
   }
 
-  return lastFnInfo;
+  return NULL;
 }
 
 //TODO: add auxiliary functions
 
-FnsData fn_trace(void *addr, FnsData collectionOfFunc)
+FnsData *fn_trace(void *addr, FnsData *collectionOfFunc)
 {
-  FnInfo *currentFnToTrace = &collectionOfFunc.functionArray[checkForExistingFn(collectionOfFunc, addr)];
   Lde *decoder = new_lde();
-  const unsigned char *p = addr;
-  int totalOffset = 0; //Offset of address
+  int indexOfCurrentFunction = collectionOfFunc->currentIndex;
+  //Adds new Function to the collectionOfFunc
+  collectionOfFunc = addFunc(addr, collectionOfFunc);  
+  
+  unsigned char *currentFunction = addr;
+  unsigned int funcLength = 0;
+  unsigned int nOut = 0;
 
-  unsigned char currentOpCode = *((unsigned char *)(p)); //Current opcode
-
-  while (!is_ret(currentOpCode)) //Run until a return operation is found
+  while (!is_ret(*currentFunction))
   {
-
-    currentOpCode = *((unsigned char *)(p + totalOffset)); //Set the current opcode to the correct one at the given address
-    //printf("%x\n", currentOpCode);                         //Print current Opcode hex value
-
-    int lineLength = get_op_length(decoder, p + totalOffset); //Length of whole line in bits
-
-    //check if opcode is a CALL operation
-    if (is_call(currentOpCode))
+    int instrLength = get_op_length(decoder, currentFunction);
+    unsigned char opCode = *currentFunction;
+    funcLength += instrLength;
+    if (is_call(opCode))
     {
-      ++currentFnToTrace->nOutCalls;
-      //find location of the called function
-
-      int *offSetOperandForCalledFn = (int *)(p + totalOffset + 1);
-      unsigned char *addressOfNextInstruction = ((unsigned char *)(p + totalOffset + lineLength));
-      unsigned int *addressOfFunctionBeingCalled = (unsigned int *)(*offSetOperandForCalledFn + addressOfNextInstruction);
-      //printf("%p\n", addressOfFunctionBeingCalled); //Print address of called function
-
-      //Check if function already exists within the FnsData data structure
-      int indexOfFn = checkForExistingFn(collectionOfFunc, (void *)addressOfFunctionBeingCalled);
-      if (indexOfFn > -1)
+      ++nOut;
+      int *offsetPoint = (void *)currentFunction + 1;
+      void *address = *offsetPoint + currentFunction + instrLength;
+      int isPresent = checkForExistingFn(collectionOfFunc, address);
+      if (isPresent < 0)
       {
-        //If it does, increment that nInCalls property of it
-        ++collectionOfFunc.functionArray[indexOfFn].nInCalls;
+        collectionOfFunc = fn_trace(address, collectionOfFunc);
       }
-      else //Create a new FnInfo struct for it
+      else
       {
-        FnInfo newFn = {(void *)addressOfFunctionBeingCalled, 0, 1, 0};
-        collectionOfFunc.functionArray[collectionOfFunc.currentIndex] = newFn;
-        ++collectionOfFunc.currentIndex;
-
-        //Check if size needs to be increased
-        if (collectionOfFunc.currentIndex == collectionOfFunc.size - 1)
-        {
-          collectionOfFunc.functionArray = reallocChk(collectionOfFunc.functionArray, sizeof(FnInfo) * (collectionOfFunc.size * 2));
-          collectionOfFunc.size = collectionOfFunc.size * 2;
-        }
-        //printf("%p\n", addressOfFunctionBeingCalled);
-        //printf("%d\n", collectionOfFunc.currentIndex);
-        collectionOfFunc = fn_trace((void *)addressOfFunctionBeingCalled, collectionOfFunc);
+        ++collectionOfFunc->functionArray[isPresent].nInCalls;
       }
     }
-
-    totalOffset += lineLength; //Adds current length to the offset for the next address call;
+    currentFunction += instrLength;
   }
+  //printf("%d\n", nOut);
+  
+  //Adds collected nOutCalls from the entire function
+  collectionOfFunc->functionArray[indexOfCurrentFunction].nOutCalls = nOut;
+  collectionOfFunc->functionArray[indexOfCurrentFunction].length = funcLength + 1;
   return collectionOfFunc;
 }
 
+/*
 void print(FnsData fnsData)
 {
   for (int i = 0; i < fnsData.currentIndex; ++i)
@@ -182,13 +166,47 @@ void print(FnsData fnsData)
     printf("%p: nInCalls:   %d; nOutCalls:    %d; length:   %d\n", tempFnInfo.address, tempFnInfo.nInCalls, tempFnInfo.nOutCalls, tempFnInfo.length);
   }
 }
+*/
+
+//Compare function for qSort
+
+int cmpfunc(const void *a, const void *b)
+{
+  FnInfo aInfo = *(FnInfo *)a;
+  void *address1 = aInfo.address;
+  FnInfo bInfo = *(FnInfo *)b;
+  void *address2 = bInfo.address;
+  int dif = address1 - address2;
+  return dif;
+}
+
+//Adds new function to FnsData
+FnsData *addFunc(void *address, FnsData *collectionOfFunc)
+{
+  FnInfo *newFInfo = malloc(sizeof(FnInfo));
+
+  newFInfo->address = address;
+  newFInfo->nInCalls = 1;
+  newFInfo->nOutCalls = 0;
+
+  if (collectionOfFunc->currentIndex == collectionOfFunc->size - 1)
+  {
+    collectionOfFunc->functionArray = reallocChk(collectionOfFunc->functionArray, sizeof(FnInfo) * (collectionOfFunc->size * 2));
+    collectionOfFunc->size = collectionOfFunc->size * 2;
+  }
+
+  collectionOfFunc->functionArray[collectionOfFunc->currentIndex] = *newFInfo;
+  ++collectionOfFunc->currentIndex;
+
+  return collectionOfFunc;
+}
 
 //Check if function has already been seen before
-int checkForExistingFn(FnsData fnsData, void *fnAddress)
+int checkForExistingFn(FnsData *collectionOfFunc, void *fnAddress)
 {
-  for (int i = 0; i < fnsData.currentIndex; ++i)
+  for (int i = 0; i < collectionOfFunc->currentIndex; ++i)
   {
-    if (fnAddress == fnsData.functionArray[i].address)
+    if (fnAddress == collectionOfFunc->functionArray[i].address)
     {
       return i;
     }

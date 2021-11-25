@@ -57,3 +57,26 @@ $ LD_LIBRARY_PATH=".:$HOME/cs220/lib" ./fn-trace -r fns testFn
     5582: nInCalls:       8; nOutCalls:       5; length:     213
     5795: nInCalls:       1; nOutCalls:       1; length:      20
 $
+
+0x7f2586da90f5: nInCalls:       5; nOutCalls:       8; length:     324
+0x7f2586da9239: nInCalls:       5; nOutCalls:       6; length:     253
+0x7f2586da9336: nInCalls:       7; nOutCalls:       2; length:     119
+0x7f2586da93ad: nInCalls:       7; nOutCalls:      11; length:     403
+0x7f2586da9540: nInCalls:      10; nOutCalls:       9; length:     333
+0x7f2586da968d: nInCalls:       9; nOutCalls:       7; length:     330
+0x7f2586da97d7: nInCalls:       7; nOutCalls:      10; length:     415
+0x7f2586da9976: nInCalls:       9; nOutCalls:       4; length:     171
+0x7f2586da9a21: nInCalls:       8; nOutCalls:      10; length:     397
+0x7f2586da9bae: nInCalls:      11; nOutCalls:       5; length:     233
+0x7f2586da9c97: nInCalls:       9; nOutCalls:      11; length:     513
+0x7f2586da9e98: nInCalls:       6; nOutCalls:       6; length:     247
+0x7f2586da9f8f: nInCalls:       5; nOutCalls:       8; length:     321
+0x7f2586daa0d0: nInCalls:       7; nOutCalls:       8; length:     290
+0x7f2586daa1f2: nInCalls:       4; nOutCalls:       3; length:     142
+0x7f2586daa280: nInCalls:       6; nOutCalls:      10; length:     419
+0x7f2586daa423: nInCalls:       4; nOutCalls:       5; length:     209
+0x7f2586daa4f4: nInCalls:       7; nOutCalls:       2; length:     127
+0x7f2586daa573: nInCalls:       4; nOutCalls:       5; length:     256
+0x7f2586daa673: nInCalls:       4; nOutCalls:       3; length:     152
+0x7f2586daa70b: nInCalls:       1; nOutCalls:       1; length:      21
+
