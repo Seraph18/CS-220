@@ -26,22 +26,14 @@ struct FnsDataImpl
  */
 void free_fns_data(FnsData *fnsData)
 {
-  free(fnsData);
-}
+  //Tried free individually but I changed it to happen in my add Function function
+  /*for (int i = fnsData->currentIndex - 1; i >= 0; --i){
+    free(fnsData->functionArray[i]);
+  }*/
 
-/** Iterate over all FnInfo's in fnsData.  Make initial call with NULL
- *  lastFnInfo.  Keep calling with return value as lastFnInfo, until
- *  next_fn_info() returns NULL.  Values must be returned sorted in
- *  increasing order by fnInfoP->address.
- *
- *  Sample iteration:
- *
- *  for (FnInfo *fnInfoP = next_fn_info(fnsData, NULL); fnInfoP != NULL;
- *       fnInfoP = next_fn_info(fnsData, fnInfoP)) {
- *    //body of iteration
- *  }
- *
- */
+    free(fnsData->functionArray);
+    free(fnsData);
+}
 
 /** recognized opcodes for calls and returns */
 enum
@@ -84,7 +76,20 @@ new_fns_data(void *rootFn)
   return collectionOfFunc;
 }
 
-/*
+
+/** Iterate over all FnInfo's in fnsData.  Make initial call with NULL
+ *  lastFnInfo.  Keep calling with return value as lastFnInfo, until
+ *  next_fn_info() returns NULL.  Values must be returned sorted in
+ *  increasing order by fnInfoP->address.
+ *
+ *  Sample iteration:
+ *
+ *  for (FnInfo *fnInfoP = next_fn_info(fnsData, NULL); fnInfoP != NULL;
+ *       fnInfoP = next_fn_info(fnsData, fnInfoP)) {
+ *    //body of iteration
+ *  }
+ *
+ *
 1. The first time the function is called, the second argument lastFnInfo will be passed as NULL; the function should return the address of the "first" function-info.  
 
 2. For the next call, the client will send in the address of the "first" function-info as lastFnInfo; i.e. it will send in the return value of the previous call.  The function should return the address of the second function-info.
@@ -154,6 +159,8 @@ FnsData *fn_trace(void *addr, FnsData *collectionOfFunc)
   //Adds collected nOutCalls from the entire function
   collectionOfFunc->functionArray[indexOfCurrentFunction].nOutCalls = nOut;
   collectionOfFunc->functionArray[indexOfCurrentFunction].length = funcLength + 1;
+
+  free_lde(decoder);
   return collectionOfFunc;
 }
 
@@ -197,6 +204,8 @@ FnsData *addFunc(void *address, FnsData *collectionOfFunc)
 
   collectionOfFunc->functionArray[collectionOfFunc->currentIndex] = *newFInfo;
   ++collectionOfFunc->currentIndex;
+
+  free(newFInfo);
 
   return collectionOfFunc;
 }
