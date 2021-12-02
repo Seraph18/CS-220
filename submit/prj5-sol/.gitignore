@@ -1,3 +1,4 @@
 cache-sim
 *.o
 git 
+extras/*

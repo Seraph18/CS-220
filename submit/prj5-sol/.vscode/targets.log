@@ -1,0 +1,291 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+ 
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Dec  2 16:54:07 2021
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AGENT_FOLDER = /home/jgordo39/.vscode-server
+# environment
+XDG_SESSION_TYPE = tty
+# environment
+VSCODE_LOG_NATIVE = false
+# makefile (from 'Makefile', line 3)
+TARGET = cache-sim
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 5)
+CPPFLAGS = -I $(HOME)/$(COURSE)/include
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# default
+MAKE_VERSION := 4.2.1
+# makefile
+CURDIR := /import/linux/home1/jgordo39/i220a/submit/prj5-sol
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
+# environment
+_ = /import/linux/home1/jgordo39/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/node
+# makefile (from 'Makefile', line 6)
+CFLAGS = -g -Wall -std=c18
+# makefile (from 'Makefile', line 1)
+COURSE = cs220
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# environment
+CHAINENV_CONFIG_ROOT = /home/jgordo39/.config/chainenv
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/15291/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from 'Makefile', line 14)
+OBJS = cache-sim.o main.o 
+# environment
+VSCODE_CWD = /import/linux/home1/jgordo39
+# environment
+SSH_CONNECTION = 149.125.83.203 41564 128.226.114.202 22
+# environment
+PATH = /import/linux/home1/jgordo39/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin:/home/jgordo39/cs220/bin:/home/jgordo39/.config/chainenv/shims:/opt/chainenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+# environment
+XDG_RUNTIME_DIR = /run/user/15291
+# environment
+VSCODE_LOG_STACK = false
+# environment
+VSCODE_IPC_HOOK_CLI = /run/user/15291/vscode-ipc-45704a1f-2085-49dc-b123-a5fd3011d9ab.sock
+# makefile (from 'Makefile', line 11)
+LDFLAGS = -L $(LIBDIR)
+# makefile (from 'Makefile', line 9)
+LIB = cs220
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# automatic
+%F = $(notdir $%)
+# environment
+CHAINENV_ROOT = /opt/chainenv
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /import/linux/home1/jgordo39/i220a/submit/prj5-sol
+# default
+.LOADED := 
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/server/remoteExtensionHostProcess
+# environment
+HOME = /home/jgordo39
+# environment
+LD_LIBRARY_PATH = .:/home/jgordo39/cs220/lib:.:/home/jgordo39/cs220/lib
+# environment
+J2REDIR = /usr/lib/jvm/java-8-oracle/jre
+# environment
+LOGNAME = jgordo39
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
++F = $(notdir $+)
+# environment
+J2SDKDIR = /usr/lib/jvm/java-8-oracle
+# environment
+CHAINENV_SHELL = bash
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# environment
+JAVA_HOME = /usr/lib/jvm/java-8-oracle
+# environment
+XDG_SESSION_ID = 201755
+# environment
+USER = jgordo39
+# makefile
+.DEFAULT_GOAL := cache-sim
+# makefile (from 'Makefile', line 12)
+LDLIBS = -l$(LIB)
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := make
+# makefile (from 'Makefile', line 8)
+LIBDIR = $$HOME/$(COURSE)/lib
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_CLIENT = 149.125.83.203 41564 22
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+BROWSER = /import/linux/home1/jgordo39/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin/helpers/browser.sh
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+VIRTUALENVWRAPPER_SCRIPT = /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+# environment
+LC_ALL = C
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /import/linux/home1/jgordo39/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/remote/node_modules
+# environment
+DERBY_HOME = /usr/lib/jvm/java-8-oracle/db
+# default
+.RECIPEPREFIX := 
+# environment
+_VIRTUALENVWRAPPER_API =  mkvirtualenv rmvirtualenv lsvirtualenv showvirtualenv workon add2virtualenv cdsitepackages cdvirtualenv lssitepackages toggleglobalsitepackages cpvirtualenv setvirtualenvproject mkproject cdproject mktmpenv
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+LANG = C
+# environment
+VSCODE_EXTHOST_WILL_SEND_SOCKET = true
+# variable set hash-table stats:
+# Load=84/1024=8%, Rehash=0, Collisions=14/111=13%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 64, inode 82375690295): 13 files, no impossibilities.
+
+# 13 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+clear: clean wipeScreen
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+r: cache-sim extras/lru_2-2-2-8.test
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 22):
+	sed -e 's/#.*//' extras/lru_2-2-2-8.test \
+        | ./cache-sim -r lru -v 2-2-2-8
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-02 16:53:21.303534796
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+extras/lru_2-2-2-8.test:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 28):
+		rm -f $(OBJS) $(TARGET) *~
+
+wipeScreen:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 31):
+	clear
+
+# Not a target:
+main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+cache-sim: cache-sim.o main.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 19):
+		$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -Wl,-rpath=$(LIBDIR) -o $@
+
+# Not a target:
+cache-sim.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=12/1024=1%, Rehash=0, Collisions=0/28=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 23 / storage = 211 B / avg = 9 B
+# current buf: size = 8162 B / used = 211 B / count = 23 / avg = 9 B
+
+# strcache performance: lookups = 38 / hit rate = 39%
+# hash-table stats:
+ 
+# Load=23/8192=0%, Rehash=0, Collisions=1/38=3%
+# Finished Make data base on Thu Dec  2 16:54:07 2021
+
+ 

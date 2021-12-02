@@ -13,7 +13,9 @@ CacheSim *
 new_cache_sim(const CacheParams *params)
 {
   //TODO
-  return NULL;
+  CacheParams cparams = *params;
+  CacheSim *cSim = (CacheSim *)&cparams;
+  return cSim;
 }
 
 /** Free all resources used by cache-simulation structure *cache */
