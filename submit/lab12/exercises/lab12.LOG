@@ -1,0 +1,66 @@
+Script started on 2021-12-02 09:50:16-05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="94" LINES="49"]
+jgordo39@g7-12:~/i220a/submit/lab12/exercises$ cla[Kear
+[H[2J[3Jjgordo39@g7-12:~/i220a/submit/lab12/exercises$ [Kjgordo39@g7-12:~/i220a/submit/lab12/exercises$ [Kjgordo39@g7-12:~/i220a/submit/lab12/exercises$ [Kjgordo39@g7-12:~/i220a/submit/lab12/exercises$ [Kjgordo39@g7-12:~/i220a/submit/lab12/exercises$ [Kjgordo39@g7-12:~/i220a/submit/lab12/exercises$ [Kjgordo39@g7-12:~/i220a/submit/lab12/exercises$ [Kjgordo39@g7-12:~/i220a/submit/lab12/exercises$ [Kjgordo39@g7-12:~/i220a/submit/lab12/exercises$ [Kjgordo39@g7-12:~/i220a/submit/lab12/exercises$ [Kjgordo39@g7-12:~/i220a/submit/lab12/exercises$ dso[K[Kosbox &
+[1] 3480184
+jgordo39@g7-12:~/i220a/submit/lab12/exercises$ DOSBox version 0.74-2
+Copyright 2002-2018 DOSBox Team, published under GNU GPL.
+---
+CONFIG: Generating default configuration.
+Writing it to /home/jgordo39/.dosbox/dosbox-0.74-2.conf
+CONFIG:Loading primary settings from config file /home/jgordo39/.dosbox/dosbox-0.74-2.conf
+MIXER:Got different values from SDL: freq 44100, blocksize 512
+ALSA:Can't subscribe to MIDI port (65:0) nor (17:0)
+MIDI:Opened device:none
+dd[K[K
+[1]+  Done                    dosbox
+jgordo39@g7-12:~/i220a/submit/lab12/exercises$ 
+jgordo39@g7-12:~/i220a/submit/lab12/exercises$ dosbox &
+[1] 3481270
+jgordo39@g7-12:~/i220a/submit/lab12/exercises$ DOSBox version 0.74-2
+Copyright 2002-2018 DOSBox Team, published under GNU GPL.
+---
+CONFIG:Loading primary settings from config file /home/jgordo39/.dosbox/dosbox-0.74-2.conf
+MIXER:Got different values from SDL: freq 44100, blocksize 512
+ALSA:Can't subscribe to MIDI port (65:0) nor (17:0)
+MIDI:Opened device:none
+
+[1]+  Done                    dosbox
+jgordo39@g7-12:~/i220a/submit/lab12/exercises$ 
+jgordo39@g7-12:~/i220a/submit/lab12/exercises$ dosbox &
+[1] 3482298
+jgordo39@g7-12:~/i220a/submit/lab12/exercises$ DOSBox version 0.74-2
+Copyright 2002-2018 DOSBox Team, published under GNU GPL.
+---
+CONFIG:Loading primary settings from config file /home/jgordo39/.dosbox/dosbox-0.74-2.conf
+MIXER:Got different values from SDL: freq 44100, blocksize 512
+ALSA:Can't subscribe to MIDI port (65:0) nor (17:0)
+MIDI:Opened device:none
+
+[1]+  Done                    dosbox
+jgordo39@g7-12:~/i220a/submit/lab12/exercises$ dosbox &
+[1] 3483463
+jgordo39@g7-12:~/i220a/submit/lab12/exercises$ DOSBox version 0.74-2
+Copyright 2002-2018 DOSBox Team, published under GNU GPL.
+---
+CONFIG:Loading primary settings from config file /home/jgordo39/.dosbox/dosbox-0.74-2.conf
+MIXER:Got different values from SDL: freq 44100, blocksize 512
+ALSA:Can't subscribe to MIDI port (65:0) nor (17:0)
+MIDI:Opened device:none
+
+jgordo39@g7-12:~/i220a/submit/lab12/exercises$ 
+jgordo39@g7-12:~/i220a/submit/lab12/exercises$ dosbox &
+[2] 3484875
+[1]   Done                    dosbox
+jgordo39@g7-12:~/i220a/submit/lab12/exercises$ DOSBox version 0.74-2
+Copyright 2002-2018 DOSBox Team, published under GNU GPL.
+---
+CONFIG:Loading primary settings from config file /home/jgordo39/.dosbox/dosbox-0.74-2.conf
+MIXER:Got different values from SDL: freq 44100, blocksize 512
+ALSA:Can't subscribe to MIDI port (65:0) nor (17:0)
+MIDI:Opened device:none
+
+[2]+  Done                    dosbox
+jgordo39@g7-12:~/i220a/submit/lab12/exercises$ 
+jgordo39@g7-12:~/i220a/submit/lab12/exercises$ exit
+
+Script done on 2021-12-02 10:27:31-05:00 [COMMAND_EXIT_CODE="0"]

@@ -36,7 +36,7 @@ main2:
 main4:	
 	        call    putchar         #output inChar to console
 		call    delay           #delay for time proportional to DELAY
-                dec	%cx             #decrement loop counter
+        	dec	%cx             #decrement loop counter
 		jnz     main2           #loop if output counter nonzero
 		jmp     main1           #back to read next char
 main3:		call	exit
@@ -58,6 +58,8 @@ getchar:
 		mov     $0x08,%ah       #specify fn: read without echo into al
 		int     $DOS_INT        #read stdin into %al
 		mov     %al,inChar      #mov char read to inChar
+		cmp	$QUIT, %al	#Check if user would like to leave
+		jz	main3
 		pop	%ax
 		ret
 
