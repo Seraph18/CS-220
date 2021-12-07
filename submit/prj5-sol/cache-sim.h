@@ -52,4 +52,9 @@ typedef struct {
 /** Return result for requesting addr from cache */
 CacheResult cache_sim_result(CacheSim *cache, MemAddr addr);
 
+
+//Auxillary Functions
+
+int power2(int exponent);
+
 #endif //ifndef CACHE_SIM_
