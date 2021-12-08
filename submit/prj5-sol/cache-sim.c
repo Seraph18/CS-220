@@ -8,14 +8,17 @@
 
 struct CacheSimImpl
 {
-  int numberOfSets;        // 2^s
-  int numberOfLinesPerSet; // E
+  int numberOfBitsForIndex; // s
+  int numberOfSets;         // 2^s
+  int numberOfLinesPerSet;  // E
 
   int numberOfAddressBitsForOffset; // b
   int sizeOfCache;                  // 2^b
 
   int numberOfBitsToSpecifyPrimaryAddress; // m
   int totalSizeOfMainMemory;               // 2^m
+
+  Replacement replace;
 
   MemAddr **cacheArray; // Array to hold simulated cache
 };
@@ -38,6 +41,8 @@ new_cache_sim(const CacheParams *params)
   cSim->numberOfBitsToSpecifyPrimaryAddress = params->nMemAddrBits;
   cSim->totalSizeOfMainMemory = power2(params->nMemAddrBits);
 
+  cSim->replace = params->replacement;
+
   // Set up simulator array
   cSim->cacheArray = malloc(cSim->numberOfSets * sizeof(MemAddr));
   for (int i = 0; i < cSim->numberOfSets; ++i)
@@ -58,24 +63,68 @@ void free_cache_sim(CacheSim *cache)
 CacheResult
 cache_sim_result(CacheSim *cache, MemAddr addr)
 {
-  // Search For Address in cache; if found it is a hit
-  for (int setIndex = 0; setIndex < cache->numberOfSets; ++setIndex)
+  // Search For Address in cache; if found it is a 'CACHE_HIT'
+
+  unsigned long tagBits = cache->numberOfBitsToSpecifyPrimaryAddress - (cache->numberOfBitsForIndex + cache->numberOfAddressBitsForOffset);
+
+  unsigned long tag = addr >> (cache->numberOfBitsForIndex + cache->numberOfAddressBitsForOffset);
+
+  unsigned long setIndex = (addr >> cache->numberOfAddressBitsForOffset) % cache->numberOfSets; // Set index
+
+  printf("%lx\n", setIndex);
+
+  for (int line = 0; line < cache->numberOfLinesPerSet; ++line)
+  {
+    if (cache->cacheArray[setIndex][line] == tag)
+    {
+      // Found a hit
+      CacheResult result = {CACHE_HIT, 0};
+      return result;
+    }
+    else if (cache->cacheArray[setIndex][line] == 0)
+    {
+      // it is completly empty
+      cache->cacheArray[setIndex][line] = tag;
+      CacheResult result = {CACHE_MISS_WITHOUT_REPLACE, 0};
+      return result;
+    }
+  }
+
+  switch (cache->replace)
+  {
+  case LRU_R:
+    // todo
+    break;
+  case MRU_R:
+    // todo
+    break;
+  case RANDOM_R:
+    // todo
+    break;
+  default:
+    // todo
+    break;
+  }
+
+  /*for (int setIndex = 0; setIndex < cache->numberOfSets; ++setIndex)
   {
     for (int lineIndex = 0; lineIndex < cache->numberOfLinesPerSet; ++lineIndex)
     {
       if (cache->cacheArray[setIndex][lineIndex] == addr)
       {
-        CacheResult result = {0, 0};
+        CacheResult result = {CACHE_HIT, 0};
         return result;
       }
-      else if(cache->cacheArray[setIndex][lineIndex] == 0){
-        //Found a blank spot to put new value
+      else if (cache->cacheArray[setIndex][lineIndex] == 0)
+      {
+        // Found a blank spot to put new value 'CACHE_MISS_WITHOUT_REPLACE'
         cache->cacheArray[setIndex][lineIndex] = addr;
-        CacheResult result = {1, 0};
+        CacheResult result = {CACHE_MISS_WITHOUT_REPLACE, 0};
         return result;
       }
     }
   }
+  */
   CacheResult result = {5, 0};
   return result;
 }
