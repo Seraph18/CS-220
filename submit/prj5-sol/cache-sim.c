@@ -59,23 +59,30 @@ void free_cache_sim(CacheSim *cache)
   free(cache);
 }
 
+unsigned long getLineTag(CacheSim *cache, MemAddr addr){
+  return (addr >> (cache->numberOfBitsForIndex + cache->numberOfAddressBitsForOffset));
+}
+
+
 /** Return result for requesting addr from cache */
 CacheResult
 cache_sim_result(CacheSim *cache, MemAddr addr)
 {
   // Search For Address in cache; if found it is a 'CACHE_HIT'
 
-  unsigned long tagBits = cache->numberOfBitsToSpecifyPrimaryAddress - (cache->numberOfBitsForIndex + cache->numberOfAddressBitsForOffset);
+  // unsigned long tagBits = cache->numberOfBitsToSpecifyPrimaryAddress - (cache->numberOfBitsForIndex + cache->numberOfAddressBitsForOffset);
 
-  unsigned long tag = addr >> (cache->numberOfBitsForIndex + cache->numberOfAddressBitsForOffset);
+  unsigned long tag = getLineTag(cache, addr);
 
   unsigned long setIndex = (addr >> cache->numberOfAddressBitsForOffset) % cache->numberOfSets; // Set index
 
+  unsigned long content = addr >> cache->numberOfAddressBitsForOffset;
+
   //printf("%lx\n", setIndex);
-  // Look for hit
+  //  Look for hit
   for (int line = 0; line < cache->numberOfLinesPerSet; ++line)
   {
-    if (cache->cacheArray[setIndex][line] == tag)
+    if (getLineTag(cache, cache->cacheArray[setIndex][line]) == tag)
     {
       // Found a hit
       CacheResult result = {CACHE_HIT, 0};
@@ -84,14 +91,14 @@ cache_sim_result(CacheSim *cache, MemAddr addr)
     else if (cache->cacheArray[setIndex][line] == 0)
     {
       // it is completly empty
-      MemAddr tempTagHolder;
+
       // Move down currentValues
       for (int i = line; 0 < i; --i)
       {
         cache->cacheArray[setIndex][i] = cache->cacheArray[setIndex][i - 1];
       }
 
-      cache->cacheArray[setIndex][0] = tag;
+      cache->cacheArray[setIndex][0] = addr;
       CacheResult result = {CACHE_MISS_WITHOUT_REPLACE, 0};
       return result;
     }
@@ -100,17 +107,17 @@ cache_sim_result(CacheSim *cache, MemAddr addr)
   switch (cache->replace)
   {
   case LRU_R:
-    // todo
+
     // Grab data to replace for result
     dataToReplace = cache->cacheArray[setIndex][cache->numberOfLinesPerSet - 1];
 
     // Move down currentValues
-    for (int i = cache->numberOfLinesPerSet-1; 0 < i; --i)
+    for (int i = cache->numberOfLinesPerSet - 1; 0 < i; --i)
     {
       cache->cacheArray[setIndex][i] = cache->cacheArray[setIndex][i - 1];
     }
 
-    cache->cacheArray[setIndex][0] = tag;
+    cache->cacheArray[setIndex][0] = addr;
 
     CacheResult result = {2, dataToReplace};
     return result;
