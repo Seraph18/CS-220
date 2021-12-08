@@ -71,8 +71,8 @@ cache_sim_result(CacheSim *cache, MemAddr addr)
 
   unsigned long setIndex = (addr >> cache->numberOfAddressBitsForOffset) % cache->numberOfSets; // Set index
 
-  printf("%lx\n", setIndex);
-
+  //printf("%lx\n", setIndex);
+  // Look for hit
   for (int line = 0; line < cache->numberOfLinesPerSet; ++line)
   {
     if (cache->cacheArray[setIndex][line] == tag)
@@ -84,19 +84,40 @@ cache_sim_result(CacheSim *cache, MemAddr addr)
     else if (cache->cacheArray[setIndex][line] == 0)
     {
       // it is completly empty
-      cache->cacheArray[setIndex][line] = tag;
+      MemAddr tempTagHolder;
+      // Move down currentValues
+      for (int i = line; 0 < i; --i)
+      {
+        cache->cacheArray[setIndex][i] = cache->cacheArray[setIndex][i - 1];
+      }
+
+      cache->cacheArray[setIndex][0] = tag;
       CacheResult result = {CACHE_MISS_WITHOUT_REPLACE, 0};
       return result;
     }
   }
-
+  MemAddr dataToReplace;
   switch (cache->replace)
   {
   case LRU_R:
     // todo
-    break;
+    // Grab data to replace for result
+    dataToReplace = cache->cacheArray[setIndex][cache->numberOfLinesPerSet - 1];
+
+    // Move down currentValues
+    for (int i = cache->numberOfLinesPerSet-1; 0 < i; --i)
+    {
+      cache->cacheArray[setIndex][i] = cache->cacheArray[setIndex][i - 1];
+    }
+
+    cache->cacheArray[setIndex][0] = tag;
+
+    CacheResult result = {2, dataToReplace};
+    return result;
+
   case MRU_R:
     // todo
+
     break;
   case RANDOM_R:
     // todo
