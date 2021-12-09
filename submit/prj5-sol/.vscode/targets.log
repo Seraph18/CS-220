@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Dec  8 17:59:30 2021
+# Make data base, printed on Wed Dec  8 19:00:30 2021
 
 # Variables
 
@@ -189,9 +189,9 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 
 # Directories
 
-# . (device 65, inode 82375690295): 13 files, no impossibilities.
+# . (device 65, inode 82375690295): 10 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 10 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -211,20 +211,20 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
-r: cache-sim extras/lru_2-2-2-8.test
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-08 19:00:09.083842599
+#  File has been updated.
+#  Successfully updated.
+
+lu: cache-sim extras/lru_2-2-2-8.test
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 22):
 	sed -e 's/#.*//' extras/lru_2-2-2-8.test \
         | ./cache-sim -r lru -v 2-2-2-8
-
-# Not a target:
-Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2021-12-02 16:55:36.859095581
-#  File has been updated.
-#  Successfully updated.
 
 # Not a target:
 extras/lru_2-2-2-8.test:
@@ -238,18 +238,32 @@ extras/lru_2-2-2-8.test:
 #  Modification time never checked.
 #  File has not been updated.
 
+# Not a target:
+extras/mru_4-2-8-16.test:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ru: cache-sim extras/mru_4-2-8-16.test
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 27):
+	sed -e 's/#.*//' extras/mru_4-2-8-16.test \
+        | ./cache-sim -r mru -v 4-2-8-16
+
 clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 28):
+#  recipe to execute (from 'Makefile', line 33):
 		rm -f $(OBJS) $(TARGET) *~
 
 wipeScreen:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 31):
+#  recipe to execute (from 'Makefile', line 36):
 	clear
 
 # Not a target:
@@ -266,26 +280,26 @@ cache-sim: cache-sim.o main.o
 		$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -Wl,-rpath=$(LIBDIR) -o $@
 
 # Not a target:
+ 
 cache-sim.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=12/1024=1%, Rehash=0, Collisions=0/28=0%
+# Load=14/1024=1%, Rehash=0, Collisions=0/32=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 23 / storage = 211 B / avg = 9 B
-# current buf: size = 8162 B / used = 211 B / count = 23 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 25 / storage = 240 B / avg = 9 B
+# current buf: size = 8162 B / used = 240 B / count = 25 / avg = 9 B
 
-# strcache performance: lookups = 38 / hit rate = 39%
- 
+# strcache performance: lookups = 39 / hit rate = 35%
 # hash-table stats:
-# Load=23/8192=0%, Rehash=0, Collisions=1/38=3%
-# Finished Make data base on Wed Dec  8 17:59:30 2021
+# Load=25/8192=0%, Rehash=0, Collisions=1/39=3%
+# Finished Make data base on Wed Dec  8 19:00:30 2021
 
  

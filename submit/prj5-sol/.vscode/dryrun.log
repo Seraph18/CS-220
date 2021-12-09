@@ -1,4 +1,4 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory '/import/linux/home1/jgordo39/i220a/submit/prj5-sol'
 cc -g -Wall -std=c18 -I /home/jgordo39/cs220/include  -c -o cache-sim.o cache-sim.c
 cc -g -Wall -std=c18 -I /home/jgordo39/cs220/include  -c -o main.o main.c

@@ -59,10 +59,10 @@ void free_cache_sim(CacheSim *cache)
   free(cache);
 }
 
-unsigned long getLineTag(CacheSim *cache, MemAddr addr){
+unsigned long getLineTag(CacheSim *cache, MemAddr addr)
+{
   return (addr >> (cache->numberOfBitsForIndex + cache->numberOfAddressBitsForOffset));
 }
-
 
 /** Return result for requesting addr from cache */
 CacheResult
@@ -70,21 +70,33 @@ cache_sim_result(CacheSim *cache, MemAddr addr)
 {
   // Search For Address in cache; if found it is a 'CACHE_HIT'
 
-  // unsigned long tagBits = cache->numberOfBitsToSpecifyPrimaryAddress - (cache->numberOfBitsForIndex + cache->numberOfAddressBitsForOffset);
-
   unsigned long tag = getLineTag(cache, addr);
 
   unsigned long setIndex = (addr >> cache->numberOfAddressBitsForOffset) % cache->numberOfSets; // Set index
 
-  unsigned long content = addr >> cache->numberOfAddressBitsForOffset;
-
-  //printf("%lx\n", setIndex);
-  //  Look for hit
+  // printf("%lx\n", setIndex);
+  //   Look for hit
   for (int line = 0; line < cache->numberOfLinesPerSet; ++line)
   {
     if (getLineTag(cache, cache->cacheArray[setIndex][line]) == tag)
     {
       // Found a hit
+
+      // Check
+      if (line != 0)
+      {
+        MemAddr dataToMove = cache->cacheArray[setIndex][line];
+
+        // Move down currentValues
+        for (int i = line; 0 < i; --i)
+        {
+          cache->cacheArray[setIndex][i] = cache->cacheArray[setIndex][i - 1];
+        }
+
+        // Readd addr
+        cache->cacheArray[setIndex][0] = dataToMove;
+      }
+
       CacheResult result = {CACHE_HIT, 0};
       return result;
     }
@@ -104,6 +116,7 @@ cache_sim_result(CacheSim *cache, MemAddr addr)
     }
   }
   MemAddr dataToReplace;
+  CacheResult result = {2, 0};
   switch (cache->replace)
   {
   case LRU_R:
@@ -119,13 +132,17 @@ cache_sim_result(CacheSim *cache, MemAddr addr)
 
     cache->cacheArray[setIndex][0] = addr;
 
-    CacheResult result = {2, dataToReplace};
+    result.replaceAddr = dataToReplace;
     return result;
 
   case MRU_R:
-    // todo
 
-    break;
+    dataToReplace = cache->cacheArray[setIndex][0];
+    cache->cacheArray[setIndex][0] = addr;
+    result.replaceAddr = dataToReplace;
+
+    return result;
+
   case RANDOM_R:
     // todo
     break;
@@ -153,8 +170,8 @@ cache_sim_result(CacheSim *cache, MemAddr addr)
     }
   }
   */
-  CacheResult result = {5, 0};
-  return result;
+  CacheResult defaultResult = {5, 0};
+  return defaultResult;
 }
 
 // Multiply 2 by the power of a given exponent
