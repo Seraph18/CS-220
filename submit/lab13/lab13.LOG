@@ -1,0 +1,605 @@
+Script started on 2021-12-09 10:11:22-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="94" LINES="49"]
+jgordo39@g7-14:~/i220a/submit/lab13$ cd exercises
+jgordo39@g7-14:~/i220a/submit/lab13/exercises$ ls
+file-char-count  file-copy  no-buffer-copy  rec-io  stdin-char-count
+jgordo39@g7-14:~/i220a/submit/lab13/exercises$ cd stdin-char-count
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/stdin-char-count$ ls
+Makefile  stdin-char-count.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/stdin-char-count$ ./stdin-char-count < stdin-cha r-count.c
+bash: ./stdin-char-count: No such file or directory
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/stdin-char-count$ ./stdin-char-count < stdin-char-count.c[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmake
+gcc -g -Wall -std=c18 -funsigned-char    stdin-char-count.c   -o stdin-char-count
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/stdin-char-count$ make./stdin-char-count < stdin-char-count.c
+EOF = -1
+C^C
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/stdin-char-count$ ls
+Makefile  stdin-char-count  stdin-char-count.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/stdin-char-count$ emacs stdin-char-count.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/stdin-char-count$ make
+gcc -g -Wall -std=c18 -funsigned-char    stdin-char-count.c   -o stdin-char-count
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/stdin-char-count$ makeemacs stdin-char-count.cls[K./stdin-char-count < stdin-char-count.c
+EOF = -1
+197
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/stdin-char-count$ ls
+Makefile  stdin-char-count  stdin-char-count.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/stdin-char-count$ cd ..
+jgordo39@g7-14:~/i220a/submit/lab13/exercises$ ls
+file-char-count  file-copy  no-buffer-copy  rec-io  stdin-char-count
+jgordo39@g7-14:~/i220a/submit/lab13/exercises$ cd file [K-char-count
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ ls
+file-char-count.c  Makefile
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ make
+gcc -g -Wall -std=c18    file-char-count.c   -o file-char-count
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ ./file-cahr[K[K[Khar-count file cha[K[K[K[K[K=[Ke-char-cou nt.c
+566
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ ./file-char-count file-char-count.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfile-char-count[1P.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfile-char-count.[1Pc[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfile-char-count.c[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfile-char-count.c [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pfile-char-count.c
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pfile-char-count.c[1Pfile-char-count.c[1Pfile-char-count.c[1Pfile-char-count.c[1Pfile-char-count.c[1Pfile-char-count.c[1Pfile-char-count.c[1Pfile-char-count.c[1Pfile-char-count.c[1Pfile-char-count.c[1Pile-char-count.c[1Pfile-char-count.c[1Pfile-char-count.ccfile-char-count.csfile-char-count.c[1Pfile-char-count.c[1Pfile-char-count.cwfile-char-count.ccfile-char-count.c file-char-count.c-file-char-count.ccfile-char-count.c file-char-count.c
+566 file-char-count.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ ls
+file-char-count  file-char-count.c  Makefile
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ ./file [K-char [K-count xxx
+cannot read xxx: No such file or directory
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ ./file-char-count xxx[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+file-char-count  file-char-count.c  Makefile
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ more
+more: bad usage
+Try 'more --help' for more information.
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ more file-char-count
+file-char-count    file-char-count.c  
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ more file-char-count.c
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/** Output number of chars in file specified by single command-line
+ *  argument.
+ */
+int
+main(int argc, const char *argv[])
+{
+  if (argc != 2) {
+    fprintf(stderr, "usage: %s FILE_NAME\n", argv[0]);
+    exit(1);
+  }
+  const char *fName = argv[1];
+  FILE *in = fopen(fName, "r");
+  if (!in) {
+    fprintf(stderr, "cannot read %s: %s\n", fName, strerror(errno));
+    exit(1);
+  }
+  int c;
+  int count = 0;
+  while ((c = fgetc(in)) != EOF) count++;
+  printf("%d\n", count);
+  return 0;
+}
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ more file-char-count.c[C[1P file-char-count.c[1P file-char-count.c[1P file-char-count.c[1P file-char-count.cc file-char-count.ca file-char-count.cs file-char-count.c[1P file-char-count.ct file-char-count.c
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/** Output number of chars in file specified by single command-line
+ *  argument.
+ */
+int
+main(int argc, const char *argv[])
+{
+  if (argc != 2) {
+    fprintf(stderr, "usage: %s FILE_NAME\n", argv[0]);
+    exit(1);
+  }
+  const char *fName = argv[1];
+  FILE *in = fopen(fName, "r");
+  if (!in) {
+    fprintf(stderr, "cannot read %s: %s\n", fName, strerror(errno));
+    exit(1);
+  }
+  int c;
+  int count = 0;
+  while ((c = fgetc(in)) != EOF) count++;
+  printf("%d\n", count);
+  return 0;
+}
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ cat file-char-count.c[1P file-char-count.c[1P file-char-count.c[1P file-char-count.ce file-char-count.cm file-char-count.ca file-char-count.cc file-char-count.cs file-char-count.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ make
+gcc -g -Wall -std=c18    file-char-count.c   -o file-char-count
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ makeemacs file-char-count.c[2Pcat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@more[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[2Pls./file-char-count xxxls[Kwc -c file-char-count.c./file-char-count file-char-count.c
+580
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ ./file-char-count file-char-count.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+580
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ ./file-char-count file-char-count.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cv./file-char-count file-char-count.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca./file-char-count file-char-count.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl./file-char-count file-char-count.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cg./file-char-count file-char-count.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr./file-char-count file-char-count.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci./file-char-count file-char-count.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn./file-char-count file-char-count.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd./file-char-count file-char-count.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ./file-char-count file-char-count.c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+==3532995== Memcheck, a memory error detector
+==3532995== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3532995== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==3532995== Command: ./file-char-count file-char-count.c
+==3532995== 
+580
+==3532995== 
+==3532995== HEAP SUMMARY:
+==3532995==     in use at exit: 0 bytes in 0 blocks
+==3532995==   total heap usage: 3 allocs, 3 frees, 9,768 bytes allocated
+==3532995== 
+==3532995== All heap blocks were freed -- no leaks are possible
+==3532995== 
+==3532995== For counts of detected and suppressed errors, rerun with: -v
+==3532995== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ ls
+file-char-count  file-char-count.c  Makefile
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ cd
+jgordo39@g7-14:~$ cd -
+/home/jgordo39/i220a/submit/lab13/exercises/file-char-count
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-char-count$ cd ..
+jgordo39@g7-14:~/i220a/submit/lab13/exercises$ ls
+file-char-count  file-copy  no-buffer-copy  rec-io  stdin-char-count
+jgordo39@g7-14:~/i220a/submit/lab13/exercises$ cd file-copy
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ make
+gcc -g -Wall -std=c18    file-copy.c   -o file-copy
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ clear
+[H[2J[3Jjgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ./file c[K-[K[K-copy
+usage: ./file-copy SRC_NAME DEST_NAME
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ls -l file-copy.c t
+ls: cannot access 't': No such file or directory
+-rw-r----- 1 jgordo39 jgordo39 1245 Dec  7 12:24 file-copy.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ls -l file-copy.c t[1P[1P[1P[1P[1P[1P[1@.[1@/[C[1@f[1@i[1@l[1@e[1@-[1@c[1@o[1@p[1@y[1@ 
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ./file-copy file-copy.c t[6Pls -l[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+-rw-r----- 1 jgordo39 jgordo39 1245 Dec  7 12:24 file-copy.c
+-rw-r----- 1 jgordo39 jgordo39 1245 Dec  9 10:25 t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ls
+file-copy  file-copy.c	Makefile  t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ cmp file-copy.c t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ./file0c[K[K-copy-[K Makefile t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ cmpt[K Makefile t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ls
+file-copy  file-copy.c	Makefile  t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ chmod a-w t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ,/[K[K./file-copy file-copy.c t
+cannot write t: Permission denied
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ cmp Makefile t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ mak[K[K[Kls
+file-copy  file-copy.c	Makefile  t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ emacs file-copy..[Kc
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ make
+gcc -g -Wall -std=c18    file-copy.c   -o file-copy
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ makeemacs file-copy.cls[Kcmp Makefile t[11@./file-copy file-copy.c[C[C[14Pchmod a-w[C[C[14@./file-copy file-copy.c[C[C
+cannot write t: Permission denied
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ./file-copy file-copy.c tmake[Kemacs file-copy.cls[Kcmp Makefile tls[Kcmp Makefile t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ cat t
+CC = gcc
+CFLAGS = -g -Wall -std=c18
+
+TARGETS = file-copy
+
+$(TARGETS):
+
+
+clean:
+		rm -f $(TARGETS) *.o *~
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ rm [K[K[Kmake clean
+rm -f file-copy *.o *~
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ls
+file-copy.c  Makefile  t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ rm -f t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ make
+gcc -g -Wall -std=c18    file-copy.c   -o file-copy
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ /[K./file-copy file-copp[Ky.c t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ,.[K[K./file-copy file-copy.c tmake[K./file-copy file-copy.c t[1Pt[1Pt[1Pt[1Pt[1Pt[1Pt[1Pt[1Pt[1Pt[1Pt[1Pt[1PtMtatktetftitltet t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ cat t
+CC = gcc
+CFLAGS = -g -Wall -std=c18
+
+TARGETS = file-copy
+
+$(TARGETS):
+
+
+clean:
+		rm -f $(TARGETS) *.o *~
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ chmod a-a t
+chmod: invalid mode: ‘a-a’
+Try 'chmod --help' for more information.
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ chmod a-a t[C[6Pat[C[C[6@hmod a-a[C[C[1P tw t[1P t[1P t
+chmod: invalid mode: ‘a’
+Try 'chmod --help' for more information.
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ chmod a t- tw t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ chmod a-w t[2P t-a t[6Pat[C[C[17@./file-copy Makefile[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ka[Kamke[K[K[K[Kmake
+make: 'file-copy' is up to date.
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ makechmod a-w t[2P t-a t[6Pat[C[C[17@./file-copy Makefile[C[Ccat t[K[6@hmod a-a[C[C[6Pat[C[C[17@./file-copy Makefile[C[C[3@file-copy.c[C[C[3PMakefile[C[C
+cannot write t: Permission denied
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ls -l
+total 32
+-rwxr-x--- 1 jgordo39 jgordo39 19848 Dec  9 10:32 file-copy
+-rw-r----- 1 jgordo39 jgordo39  1256 Dec  9 10:29 file-copy.c
+-rw-r----- 1 jgordo39 jgordo39   105 Dec  7 12:24 Makefile
+-r--r----- 1 jgordo39 jgordo39   105 Dec  9 10:33 t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ make
+make: 'file-copy' is up to date.
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ make clean
+rm -f file-copy *.o *~
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ rm -f t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ 
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ls
+file-copy.c  Makefile
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ make
+gcc -g -Wall -std=c18    file-copy.c   -o file-copy
+
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ 
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ make clean
+rm -f file-copy *.o *~
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ls
+file-copy.c  Makefile
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ c[Kemacs file[[K-copy/c[K[K.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ make
+gcc -g -Wall -std=c18    file-copy.c   -o file-copy
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ rm -f t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ rm -f t[3Pmakeemacs file-copy.cls[Kmake cleanls[Kemacs file-copy.cls[Kmake clean[K[2Plsrm -f tmake clean[Kls -l./file-copy Makefile tmake[K./file-copy Makefile tmake[Kchmod a-w t[2P t-a t[6Pat[C[C[17@./file-copy Makefile[C[C[3@file-copy.c[C[C
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ./file-copy file-copy.c trm -f t[K[3Pmakeemacs file-copy.cls[Kmake clean[K[2Plsrm -f tmake clean[Kls -l./file-copy Makefile t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ cat t
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+static void
+doCopy(const char *inName, FILE *in, const char *outName, FILE *out)
+{
+  int c;
+  while ((c = fgetc(in)) != EOF) {
+    if (fputc(c, out) == EOF || c == -1) {
+      fprintf(stderr, "error writing to %s: %s\n", outName, strerror(errno));
+      return; //return rather than exit to ensure files closed
+    }
+  }
+}
+
+/** Copy file specified by first argument to file specified by
+ *  second argument.
+ */
+int
+main(int argc, const char *argv[])
+{
+  if (argc != 3) {
+    fprintf(stderr, "usage: %s SRC_NAME DEST_NAME\n", argv[0]);
+    exit(1);
+  }
+  const char *srcName = argv[1];
+  const char *destName = argv[2];
+  FILE *in = fopen(srcName, "r");
+  if (!in) {
+    fprintf(stderr, "cannot read %s: %s\n", srcName, strerror(errno));
+    exit(1);
+  }
+  FILE *out = fopen(destName, "a");
+  if (!out) {
+    fprintf(stderr, "cannot write %s: %s\n", destName, strerror(errno));
+    exit(1);
+  }
+  doCopy(srcName, in, destName, out);
+  if (fclose(in) != 0) {
+    fprintf(stderr, "cannot close %s: %s\n", srcName, strerror(errno));
+    exit(1);
+  }
+  if (fclose(out) != 0) {
+    fprintf(stderr, "cannot close %s: %s\n", destName, strerror(errno));
+    exit(1);
+  }
+  return 0;
+}
+CC = gcc
+CFLAGS = -g -Wall -std=c18
+
+TARGETS = file-copy
+
+$(TARGETS):
+
+
+clean:
+		rm -f $(TARGETS) *.o *~
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ wc -l t
+60 t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ls[K[Kclear
+[H[2J[3Jjgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ ls
+file-copy  file-copy.c	Makefile  t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/file-copy$ cd ..
+jgordo39@g7-14:~/i220a/submit/lab13/exercises$ ls
+file-char-count  file-copy  no-buffer-copy  rec-io  stdin-char-count
+jgordo39@g7-14:~/i220a/submit/lab13/exercises$ cd no-buffer-copy
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/no-buffer-copy$ ls
+Makefile  no-buffer-copy.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/no-buffer-copy$ time ./no-buffer-copy `which gcc` /dev/null 1
+bash: ./no-buffer-copy: No such file or directory
+
+real	0m0.011s
+user	0m0.006s
+sys	0m0.001s
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/no-buffer-copy$ time ./no-buffer-copy `which gcc` /dev/null 1[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake
+gcc -g -Wall -std=c18    no-buffer-copy.c   -o no-buffer-copy
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/no-buffer-copy$ maketime ./no-buffer-copy `which gcc` /dev/null 1
+
+real	0m0.008s
+user	0m0.000s
+sys	0m0.006s
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/no-buffer-copy$ time ./no-buffer-copy `which gcc` /dev/null 1[K0
+
+real	0m0.009s
+user	0m0.004s
+sys	0m0.003s
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/no-buffer-copy$ cd ..
+jgordo39@g7-14:~/i220a/submit/lab13/exercises$ ls
+file-char-count  file-copy  no-buffer-copy  rec-io  stdin-char-count
+jgordo39@g7-14:~/i220a/submit/lab13/exercises$ ;s[K[Kcd rec-io
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ ls
+dyn-array.c  dyn-array.h  gen-rand-points.c  Makefile  point2.h  points.dat  stat-points.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ am[K[Kmake
+gcc -g -Wall -std=c18   -c -o gen-rand-points.o gen-rand-points.c
+gcc   gen-rand-points.o  -lm -o gen-rand-points
+gcc -g -Wall -std=c18   -c -o stat-points.o stat-points.c
+gcc -g -Wall -std=c18   -c -o dyn-array.o dyn-array.c
+gcc   stat-points.o dyn-array.o  -lm -o stat-points
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ ./gen-rand-points 1--[K[K00 points.day[Kt
+average magnitude = 752.156
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ emacs points.dat
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ ./stat-points points.dat
+min = 43.4166
+average = 752.156
+median = 773.59
+max = 1306.49
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ ls
+dyn-array.c  dyn-array.o      gen-rand-points.c  Makefile  points.dat	stat-points.c
+dyn-array.h  gen-rand-points  gen-rand-points.o  point2.h  stat-points	stat-points.o
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make clean
+rm -f gen-rand-points stat-points *.o *~
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ ls
+dyn-array.c  dyn-array.h  gen-rand-points.c  Makefile  point2.h  points.dat  stat-points.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ emacs gen-rand-points
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ emacs gen-rand-points.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make
+gcc -g -Wall -std=c18   -c -o gen-rand-points.o gen-rand-points.c
+gcc   gen-rand-points.o  -lm -o gen-rand-points
+gcc -g -Wall -std=c18   -c -o stat-points.o stat-points.c
+gcc -g -Wall -std=c18   -c -o dyn-array.o dyn-array.c
+gcc   stat-points.o dyn-array.o  -lm -o stat-points
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make[Kmake clean
+rm -f gen-rand-points stat-points *.o *~
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ eamcs stat-points.c
+bash: eamcs: command not found
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ eamcs stat-points.c[1P[C[1@a
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make
+gcc -g -Wall -std=c18   -c -o gen-rand-points.o gen-rand-points.c
+gcc   gen-rand-points.o  -lm -o gen-rand-points
+gcc -g -Wall -std=c18   -c -o stat-points.o stat-points.c
+gcc -g -Wall -std=c18   -c -o dyn-array.o dyn-array.c
+gcc   stat-points.o dyn-array.o  -lm -o stat-points
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ makeemacs stat-points.cam[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9Pmake clean[Kemacs gen-rand-points.c[Kls[Kmake cleanls[K./stat-points points.dat[8Pemac[C[C[C[C[C[C[C[C[C[C[C[C[8@./stat-point[C[C[C[C[C[C[C[C[C[C[C[C[8Pemac[C[C[C[C[C[C[C[C[C[C[C[C[16@./gen-rand-points 100[C[C[C[C[C[C[C[C[C[C[C
+average magnitude = 752.156
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ ls
+dyn-array.c  dyn-array.o      gen-rand-points.c  Makefile  points.dat	stat-points.c
+dyn-array.h  gen-rand-points  gen-rand-points.o  point2.h  stat-points	stat-points.o
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make clear[Kn
+rm -f gen-rand-points stat-points *.o *~
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ clear
+[H[2J[3Jjgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ ls
+dyn-array.c  dyn-array.h  gen-rand-points.c  Makefile  point2.h  points.dat  stat-points.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ lsclearmake cleanls[K./gen-rand-points 100 points.datmake[Kemacs stat-points.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make
+gcc -g -Wall -std=c18   -c -o gen-rand-points.o gen-rand-points.c
+gcc   gen-rand-points.o  -lm -o gen-rand-points
+gcc -g -Wall -std=c18   -c -o stat-points.o stat-points.c
+[01m[Kstat-points.c:[m[K In function ‘[01m[KreadPoints[m[K’:
+[01m[Kstat-points.c:15:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kars[m[K’ undeclared (first use in this function); did you mean ‘[01m[Kargs[m[K’?
+   if([01;31m[Kars[m[K == 3){
+      [01;31m[K^~~[m[K
+      [32m[Kargs[m[K
+[01m[Kstat-points.c:15:6:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+[01m[Kstat-points.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kstat-points.c:73:19:[m[K [01;31m[Kerror: [m[K‘[01m[Karc[m[K’ undeclared (first use in this function); did you mean ‘[01m[Kargc[m[K’?
+   if (argc < 2 || [01;31m[Karc[m[K > 3) {
+                   [01;31m[K^~~[m[K
+                   [32m[Kargc[m[K
+make: *** [<builtin>: stat-points.o] Error 1
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ makeemacs stat-points.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ a[Kmake
+gcc -g -Wall -std=c18   -c -o stat-points.o stat-points.c
+gcc -g -Wall -std=c18   -c -o dyn-array.o dyn-array.c
+gcc   stat-points.o dyn-array.o  -lm -o stat-points
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ makeemacs stat-points.cmake[Kemacs stat-points.cmake[K[Kmakeemacs stat-points.cmake[K[Kto[K[Kls
+dyn-array.c  dyn-array.o      gen-rand-points.c  Makefile  points.dat	stat-points.c
+dyn-array.h  gen-rand-points  gen-rand-points.o  point2.h  stat-points	stat-points.o
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ touch [K[K[K[K[K[Klsmakeemacs stat-points.cmake[Kemacs stat-points.cmake[Kemacs stat-points.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make clean
+rm -f gen-rand-points stat-points *.o *~
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make
+gcc -g -Wall -std=c18   -c -o gen-rand-points.o gen-rand-points.c
+gcc   gen-rand-points.o  -lm -o gen-rand-points
+gcc -g -Wall -std=c18   -c -o stat-points.o stat-points.c
+[01m[Kstat-points.c:[m[K In function ‘[01m[KstatPoints[m[K’:
+[01m[Kstat-points.c:53:39:[m[K [01;31m[Kerror: [m[Kexpected expression before ‘[01m[Kint[m[K’
+   sortDynArray(points, comparePoint2, [01;31m[Kint[m[K args);
+                                       [01;31m[K^~~[m[K
+[01m[Kstat-points.c:53:3:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[KsortDynArray[m[K’
+   [01;31m[KsortDynArray[m[K(points, comparePoint2, int args);
+   [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[Kstat-points.c:8[m[K:
+[01m[Kdyn-array.h:32:6:[m[K [01;36m[Knote: [m[Kdeclared here
+ void [01;36m[KsortDynArray[m[K(DynArray *dynArray,
+      [01;36m[K^~~~~~~~~~~~[m[K
+[01m[Kstat-points.c:[m[K At top level:
+[01m[Kstat-points.c:65:1:[m[K [01;31m[Kerror: [m[Kexpected identifier or ‘[01m[K([m[K’ before ‘[01m[K}[m[K’ token
+ [01;31m[K}[m[K
+ [01;31m[K^[m[K
+[01m[Kstat-points.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kstat-points.c:78:5:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KFile[m[K’
+     [01;31m[KFile[m[K *appFile = argv[2];
+     [01;31m[K^~~~[m[K
+[01m[Kstat-points.c:78:21:[m[K [01;35m[Kwarning: [m[Kinitialization of ‘[01m[Kint *[m[K’ from incompatible pointer type ‘[01m[Kconst char *[m[K’ [[01;35m[K-Wincompatible-pointer-types[m[K]
+     File *appFile = [01;35m[Kargv[m[K[2];
+                     [01;35m[K^~~~[m[K
+[01m[Kstat-points.c:79:24:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[KstatPoints[m[K’ from incompatible pointer type [[01;35m[K-Wincompatible-pointer-types[m[K]
+     statPoints(points, [01;35m[KappFile[m[K);
+                        [01;35m[K^~~~~~~[m[K
+[01m[Kstat-points.c:51:36:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[KFILE *[m[K’ {aka ‘[01m[Kstruct _IO_FILE *[m[K’} but argument is of type ‘[01m[Kint *[m[K’
+ statPoints(DynArray *points, [01;36m[KFILE *out[m[K)
+                              [01;36m[K~~~~~~^~~[m[K
+make: *** [<builtin>: stat-points.o] Error 1
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make cleanemacs stat-points.c[9Pmake cleanemacs stat-points.c
+d
+
+^Cjgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ fg
+bash: fg: current: no such job
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make
+gcc -g -Wall -std=c18   -c -o stat-points.o stat-points.c
+[01m[Kstat-points.c:[m[K In function ‘[01m[KstatPoints[m[K’:
+[01m[Kstat-points.c:53:39:[m[K [01;31m[Kerror: [m[Kexpected expression before ‘[01m[Kint[m[K’
+   sortDynArray(points, comparePoint2, [01;31m[Kint[m[K args);
+                                       [01;31m[K^~~[m[K
+[01m[Kstat-points.c:53:3:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[KsortDynArray[m[K’
+   [01;31m[KsortDynArray[m[K(points, comparePoint2, int args);
+   [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[Kstat-points.c:8[m[K:
+[01m[Kdyn-array.h:32:6:[m[K [01;36m[Knote: [m[Kdeclared here
+ void [01;36m[KsortDynArray[m[K(DynArray *dynArray,
+      [01;36m[K^~~~~~~~~~~~[m[K
+[01m[Kstat-points.c:[m[K At top level:
+[01m[Kstat-points.c:65:1:[m[K [01;31m[Kerror: [m[Kexpected identifier or ‘[01m[K([m[K’ before ‘[01m[K}[m[K’ token
+ [01;31m[K}[m[K
+ [01;31m[K^[m[K
+[01m[Kstat-points.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kstat-points.c:78:21:[m[K [01;35m[Kwarning: [m[Kinitialization of ‘[01m[KFILE *[m[K’ {aka ‘[01m[Kstruct _IO_FILE *[m[K’} from incompatible pointer type ‘[01m[Kconst char *[m[K’ [[01;35m[K-Wincompatible-pointer-types[m[K]
+     FILE *appFile = [01;35m[Kargv[m[K[2];
+                     [01;35m[K^~~~[m[K
+make: *** [<builtin>: stat-points.o] Error 1
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make l[K[K clean
+rm -f gen-rand-points stat-points *.o *~
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ clear
+[H[2J[3Jjgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make
+gcc -g -Wall -std=c18   -c -o gen-rand-points.o gen-rand-points.c
+gcc   gen-rand-points.o  -lm -o gen-rand-points
+gcc -g -Wall -std=c18   -c -o stat-points.o stat-points.c
+[01m[Kstat-points.c:[m[K In function ‘[01m[KstatPoints[m[K’:
+[01m[Kstat-points.c:53:39:[m[K [01;31m[Kerror: [m[Kexpected expression before ‘[01m[Kint[m[K’
+   sortDynArray(points, comparePoint2, [01;31m[Kint[m[K args);
+                                       [01;31m[K^~~[m[K
+[01m[Kstat-points.c:53:3:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[KsortDynArray[m[K’
+   [01;31m[KsortDynArray[m[K(points, comparePoint2, int args);
+   [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[Kstat-points.c:8[m[K:
+[01m[Kdyn-array.h:32:6:[m[K [01;36m[Knote: [m[Kdeclared here
+ void [01;36m[KsortDynArray[m[K(DynArray *dynArray,
+      [01;36m[K^~~~~~~~~~~~[m[K
+[01m[Kstat-points.c:[m[K At top level:
+[01m[Kstat-points.c:65:1:[m[K [01;31m[Kerror: [m[Kexpected identifier or ‘[01m[K([m[K’ before ‘[01m[K}[m[K’ token
+ [01;31m[K}[m[K
+ [01;31m[K^[m[K
+[01m[Kstat-points.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kstat-points.c:78:21:[m[K [01;35m[Kwarning: [m[Kinitialization of ‘[01m[KFILE *[m[K’ {aka ‘[01m[Kstruct _IO_FILE *[m[K’} from incompatible pointer type ‘[01m[Kconst char *[m[K’ [[01;35m[K-Wincompatible-pointer-types[m[K]
+     FILE *appFile = [01;35m[Kargv[m[K[2];
+                     [01;35m[K^~~~[m[K
+make: *** [<builtin>: stat-points.o] Error 1
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make[K[K[K[Kemacs[K[K[K[K[Kmakeclearmake clean[K[2Pfgemacs stat-points.cmake[Kemacs stat-points.c
+fg
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ fg
+bash: fg: current: no such job
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make
+gcc -g -Wall -std=c18   -c -o stat-points.o stat-points.c
+[01m[Kstat-points.c:[m[K In function ‘[01m[KstatPoints[m[K’:
+[01m[Kstat-points.c:65:13:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kfopen[m[K’ from incompatible pointer type [[01;35m[K-Wincompatible-pointer-types[m[K]
+       fopen([01;35m[Kout[m[K, "a");
+             [01;35m[K^~~[m[K
+In file included from [01m[Kstat-points.c:5[m[K:
+[01m[K/usr/include/stdio.h:246:14:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char * restrict[m[K’ but argument is of type ‘[01m[KFILE *[m[K’ {aka ‘[01m[Kstruct _IO_FILE *[m[K’}
+ extern FILE *[01;36m[Kfopen[m[K (const char *__restrict __filename,
+              [01;36m[K^~~~~[m[K
+[01m[Kstat-points.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kstat-points.c:83:21:[m[K [01;35m[Kwarning: [m[Kinitialization of ‘[01m[KFILE *[m[K’ {aka ‘[01m[Kstruct _IO_FILE *[m[K’} from incompatible pointer type ‘[01m[Kconst char *[m[K’ [[01;35m[K-Wincompatible-pointer-types[m[K]
+     FILE *appFile = [01;35m[Kargv[m[K[2];
+                     [01;35m[K^~~~[m[K
+gcc -g -Wall -std=c18   -c -o dyn-array.o dyn-array.c
+gcc   stat-points.o dyn-array.o  -lm -o stat-points
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ fg
+bash: fg: current: no such job
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ fgmake[2Pfgemacs stat-points.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make
+gcc -g -Wall -std=c18   -c -o stat-points.o stat-points.c
+[01m[Kstat-points.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kstat-points.c:77:21:[m[K [01;35m[Kwarning: [m[Kinitialization of ‘[01m[KFILE *[m[K’ {aka ‘[01m[Kstruct _IO_FILE *[m[K’} from incompatible pointer type ‘[01m[Kconst char *[m[K’ [[01;35m[K-Wincompatible-pointer-types[m[K]
+     FILE *appFile = [01;35m[Kargv[m[K[2];
+                     [01;35m[K^~~~[m[K
+gcc   stat-points.o dyn-array.o  -lm -o stat-points
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make clean
+rm -f gen-rand-points stat-points *.o *~
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make
+gcc -g -Wall -std=c18   -c -o gen-rand-points.o gen-rand-points.c
+gcc   gen-rand-points.o  -lm -o gen-rand-points
+gcc -g -Wall -std=c18   -c -o stat-points.o stat-points.c
+[01m[Kstat-points.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kstat-points.c:77:21:[m[K [01;35m[Kwarning: [m[Kinitialization of ‘[01m[KFILE *[m[K’ {aka ‘[01m[Kstruct _IO_FILE *[m[K’} from incompatible pointer type ‘[01m[Kconst char *[m[K’ [[01;35m[K-Wincompatible-pointer-types[m[K]
+     FILE *appFile = [01;35m[Kargv[m[K[2];
+                     [01;35m[K^~~~[m[K
+gcc -g -Wall -std=c18   -c -o dyn-array.o dyn-array.c
+gcc   stat-points.o dyn-array.o  -lm -o stat-points
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make [K[K[K[K[Kmake clean[Kemacs stat-points.c\[K
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make clean
+rm -f gen-rand-points stat-points *.o *~
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make
+gcc -g -Wall -std=c18   -c -o gen-rand-points.o gen-rand-points.c
+gcc   gen-rand-points.o  -lm -o gen-rand-points
+gcc -g -Wall -std=c18   -c -o stat-points.o stat-points.c
+gcc -g -Wall -std=c18   -c -o dyn-array.o dyn-array.c
+gcc   stat-points.o dyn-array.o  -lm -o stat-points
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make cleanemacs stat-points.cmake[K clean[Kemacs stat-points.cfg[Kemacs stat-points.cmake[K clean[Kemacs stat-points.c[9Pmake clean[K[Kls
+dyn-array.c  dyn-array.o      gen-rand-points.c  Makefile  points.dat	stat-points.c
+dyn-array.h  gen-rand-points  gen-rand-points.o  point2.h  stat-points	stat-points.o
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ touch t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ ls
+dyn-array.c  dyn-array.o      gen-rand-points.c  Makefile  points.dat	stat-points.c  t
+dyn-array.h  gen-rand-points  gen-rand-points.o  point2.h  stat-points	stat-points.o
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ ./stat-points[Ks pint[K[K[Koints.dat t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ cat t
+min = 43.4166
+average = 752.156
+median = 773.59
+max = 1306.49
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ cat t[21@./stat-points points.d[C[C[C[Ccat t[K[K[K[K[K[Krm -f t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ toush [K[K[K[K[K[Krm -f t[2Pcat[C[C[21@./stat-points points.d[C[C[C[C
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ cat t
+min = 43.4166
+average = 752.156
+median = 773.59
+max = 1306.49
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ rm [K[K[Km[Krm dddddddd[K[K[K[K[K[K[K[K[K[K[Krm -f t
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ ls
+dyn-array.c  dyn-array.o      gen-rand-points.c  Makefile  points.dat	stat-points.c
+dyn-array.h  gen-rand-points  gen-rand-points.o  point2.h  stat-points	stat-points.o
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make clean
+rm -f gen-rand-points stat-points *.o *~
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ ls
+dyn-array.c  dyn-array.h  gen-rand-points.c  Makefile  point2.h  points.dat  stat-points.c
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make
+gcc -g -Wall -std=c18   -c -o gen-rand-points.o gen-rand-points.c
+gcc   gen-rand-points.o  -lm -o gen-rand-points
+gcc -g -Wall -std=c18   -c -o stat-points.o stat-points.c
+gcc -g -Wall -std=c18   -c -o dyn-array.o dyn-array.c
+gcc   stat-points.o dyn-array.o  -lm -o stat-points
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ make[2Plsmake cleanls[Krm -f t[2Pcat[C[C[21@./stat-points points.d[C[C[C[C[1@v[1@a[1@l[1@g[1@r[1@i[1@n[1@d[1@ 
+==3544276== Memcheck, a memory error detector
+==3544276== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3544276== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==3544276== Command: ./stat-points points.dat t
+==3544276== 
+==3544276== 
+==3544276== HEAP SUMMARY:
+==3544276==     in use at exit: 0 bytes in 0 blocks
+==3544276==   total heap usage: 11 allocs, 11 frees, 19,536 bytes allocated
+==3544276== 
+==3544276== All heap blocks were freed -- no leaks are possible
+==3544276== 
+==3544276== For counts of detected and suppressed errors, rerun with: -v
+==3544276== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+jgordo39@g7-14:~/i220a/submit/lab13/exercises/rec-io$ exit
+
+Script done on 2021-12-09 11:15:21-05:00 [COMMAND_EXIT_CODE="0"]

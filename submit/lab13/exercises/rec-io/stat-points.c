@@ -11,7 +11,8 @@
 static void
 readPoints(const char *inName, DynArray *points)
 {
-  FILE *in = fopen(inName, "r");
+  FILE *in = fopen(inName, "rb");
+  
   if (!in) {
     fprintf(stderr, "cannot read %s: %s\n", inName, strerror(errno));
     exit(1);
@@ -56,6 +57,7 @@ statPoints(DynArray *points, FILE *out)
     double max = magnitudePoint2(getElementDynArray(points, n - 1));
     double average = averagePoints(points);
     double median = magnitudePoint2(getElementDynArray(points, n/2));
+   
     fprintf(out, "min = %g\naverage = %g\nmedian = %g\nmax = %g\n",
             min, average, median, max);
   }
@@ -64,13 +66,20 @@ statPoints(DynArray *points, FILE *out)
 int
 main(int argc, const char *argv[])
 {
-  if (argc != 2) {
+  if (argc < 2 || argc > 3) {
     fprintf(stderr, "usage: %s BINARY_POINTS_FILE\n", argv[0]);
     exit(1);
   }
   DynArray *points = newDynArray(sizeof(Point2));
   readPoints(argv[1], points);
+
+  if(argc == 3){
+    FILE *appFile = fopen(argv[2], "a");
+    statPoints(points, appFile);
+    fclose(appFile);
+  }else{
   statPoints(points, stdout);
+  }
   freeDynArray(points);
   return 0;
 }
