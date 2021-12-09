@@ -160,7 +160,7 @@ cache_sim_result(CacheSim *cache, MemAddr addr)
     break;
   }
 
-  CacheResult defaultResult = {3, 0}; //Error Occured if this is called
+  CacheResult defaultResult = {3, -1}; //Error Occured if this is called
   return defaultResult;
 }
 
