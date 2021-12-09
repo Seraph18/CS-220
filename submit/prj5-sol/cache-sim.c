@@ -56,7 +56,10 @@ new_cache_sim(const CacheParams *params)
 /** Free all resources used by cache-simulation structure *cache */
 void free_cache_sim(CacheSim *cache)
 {
-  free(cache);
+  for (int i = 0; i < cache->numberOfSets; ++i){
+    free(cache->cacheArray[i]);
+  }
+    free(cache->cacheArray);
 }
 
 unsigned long getLineTag(CacheSim *cache, MemAddr addr)
@@ -116,6 +119,7 @@ cache_sim_result(CacheSim *cache, MemAddr addr)
     }
   }
   MemAddr dataToReplace;
+  int randomLineIndex;
   CacheResult result = {2, 0};
   switch (cache->replace)
   {
@@ -144,33 +148,19 @@ cache_sim_result(CacheSim *cache, MemAddr addr)
     return result;
 
   case RANDOM_R:
-    // todo
-    break;
+    
+    randomLineIndex = rand() % (cache->numberOfLinesPerSet + 1);
+    dataToReplace = cache->cacheArray[setIndex][randomLineIndex];
+    cache->cacheArray[setIndex][randomLineIndex] = addr;
+
+    result.replaceAddr = dataToReplace;
+    return result;
   default:
-    // todo
+    //Do Nothing if error
     break;
   }
 
-  /*for (int setIndex = 0; setIndex < cache->numberOfSets; ++setIndex)
-  {
-    for (int lineIndex = 0; lineIndex < cache->numberOfLinesPerSet; ++lineIndex)
-    {
-      if (cache->cacheArray[setIndex][lineIndex] == addr)
-      {
-        CacheResult result = {CACHE_HIT, 0};
-        return result;
-      }
-      else if (cache->cacheArray[setIndex][lineIndex] == 0)
-      {
-        // Found a blank spot to put new value 'CACHE_MISS_WITHOUT_REPLACE'
-        cache->cacheArray[setIndex][lineIndex] = addr;
-        CacheResult result = {CACHE_MISS_WITHOUT_REPLACE, 0};
-        return result;
-      }
-    }
-  }
-  */
-  CacheResult defaultResult = {5, 0};
+  CacheResult defaultResult = {3, 0}; //Error Occured if this is called
   return defaultResult;
 }
 

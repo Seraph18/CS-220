@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Dec  8 19:00:30 2021
+# Make data base, printed on Wed Dec  8 20:04:08 2021
 
 # Variables
 
@@ -45,7 +45,7 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-_ = /import/linux/home1/jgordo39/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/node
+_ = /import/linux/home1/jgordo39/.vscode-server/bin/7db1a2b88f7557e0a43fec75b6ba7e50b3e9f77e/node
 # makefile (from 'Makefile', line 6)
 CFLAGS = -g -Wall -std=c18
 # makefile (from 'Makefile', line 1)
@@ -65,15 +65,15 @@ OBJS = cache-sim.o main.o
 # environment
 VSCODE_CWD = /import/linux/home1/jgordo39
 # environment
-SSH_CONNECTION = 149.125.83.114 51434 128.226.114.203 22
+SSH_CONNECTION = 149.125.83.114 52486 128.226.114.201 22
 # environment
-PATH = /import/linux/home1/jgordo39/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin:/home/jgordo39/cs220/bin:/home/jgordo39/.config/chainenv/shims:/opt/chainenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+PATH = /import/linux/home1/jgordo39/.vscode-server/bin/7db1a2b88f7557e0a43fec75b6ba7e50b3e9f77e/bin:/home/jgordo39/cs220/bin:/home/jgordo39/.config/chainenv/shims:/opt/chainenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
 # environment
 XDG_RUNTIME_DIR = /run/user/15291
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/15291/vscode-ipc-1596088c-d001-4269-929a-8973483b69b6.sock
+VSCODE_IPC_HOOK_CLI = /run/user/15291/vscode-ipc-fcccefc4-6bc9-4ecf-b221-16ded0911c1c.sock
 # makefile (from 'Makefile', line 11)
 LDFLAGS = -L $(LIBDIR)
 # makefile (from 'Makefile', line 9)
@@ -125,7 +125,7 @@ SHLVL = 1
 # environment
 JAVA_HOME = /usr/lib/jvm/java-8-oracle
 # environment
-XDG_SESSION_ID = 617804
+XDG_SESSION_ID = 473006
 # environment
 USER = jgordo39
 # makefile
@@ -136,6 +136,8 @@ LDLIBS = -l$(LIB)
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := make
+# environment
+OLDPWD = /home/jgordo39/.vscode-server/bin/7db1a2b88f7557e0a43fec75b6ba7e50b3e9f77e
 # makefile (from 'Makefile', line 8)
 LIBDIR = $$HOME/$(COURSE)/lib
 # default
@@ -147,11 +149,11 @@ MAKEFLAGS = pqrR
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_CLIENT = 149.125.83.114 51434 22
+SSH_CLIENT = 149.125.83.114 52486 22
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
-BROWSER = /import/linux/home1/jgordo39/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin/helpers/browser.sh
+BROWSER = /import/linux/home1/jgordo39/.vscode-server/bin/7db1a2b88f7557e0a43fec75b6ba7e50b3e9f77e/bin/helpers/browser.sh
 # default
 MAKEFILES := 
 # automatic
@@ -167,7 +169,7 @@ SUFFIXES :=
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
-VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /import/linux/home1/jgordo39/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/remote/node_modules
+VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /import/linux/home1/jgordo39/.vscode-server/bin/7db1a2b88f7557e0a43fec75b6ba7e50b3e9f77e/remote/node_modules
 # environment
 DERBY_HOME = /usr/lib/jvm/java-8-oracle/db
 # default
@@ -181,7 +183,7 @@ LANG = C
 # environment
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # variable set hash-table stats:
-# Load=84/1024=8%, Rehash=0, Collisions=14/111=13%
+# Load=85/1024=8%, Rehash=0, Collisions=14/112=12%
 
 # Pattern-specific Variable Values
 
@@ -189,9 +191,9 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 
 # Directories
 
-# . (device 65, inode 82375690295): 10 files, no impossibilities.
+# . (device 64, inode 82375690295): 13 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -277,10 +279,10 @@ cache-sim: cache-sim.o main.o
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 19):
+ 
 		$(CC) $(LDFLAGS) $(OBJS) $(LDLIBS) -Wl,-rpath=$(LIBDIR) -o $@
 
 # Not a target:
- 
 cache-sim.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -297,9 +299,9 @@ cache-sim.o:
 # strcache buffers: 1 (0) / strings = 25 / storage = 240 B / avg = 9 B
 # current buf: size = 8162 B / used = 240 B / count = 25 / avg = 9 B
 
-# strcache performance: lookups = 39 / hit rate = 35%
+# strcache performance: lookups = 42 / hit rate = 40%
 # hash-table stats:
-# Load=25/8192=0%, Rehash=0, Collisions=1/39=3%
-# Finished Make data base on Wed Dec  8 19:00:30 2021
+# Load=25/8192=0%, Rehash=0, Collisions=1/42=2%
+# Finished Make data base on Wed Dec  8 20:04:08 2021
 
  
